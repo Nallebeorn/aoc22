@@ -18,4 +18,4 @@ with open("input.txt", "r") as file:
                 highest_calories_yet = current_elf_calories
             current_elf_calories = 0
 
-    print(f"The elf carrying the most calories is carrying  {highest_calories_yet}  calories worth of food.")
+    print(f"The elf carrying the most calories is carrying {highest_calories_yet} calories worth of food.")

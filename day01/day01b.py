@@ -20,4 +20,4 @@ with open("input.txt", "r") as file:
     elves_calories.sort(reverse = True)
     top_three_total_calories = sum(elves_calories[:3])
 
-    print(f"The top three elves carrying the most calories are carrying a total of  {top_three_total_calories}  calories worth of food.")
+    print(f"The top three elves carrying the most calories are carrying a total of {top_three_total_calories} calories worth of food.")

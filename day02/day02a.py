@@ -26,9 +26,6 @@ result_matrix = {
     ("C", "Y"): 0,
 }
 
-draw_score = 3
-win_score = 6
-
 with open("input.txt", "r") as file:
     games = [tuple(line.strip().split(" ")) for line in file]
 
@@ -37,4 +34,4 @@ with open("input.txt", "r") as file:
         score += shape_to_score[my_play]
         score += result_matrix[(opponent_play, my_play)]
 
-    print(f"If I follow the strategy guide fully, and its predictions are entirely accurate, my total score will be {score}")
+    print(f"If I follow the strategy guide fully, and its predictions are entirely accurate, {score} should be my final score.")
