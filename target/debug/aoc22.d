@@ -1,1 +1,0 @@
-C:\Users\Benjamin\Documents\Kodprojekt\aoc22\target\debug\aoc22.exe: C:\Users\Benjamin\Documents\Kodprojekt\aoc22\src\day00\input.txt C:\Users\Benjamin\Documents\Kodprojekt\aoc22\src\day00\mod.rs C:\Users\Benjamin\Documents\Kodprojekt\aoc22\src\main.rs
