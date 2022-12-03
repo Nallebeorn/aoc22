@@ -3,7 +3,9 @@ import sys
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
-print("DAY 01a")
+print(
+"""~~~ 01/12 ~~~
+""")
 
 with open("input.txt", "r") as file:
     lines = [line.strip() for line in file] + ['']
@@ -18,4 +20,4 @@ with open("input.txt", "r") as file:
                 highest_calories_yet = current_elf_calories
             current_elf_calories = 0
 
-    print(f"The elf carrying the most calories is carrying {highest_calories_yet} calories worth of food.")
+    print(f"* Having processed the list, it appears the elf carrying the most calories is carrying a whooping {highest_calories_yet} calories worth of food!")

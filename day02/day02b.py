@@ -4,7 +4,9 @@ from functools import *
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
-print("DAY 02a")
+print(
+"""~~~
+""")
 
 shape_to_score = {
     "A": 1,
@@ -42,4 +44,4 @@ with open("input.txt", "r") as file:
         score += shape_to_score[my_play]
         score += result_to_score[desired_result]
 
-    print(f"If I follow the strategy guide fully, and its predictions are entirely nice and accurate, {score} should be my final result.")
+    print(f"* If I follow the strategy guide fully, and its predictions are entirely nice and accurate, {score} should be my final result.")
