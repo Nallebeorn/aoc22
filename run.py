@@ -7,4 +7,6 @@ scripts = sorted([script for folder in day_folders_contents for script in folder
 
 for script in scripts:
     run_path(script)
-    input("")
+    print("")
+    if (script.endswith("b.py")):
+        print("")

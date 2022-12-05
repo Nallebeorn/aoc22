@@ -5,7 +5,7 @@ from functools import *
 os.chdir(os.path.dirname(sys.argv[0]))
 
 print(
-"""~~~ 04/12 ~~~
+"""~~~
 """)
 
 with open("input.txt", "r") as file:

@@ -28,4 +28,4 @@ with open("input.txt", "r") as file:
 
     top_crates = "".join(stack[-1] for stack in towers)
 
-    print(f"* After the rearrangement procedure completed, {top_crates} are the creates tha ended up on top of each stack.")
+    print(f"* After the rearrangement procedure completed, {top_crates} are the crates that ended up on top of each stack.")
