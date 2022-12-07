@@ -13,6 +13,6 @@ with open("input.txt", "r") as file:
 
     for i in range(4, len(signal)):
         if len(set(signal[i-4:i])) == 4:
-            print(f"* The first start-of-packet marker could be found after processing {i} characters in the datastram.")
+            print(f"* The first start-of-packet marker could be found after processing {i} characters in the datastream.")
             break
             
