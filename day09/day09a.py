@@ -1,13 +1,16 @@
 import os
 import sys
 from functools import *
-from math import copysign
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
 print(
 """~~~ 09/12 ~~~
+
 """)
+
+def sign(x):
+    return (x > 0) - (x < 0)
 
 with open("input.txt", "r") as file:
     commands = [tuple(line.split()) for line in file]
@@ -34,10 +37,8 @@ with open("input.txt", "r") as file:
             diff_y = head_pos_y - tail_pos_y
             
             if max(abs(diff_x), abs(diff_y)) >= 2:
-                if diff_x != 0:
-                    tail_pos_x = int(tail_pos_x + copysign(1, diff_x))
-                if diff_y != 0:
-                    tail_pos_y = int(tail_pos_y + copysign(1, diff_y))
+                tail_pos_x += sign(diff_x)
+                tail_pos_y += sign(diff_y)
             
             visited_positions.add((tail_pos_x, tail_pos_y))
                     
