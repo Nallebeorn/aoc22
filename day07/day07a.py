@@ -53,4 +53,4 @@ def traverse_and_find_size(dir):
     
 traverse_and_find_size(root)
     
-print(f"The sum of the total sizes of directories {total_size_sum} (disregarding directories larger than 100 000)")
+print(f"* The sum of the total sizes of directories {total_size_sum} (disregarding directories larger than 100 000)")

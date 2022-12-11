@@ -64,4 +64,4 @@ print(f"Disk usage: {used_space}/{disk_total_space}. Required: {needed_space}. M
 
 size_of_smallest_viable_deletion = min([size for size in directories_sizes if size >= space_to_free_up])
     
-print(f"Of the directories large enough that deleting one of them would free up the space required for the update, {size_of_smallest_viable_deletion} is the smallest size.")
+print(f"* Of the directories large enough that deleting one of them would free up the space required for the update, {size_of_smallest_viable_deletion} is the smallest size.")

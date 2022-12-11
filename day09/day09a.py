@@ -44,4 +44,4 @@ with open("input.txt", "r") as file:
                     
     num_visisted_positions = len(visited_positions)
     
-    print(f"In my diverting thought experiment, the tail of the rope would visit {num_visisted_positions} positions at least once.")
+    print(f"* In my diverting thought experiment, the tail of the rope would visit {num_visisted_positions} positions at least once.")

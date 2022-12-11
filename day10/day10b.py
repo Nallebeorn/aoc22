@@ -41,4 +41,4 @@ with open("input.txt", "r") as file:
             advance_cycle()
             reg_x += int(instruction[1])
         
-print(f"Running the program to completion would paint the following picture to the screen:\n\n{screen_output}")
+print(f"* Running the program to completion would paint the following picture to the screen:\n\n{screen_output}")

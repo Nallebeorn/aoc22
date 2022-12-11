@@ -39,4 +39,4 @@ with open("input.txt", "r") as file:
                 
             best_scenic_score_so_far = max(best_scenic_score_so_far, reduce(lambda a, b: a * b, scores, 1))
             
-    print(f"It seems like {best_scenic_score_so_far} is the highest scenic score for any tree.")
+    print(f"* It seems like {best_scenic_score_so_far} is the highest scenic score for any tree.")

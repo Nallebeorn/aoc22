@@ -52,4 +52,4 @@ with open("input.txt", "r") as file:
                     
     num_visisted_positions = len(visited_positions)
     
-    print(f"In my suddenly tangible though experiment, the tail of the rope will visit {num_visisted_positions} positions at least once. If I arc my body just like so I should be able to avoid them all...")
+    print(f"* In my suddenly tangible though experiment, the tail of the rope will visit {num_visisted_positions} positions at least once. If I arc my body just like so I should be able to avoid them all...")

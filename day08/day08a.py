@@ -22,4 +22,4 @@ with open("input.txt", "r") as file:
                 all([grid[yy][x] < height for yy in range(y + 1, len(grid))]),
             ])
             
-    print(f"There are {total_trees_visible} trees visible from outside the grid.")
+    print(f"* There are {total_trees_visible} trees visible from outside the grid.")

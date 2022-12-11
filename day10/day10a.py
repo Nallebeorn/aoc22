@@ -30,4 +30,4 @@ with open("input.txt", "r") as file:
             advance_cycle()
             reg_x += int(instruction[1])
             
-print(f"Analyzing the programming of this most peculiar processor, I can see that {total_signal_strength} is the sum of the signal strengths of interest.")
+print(f"* Analyzing the programming of this most peculiar processor, I can see that {total_signal_strength} is the sum of the signal strengths of interest.")
