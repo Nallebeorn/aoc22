@@ -56,11 +56,11 @@ with open("input.txt", "r") as file:
                     monkeys[monkey.if_false_throw_to].items.append(item)
                     
     # print("")
-    for monkey_idx, monkey in enumerate(monkeys):
-        print(f"Monkey {monkey_idx} inspected items {monkey.business} times.")
+    # for monkey_idx, monkey in enumerate(monkeys):
+    #     print(f"Monkey {monkey_idx} inspected items {monkey.business} times.")
+    # print("")
+    
     monkey_business_leaderboard = sorted([monkey.business for monkey in monkeys], reverse=True)
-    print("")
-        
     monkey_business_tally = monkey_business_leaderboard[0] * monkey_business_leaderboard[1]
     
     print(f"The level of monkey business has alrady reached {monkey_business_tally} after 20 rounds of stuff-slinging simian shenanigans!")
