@@ -53,13 +53,7 @@ with open("input.txt", "r") as file:
                 if next not in shortest_path_so_far_to or new_cost < shortest_path_so_far_to[next]:
                     shortest_path_so_far_to[next] = new_cost
                     
-                    next_x = next % width
-                    next_y = next // width
-                    heuristic = abs(end_x - next_x) + abs(end_y - next_y)
-                    
-                    priority = new_cost + heuristic
-                    
-                    heapq.heappush(frontier, (priority, next))
+                    heapq.heappush(frontier, (new_cost, next))
         
         if end in shortest_path_so_far_to and shortest_path_so_far_to[end] < length_of_best_path_so_far:
             length_of_best_path_so_far = shortest_path_so_far_to[end]
