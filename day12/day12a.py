@@ -1,7 +1,7 @@
 import os
 import sys
 from functools import *
-import heapq
+from collections import deque
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
@@ -32,8 +32,8 @@ with open("input.txt", "r") as file:
         if i + width < len(heightmap) and heightmap[i + width] <= max_height:
             edges.add(i + width)
     
-    frontier = []
-    heapq.heappush(frontier, (0, start))
+    frontier = deque()
+    frontier.append(start)
     closed_set = set()
     shortest_path_so_far_to = {start: 0}
     
@@ -41,7 +41,7 @@ with open("input.txt", "r") as file:
     end_y = end // width
     
     while frontier:
-        current = heapq.heappop(frontier)[1]
+        current = frontier.pop()
         
         if current == end:
             break
@@ -57,7 +57,7 @@ with open("input.txt", "r") as file:
                 
                 priority = new_cost + heuristic
                 
-                heapq.heappush(frontier, (priority, next))
+                frontier.append(next)
                 
     shortest_path_to_goal = shortest_path_so_far_to[end]
     
