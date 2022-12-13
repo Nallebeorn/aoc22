@@ -1,7 +1,7 @@
 import os
 import sys
 from functools import *
-import heapq
+import ast
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
@@ -9,53 +9,42 @@ print(
 """~~~
 """)
 
+def compare_pair(left, right):
+    for i in range(min(len(left), len(right))):
+        l = left[i]
+        r = right[i]
+        
+        if isinstance(l, int) and isinstance(r, int):
+            if l < r:
+                return -1
+            elif l > r:
+                return 1
+        else:
+            if isinstance(l, int):
+                l = [l]
+            if isinstance(r, int):
+                r = [r]
+            
+            result = compare_pair(l, r)
+            if result != 0:
+                return result
+            
+    if len(left) < len(right):
+        return -1
+    elif len(left) > len(right):
+        return 1
+    
+    return 0
+
 with open("input.txt", "r") as file:
-    lines = file.read().splitlines()
-    width = len(lines[0])
-    inputmap = "".join(lines)
+    divider_packets = [[[2]], [[6]]]
+    lines = [ast.literal_eval(line.strip()) for line in file if not line.isspace()]
     
-    end = inputmap.index("E")
-    heightmap = [ord(c) - ord("a") for c in inputmap.replace("S", "a").replace("E", "z")]
-    graph = []
-    for i in range(len(heightmap)):
-        x = i % width
-        max_height = heightmap[i] + 1
-        edges = set()
-        graph.append(edges)
-        if x - 1 >= 0 and heightmap[i - 1] <= max_height:
-            edges.add(i - 1)
-        if x + 1 < width and heightmap[i + 1] <= max_height:
-            edges.add(i + 1)
-        if i - width >= 0 and heightmap[i - width] <= max_height:
-            edges.add(i - width)
-        if i + width < len(heightmap) and heightmap[i + width] <= max_height:
-            edges.add(i + width)
-   
-    length_of_best_path_so_far = 99999
-     
-    for start in [pos for pos in range(len(heightmap)) if heightmap[pos] == 0]:
-        frontier = []
-        heapq.heappush(frontier, (0, start))
-        closed_set = set()
-        shortest_path_so_far_to = {start: 0}
-        
-        end_x = end % width
-        end_y = end // width
-        
-        while frontier:
-            current = heapq.heappop(frontier)[1]
-            
-            if current == end:
-                break
-            
-            for next in graph[current]:
-                new_cost = shortest_path_so_far_to[current] + 1
-                if next not in shortest_path_so_far_to or new_cost < shortest_path_so_far_to[next]:
-                    shortest_path_so_far_to[next] = new_cost
-                    
-                    heapq.heappush(frontier, (new_cost, next))
-        
-        if end in shortest_path_so_far_to and shortest_path_so_far_to[end] < length_of_best_path_so_far:
-            length_of_best_path_so_far = shortest_path_so_far_to[end]
+    sorted_packets = sorted(lines + divider_packets, key=cmp_to_key(compare_pair))
     
-    print(f"* Beginning from the most ideal starting position, there will be {length_of_best_path_so_far} steps to walk along the scenic trail to the hilltop.")
+    divider_key = 1
+    for i, packet in enumerate(sorted_packets):
+        if packet in divider_packets:
+            divider_key *= i + 1
+    
+    print(divider_key)
