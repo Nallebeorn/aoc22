@@ -13,10 +13,8 @@ def compare_pair(left, right):
     for i in range(min(len(left), len(right))):
         l = left[i]
         r = right[i]
-        print("compare", l, "vs", r)
         
         if isinstance(l, int) and isinstance(r, int):
-            print("ints")
             if l < r:
                 return True
             elif l > r:
@@ -46,13 +44,7 @@ with open("input.txt", "r") as file:
     for i in range(0, len(lines), 2):
         left = lines[i]
         right = lines[i + 1]
-        print("**", i // 2 + 1, "**")
-        print(left, "vs", right)
         if compare_pair(left, right) > 0:
             sum_of_indices_in_right_order += i // 2 + 1
-            print("RIGHT ORDER")
-        else:
-            print("WRONG ORDER")
-        print("")
     
-    print(sum_of_indices_in_right_order)
+    print(f"* The packets are all a jumbled mess, only {sum_of_indices_in_right_order} pairs are in the correct order!")

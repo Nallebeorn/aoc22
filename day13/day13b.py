@@ -42,9 +42,9 @@ with open("input.txt", "r") as file:
     
     sorted_packets = sorted(lines + divider_packets, key=cmp_to_key(compare_pair))
     
-    divider_key = 1
+    decoder_key = 1
     for i, packet in enumerate(sorted_packets):
         if packet in divider_packets:
-            divider_key *= i + 1
+            decoder_key *= i + 1
     
-    print(divider_key)
+    print(f"* I have now painstakingly rearranged every packet into the correct order. Analyzing the divider packets, it seems {decoder_key} is the decoder key.")
