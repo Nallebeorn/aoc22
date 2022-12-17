@@ -39,7 +39,7 @@ with open("input.txt", "r") as file:
     for data in [line.split() for line in file]:
         sensor_x = int("".join(c for c in data[2] if c.isdigit() or c == "-"))
         sensor_y = int("".join(c for c in data[3] if c.isdigit() or c == "-"))
-        # print("Sensor:", sensor_x, sensor_y)
+        print("Sensor:", sensor_x, sensor_y)
         
         beacon_x = int("".join(c for c in data[-2] if c.isdigit() or c == "-"))
         beacon_y = int("".join(c for c in data[-1] if c.isdigit() or c == "-"))
@@ -54,15 +54,15 @@ with open("input.txt", "r") as file:
         for column in range(min_x, max_x + 1):
             cross_dist = distance - abs(sensor_x - column)
             
-            y1 = max(0, sensor_y - cross_dist)
-            y2 = min(size, sensor_y + cross_dist)
+            y1 = sensor_y - cross_dist
+            y2 = sensor_y + cross_dist
             covered_columns[column].append((y1, y2))
         
         for row in range(min_y, max_y + 1):
             cross_dist = distance - abs(sensor_y - row)
             
-            x1 = max(0, sensor_x - cross_dist)
-            x2 = min(size, sensor_x + cross_dist)
+            x1 = sensor_x - cross_dist
+            x2 = sensor_x + cross_dist
             covered_rows[row].append((x1, x2))
             
     print("Merge ranges")
@@ -71,7 +71,7 @@ with open("input.txt", "r") as file:
     candidates_y = []
     
     for i in range(len(covered_rows)):
-        if i % 10_000 == 0:
+        if i % 100_000 == 0:
             print("Range no:", i)
         merged_rows = merge_ranges(covered_rows[i])
         merged_columns = merge_ranges(covered_columns[i])
