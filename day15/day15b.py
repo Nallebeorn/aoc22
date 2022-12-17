@@ -1,82 +1,57 @@
 import os
 import sys
-from time import sleep
 from functools import *
+from time import perf_counter
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
 print(
-"""~~~
+"""~~~ 15/12 ~~~
 """)
 
-def draw_tilemap(tilemap, minx, maxx, maxy):
-    output_lines = []
-    for y in range(0, maxy + 1):
-        line = ""
-        for x in range(minx, maxx + 1):
-            line += tilemap.get((x, y), ".")
-        output_lines.append(line)
-    output = "\n".join(output_lines)
-    
-    print(output)
+start_time = perf_counter()
 
 with open("input.txt", "r") as file:
-    paths = [[tuple(int(a) for a in point.split(",")) for point in line.strip().split(" -> ")] for line in file]
+    size = 4_000_000
     
-    start = (500, 0)
-    
-    tilemap = {start: "+"}
-    for path in paths:
-        for i in range(len(path) - 1):
-            x1, y1 = path[i]
-            x2, y2 = path[i + 1]
-            if y1 == y2:
-                for x in range(min(x1, x2), max(x1, x2) + 1):
-                    tilemap[x, y1] = "#"
-            else:
-                for y in range(min(y1, y2), max(y1, y2) + 1):
-                    tilemap[x1, y] = "#"
+    sensors = {}
+    for data in [line.split() for line in file]:
+        sensor_x = int("".join(c for c in data[2] if c.isdigit() or c == "-"))
+        sensor_y = int("".join(c for c in data[3] if c.isdigit() or c == "-"))
+        
+        beacon_x = int("".join(c for c in data[-2] if c.isdigit() or c == "-"))
+        beacon_y = int("".join(c for c in data[-1] if c.isdigit() or c == "-"))
+        
+        distance = abs(beacon_x - sensor_x) + abs(beacon_y - sensor_y)
+        
+        sensors[(sensor_x, sensor_y)] = distance
+        
+    def find_distress_beacon():
+        for y in range(0, size + 1):
+            for x in range(0, size + 1):
+                is_in_range_of_any_sensor = False
                 
-    minx = min(x for x, y in tilemap.keys())
-    maxx = max(x for x, y in tilemap.keys())
-    maxy = max(y for x, y in tilemap.keys()) + 2
+                for sensor_pos, sensor_distance in sensors.items():
+                    sensor_x, sensor_y = sensor_pos
+                    distance = abs(x - sensor_x) + abs(y - sensor_y)
+                    
+                    # if x == 9 and y == 19:
+                    #     print("found correct pos", distance, sensor_distance, (sensor_x, sensor_y))
+                    
+                    if distance <= sensor_distance:
+                        is_in_range_of_any_sensor = True
+                        break
+                
+                if not is_in_range_of_any_sensor:
+                    freq = x * 4_000_000 + y
+                    print(x, y, freq)
+                    return freq
     
-    sand_counter = 0
-    blocked_source = False
-    while not blocked_source:
-        sandx, sandy = start
-        while not blocked_source:
-            tilemap[(sandx, sandy)] = "o"
-            
-            prev_sand_pos = (sandx, sandy)
-            
-            tilemap[(sandx - 1, maxy)] = "#"
-            tilemap[(sandx, maxy)] = "#"
-            tilemap[(sandx + 1, maxy)] = "#"
-            
-            if (sandx, sandy + 1) not in tilemap:
-                sandy += 1
-            elif (sandx - 1, sandy + 1) not in tilemap:
-                sandx -= 1
-                sandy += 1
-            elif (sandx + 1, sandy + 1) not in tilemap:
-                sandx += 1
-                sandy += 1
-            else:
-                sand_counter += 1
-                if (sandx, sandy) == start:
-                    blocked_source = True
-                break
-            
-            # print(chr(27) + "[2J")
-            # draw_tilemap(tilemap, minx, maxx, maxy)
-            # sleep(0.05)
-            
-            del tilemap[prev_sand_pos]
+        return None
+        
+    distress_beacon_tuning_freq = find_distress_beacon()
     
-    minx = min(x for x, y in tilemap.keys())
-    maxx = max(x for x, y in tilemap.keys())
-    tilemap[start] = "+"
-    draw_tilemap(tilemap, minx, maxx, maxy)
-    print("")
-    print(f"* Hmmm, after {sand_counter} units of sand have fallen and come to rest the source should be blocked and no more sand fall down. Then, I should be safe!")
+    print(f"* If my calculations are correct, then {distress_beacon_tuning_freq} is the tuning frequency of the only possible location of the distress beacon.")
+
+end_time = perf_counter()
+print(f"[took {(end_time - start_time) * 1000}ms]")
