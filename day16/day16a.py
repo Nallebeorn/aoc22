@@ -3,6 +3,8 @@ import sys
 from functools import *
 from time import perf_counter
 from collections import deque
+from math import factorial
+import heapq
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
@@ -12,65 +14,74 @@ print(
 
 start_time = perf_counter()
     
-class State:
-    def __init__(self, location, path_since_open, pressure_release, time_remaining, opened_valves):
-        self.location = location
-        self.path_since_open = path_since_open
-        self.pressure_release = pressure_release
-        self.time_remaining = time_remaining
-        self.opened_valves = opened_valves
+def find_distance_between(start, end):
+    queue = deque()
+    queue.append(start)
+    distance: dict[str, int] = {}
+    distance[start] = 0
+    
+    while len(queue):
+        room = queue.popleft()
+        if room == end:
+            break
+            
+        for to in valve_tunnels[room]:
+            if to not in distance:
+                distance[to] = distance[room] + 1
+                queue.append(to)
+    
+    return distance[end]
 
-    def __repr__(self):
-        return f"{'*' if self.location in self.opened_valves else ''}{self.location} | {self.time_remaining}s | {self.pressure_release}"
+class Node:
+    def __init__(self, location, pressure_released, time_remaining, remaining_valves, path):
+        self.location = location
+        self.pressure_released = pressure_released
+        self.time_remaining = time_remaining
+        self.remaining_valves = remaining_valves
+        self.path = path
 
 with open("input.txt", "r") as file:
     valves_input = [line.split() for line in file]
     
-    valves = {}
+    valve_flow_rates = {}
+    valve_tunnels = {}
     for data in valves_input:
         name = data[1]
         flow_rate_info = data[4]
         flow_rate = int("".join(c for c in flow_rate_info if c.isdigit()))
         tunnels_to = [valve.strip(",") for valve in data[9:]]
-        valves[name] = (flow_rate, tunnels_to)
+        valve_flow_rates[name] = flow_rate
+        valve_tunnels[name] = tunnels_to
     
-    queue: "deque[State]" = deque()
-    queue.append(State("AA", [], 0, 30, ["AA"])) # AA's valve hasn't been opened but it's flow rate is 0 so we can consider it opened
-    
-    current_best: State = None
-    
-    current_highest_pressure = 0
-    
-    num_valves_to_open = len([flow_rate for flow_rate, tunnels in valves.values() if flow_rate > 0]) + 1
-    
-    while len(queue):
-        state = queue.popleft()
-        flow_rate, tunnels = valves[state.location]
-        
-        current_highest_pressure = max(current_highest_pressure, state.pressure_release)
-        
-        best_possible_remaining = state.pressure_release
-        for valve in valves:
-            if valve not in state.opened_valves:
-                best_possible_remaining += valves[valve][0] * (state.time_remaining - 1)
-        if best_possible_remaining < current_highest_pressure:
-            continue
-        
-        print(state, "::", best_possible_remaining, "/", current_highest_pressure, "::", len(state.opened_valves), "/", len(valves))
-        
-        if state.time_remaining > 0 and len(state.opened_valves) < num_valves_to_open:
-            if flow_rate > 0 and state.location not in state.opened_valves:
-                pressure_released = flow_rate * (state.time_remaining - 1)
-                queue.append(State(state.location, [], state.pressure_release + pressure_released, state.time_remaining - 1, state.opened_valves + [state.location]))
+    distances = {}
+    for from_valve in valve_tunnels:
+        for to_valve in valve_tunnels:
+            distances[from_valve, to_valve] = find_distance_between(from_valve, to_valve)
             
-            for to in tunnels:
-                if to not in state.path_since_open:
-                    queue.append(State(to, state.path_since_open + [to], state.pressure_release, state.time_remaining - 1, state.opened_valves))
-        else:
-            if current_best == None or state.pressure_release > current_best.pressure_release:
-                current_best = state
+    remaining_valves = [valve for valve in valve_flow_rates if valve_flow_rates[valve] > 0]
     
-    print(f"If I do this methodically I should be able to release {current_best.pressure_release} units of pressure and save the elephants and me before the volcano erupts!")
+    time_remaining = 30
+    
+    frontier: "deque[Node]" = deque()
+    frontier.append(Node("AA", 0, 30, remaining_valves, ["AA"]))
+    
+    current_best: Node = None
+    
+    while len(frontier):
+        current = frontier.popleft()
+        
+        for next in current.remaining_valves:
+            distance = distances[(current.location, next)]
+            new_time_remaining = current.time_remaining - distance - 1
+            if new_time_remaining > 0:
+                new_pressure_released = current.pressure_released + valve_flow_rates[next] * new_time_remaining
+                new_remaning_valves = [v for v in current.remaining_valves if v != next]
+                next_node = Node(next, new_pressure_released, new_time_remaining, new_remaning_valves, current.path + [next])
+                if current_best == None or new_pressure_released > current_best.pressure_released:
+                    current_best = next_node
+                frontier.append(next_node)
+    
+    print(f"If I do this methodically I should be able to release {current_best.pressure_released} units of pressure and save the elephants and me before the volcano erupts!")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")
