@@ -1,9 +1,7 @@
 import os
 import sys
 from functools import *
-from itertools import permutations
 from time import perf_counter
-from collections import deque
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
@@ -13,106 +11,126 @@ print(
 
 start_time = perf_counter()
     
-def find_path_between(start, end):
-    queue = deque()
-    queue.append(start)
-    path: dict[str, list[str]] = {}
-    path[start] = []
-    
-    while len(queue):
-        room = queue.popleft()
-        if room == end:
-            break
-            
-        for to in valve_tunnels[room]:
-            if to not in path:
-                path[to] = path[room] + [to]
-                queue.append(to)
-    
-    return path[end]
+shapes = [
+    [(0, 0,), (1, 0), (2, 0), (3, 0)], # -
+    [(0, 1,), (1, 0), (1, 1), (1, 2), (2, 1)], # +
+    [(0, 0,), (1, 0), (2, 0), (2, 1), (2, 2)], # _|
+    [(0, 0,), (0, 1), (0, 2), (0, 3)], # |
+    [(0, 0,), (1, 0), (0, 1), (1, 1)], # []
+]
 
-class Node:
-    def __init__(self, my_location, elephant_location, pressure_released, time_remaining, remaining_valves, my_path, elephant_path, my_goal = None, elephant_goal = None):
-        self.my_location = my_location
-        self.elephant_location = elephant_location
-        self.pressure_released = pressure_released
-        self.time_remaining = time_remaining
-        self.remaining_valves = remaining_valves
-        self.my_path = my_path + ([my_location] if my_goal == None else [])
-        self.elephant_path = elephant_path + ([elephant_location] if elephant_goal == None else [])
-        self.my_goal = my_goal
-        self.elephant_goal = elephant_goal
+shape_idx = 0
+jet_idx = 0
+faller_y = 3
+faller_x = 2
+game_board = {}
+stack_height = 0
+
+def draw_board():
+    global shape_idx, jet_idx, faller_x, faller_y
+    
+    height = stack_height
+    board = game_board.copy()
+    for block_x, block_y in shapes[shape_idx]:
+        height = max(height, faller_y + block_y)
+        board[faller_x + block_x, faller_y + block_y] = chr(ord("/") + ((jet_idx + 1) % 46))
+    
+    output = ""
+        
+    for y in reversed(range(height + 1)):
+        line = "|"
+        for x in range(0, 7):
+            line += board.get((x, y), ".")
+        line += "|\n"
+        output += line
+        
+    output += "+-------+"
+    
+    print(output)
+    print("\n")
+    
+def is_position_blocked(x, y):
+    global shape_idx, game_board
+    
+    if y < 0:
+        return True
+    
+    for block_x, block_y in shapes[shape_idx]:
+        if x + block_x < 0 or x + block_x >= 7:
+            return True
+        
+        if (x + block_x, y + block_y) in game_board:
+            return True
+    
+    return False
 
 with open("input.txt", "r") as file:
-    valves_input = [line.split() for line in file]
+    jet_pattern = [1 if c == ">" else -1 for c in file.read().strip()]
     
-    valve_flow_rates = {}
-    valve_tunnels = {}
-    for data in valves_input:
-        name = data[1]
-        flow_rate_info = data[4]
-        flow_rate = int("".join(c for c in flow_rate_info if c.isdigit()))
-        tunnels_to = [valve.strip(",") for valve in data[9:]]
-        valve_flow_rates[name] = flow_rate
-        valve_tunnels[name] = tunnels_to
+def simulate_cycle(max_rounds = None):
+    global jet_idx, shape_idx, game_board, faller_x, faller_y, stack_height
     
-    paths = {}
-    for from_valve in valve_tunnels:
-        for to_valve in valve_tunnels:
-            paths[from_valve, to_valve] = find_path_between(from_valve, to_valve)
+    rounds = 0
+    
+    while max_rounds == None or rounds < max_rounds:
+        # draw_board()
+                  
+        jet_push = jet_pattern[jet_idx]
+        jet_idx = (jet_idx + 1) % len(jet_pattern)
+        if not is_position_blocked(faller_x + jet_push, faller_y):
+            faller_x += jet_push
 
-    remaining_valves = [valve for valve in valve_flow_rates if valve_flow_rates[valve] > 0]
-    
-    frontier: "deque[Node]" = deque()
-    frontier.append(Node("AA", "AA", 0, 26, remaining_valves, [], []))
-    
-    current_best: Node = None
-    
-    while len(frontier):
-        current = frontier.popleft()
+        # draw_board()
         
-        if current.my_goal != None and current.elephant_goal != None:
-            valve_targets = [(current.my_goal, current.elephant_goal)]
-        elif current.my_goal != None:
-            valve_targets = [(current.my_goal, v) for v in current.remaining_valves]
-        elif current.elephant_goal != None:
-            valve_targets = [(v, current.elephant_goal) for v in current.remaining_valves]
+        if is_position_blocked(faller_x, faller_y - 1):
+            for block_x, block_y in shapes[shape_idx]:
+                game_board[faller_x + block_x, faller_y + block_y] = chr(ord("/") + (jet_idx % 46))
+                stack_height = max(stack_height, faller_y + block_y + 1)
+                
+            shape_idx = (shape_idx + 1) % len(shapes)
+            faller_x = 2
+            faller_y = stack_height + 3
+            
+            rounds += 1
+            
+            # draw_board()
         else:
-            valve_targets = permutations(current.remaining_valves, 2)
-        
-        for my_next, elephant_next in valve_targets:
-            my_path = paths[(current.my_location, my_next)] + [my_next]
-            elephant_path = paths[(current.elephant_location, elephant_next)] + [elephant_next]
+            faller_y -= 1
             
-            my_distance = len(my_path)
-            elephant_distance = len(elephant_path)
-            
-            new_time_remaining = current.time_remaining - min(my_distance, elephant_distance)
-            new_remaining_valves = [v for v in current.remaining_valves if v != my_next and v != elephant_next]
-            
-            if new_time_remaining > 0:
-                if my_distance == elephant_distance:
-                    new_pressure_released = current.pressure_released + (valve_flow_rates[my_next] + valve_flow_rates[elephant_next]) * new_time_remaining
-                    
-                    next_node = Node(my_next, elephant_next, new_pressure_released, new_time_remaining, new_remaining_valves, current.my_path, current.elephant_path, None, None)
-                elif my_distance < elephant_distance:
-                    new_pressure_released = current.pressure_released + valve_flow_rates[my_next] * new_time_remaining
-                    
-                    elephant_short_next = elephant_path[my_distance - 1]
-                    next_node = Node(my_next, elephant_short_next, new_pressure_released, new_time_remaining, new_remaining_valves, current.my_path, current.elephant_path, None, elephant_next)
-                elif elephant_distance < my_distance:
-                    new_pressure_released = current.pressure_released + valve_flow_rates[elephant_next] * new_time_remaining
-                    
-                    my_short_next = my_path[elephant_distance - 1]
-                    next_node = Node(my_short_next, elephant_next, new_pressure_released, new_time_remaining, new_remaining_valves, current.my_path, current.elephant_path, my_next, None)
-                    
-                if current_best == None or new_pressure_released > current_best.pressure_released:
-                    current_best = next_node
-                frontier.append(next_node)
+        if jet_idx == 0:
+            break
     
-    print(f"* If I do this methodically I should be able to release {current_best.pressure_released + 2} units of pressure and save the elephants and me before the volcano erupts!")
-    print(current_best.my_path)
-    print(current_best.elephant_path)
+    return (stack_height, rounds)
+
+cycle1_height, cycle1_rounds = simulate_cycle()
+cycle2_height, rounds_per_cycle = simulate_cycle()
+height_per_cycle = cycle2_height - cycle1_height
+
+num_rounds = 1000000000000
+
+predicted_height = cycle1_height
+remaining_rounds = num_rounds - cycle1_rounds
+print("rpc", rounds_per_cycle)
+predicted_height += (remaining_rounds // rounds_per_cycle) * height_per_cycle
+last_remaining_rounds = (remaining_rounds % rounds_per_cycle)
+final_cycle_height, final_cycle_rounds = simulate_cycle(last_remaining_rounds)
+predicted_height += final_cycle_height - cycle2_height
+print("cycle check", last_remaining_rounds, final_cycle_rounds)
+
+print("PREDICT", num_rounds, "=", predicted_height)
+
+exit()
+height_after_second_cycle = simulate(modulo)
+height_after_third_cycle = simulate(modulo)
+height_per_cycle = height_after_second_cycle - height_after_first_cycle
+height_per_cycle2 = height_after_third_cycle - height_after_second_cycle
+print(height_after_first_cycle, height_after_second_cycle, height_after_third_cycle, "::", height_per_cycle, height_per_cycle2)
+prediction = height_after_first_cycle + height_per_cycle * 3
+actual = simulate(modulo * 2)
+print("Predict:", prediction, actual)
+
+# draw_board()
+print(f"* I'll tell the elephants that my simulation predicts the tower of rocks will reach {stack_height} blocks tall after 2022 rocks have fallen.")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")

@@ -66,8 +66,9 @@ def is_position_blocked(x, y):
 
 with open("input.txt", "r") as file:
     jet_pattern = [1 if c == ">" else -1 for c in file.read().strip()]
-    
-rounds_left = 2022
+
+num_rounds = 100_000
+rounds_left = num_rounds
 while rounds_left > 0:
     # draw_board()
     
@@ -94,7 +95,7 @@ while rounds_left > 0:
         faller_y -= 1
     
 # draw_board()
-print(f"* I'll tell the elephants that my simulation predicts the tower of rocks will reach {stack_height} blocks tall after 2022 rocks have fallen.")
+print(f"* I'll tell the elephants that my simulation predicts the tower of rocks will reach {stack_height} blocks tall after {num_rounds} rocks have fallen.")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")

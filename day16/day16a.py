@@ -79,7 +79,7 @@ with open("input.txt", "r") as file:
                     current_best = next_node
                 frontier.append(next_node)
     
-    print(f"If I do this methodically I should be able to release {current_best.pressure_released} units of pressure and save the elephants and me before the volcano erupts!")
+    print(f"* If I do this methodically I should be able to release {current_best.pressure_released} units of pressure and save the elephants and me before the volcano erupts!")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")
