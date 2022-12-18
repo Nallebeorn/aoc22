@@ -67,7 +67,8 @@ def is_position_blocked(x, y):
 with open("input.txt", "r") as file:
     jet_pattern = [1 if c == ">" else -1 for c in file.read().strip()]
 
-num_rounds = 100_000
+num_rounds = 2022
+
 rounds_left = num_rounds
 while rounds_left > 0:
     # draw_board()

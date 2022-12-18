@@ -66,6 +66,10 @@ def is_position_blocked(x, y):
 
 with open("input.txt", "r") as file:
     jet_pattern = [1 if c == ">" else -1 for c in file.read().strip()]
+
+# For some inexplicable reason, my solution doesn't work if the input is too small (e.g. example input)
+while len(jet_pattern) < 2000:
+    jet_pattern += jet_pattern[:]
     
 def simulate_cycle(max_rounds = None):
     global jet_idx, shape_idx, game_board, faller_x, faller_y, stack_height
@@ -98,39 +102,25 @@ def simulate_cycle(max_rounds = None):
             faller_y -= 1
             
         if jet_idx == 0:
+            print("idx", shape_idx)
             break
     
     return (stack_height, rounds)
+
+num_rounds = 1_000_000_000_000
 
 cycle1_height, cycle1_rounds = simulate_cycle()
 cycle2_height, rounds_per_cycle = simulate_cycle()
 height_per_cycle = cycle2_height - cycle1_height
 
-num_rounds = 1000000000000
-
 predicted_height = cycle1_height
 remaining_rounds = num_rounds - cycle1_rounds
-print("rpc", rounds_per_cycle)
 predicted_height += (remaining_rounds // rounds_per_cycle) * height_per_cycle
 last_remaining_rounds = (remaining_rounds % rounds_per_cycle)
 final_cycle_height, final_cycle_rounds = simulate_cycle(last_remaining_rounds)
 predicted_height += final_cycle_height - cycle2_height
-print("cycle check", last_remaining_rounds, final_cycle_rounds)
 
-print("PREDICT", num_rounds, "=", predicted_height)
-
-exit()
-height_after_second_cycle = simulate(modulo)
-height_after_third_cycle = simulate(modulo)
-height_per_cycle = height_after_second_cycle - height_after_first_cycle
-height_per_cycle2 = height_after_third_cycle - height_after_second_cycle
-print(height_after_first_cycle, height_after_second_cycle, height_after_third_cycle, "::", height_per_cycle, height_per_cycle2)
-prediction = height_after_first_cycle + height_per_cycle * 3
-actual = simulate(modulo * 2)
-print("Predict:", prediction, actual)
-
-# draw_board()
-print(f"* I'll tell the elephants that my simulation predicts the tower of rocks will reach {stack_height} blocks tall after 2022 rocks have fallen.")
+print(f"* I'll have those darn elephants know that after a trillion rocks have fallen, the tower will be exactly {predicted_height} blocks tall, no more no less!")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")
