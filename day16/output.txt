@@ -1,3917 +1,1956 @@
-~~~ 16/12 ~~~
+~~~
 
-['AA']
-BB
-CC
-DD
-EE
-HH
-JJ
-['AA', 'BB']
-CC
-DD
-EE
-HH
-JJ
-['AA', 'CC']
-BB
-DD
-EE
-HH
-JJ
-['AA', 'DD']
-BB
-CC
-EE
-HH
-JJ
-['AA', 'EE']
-BB
-CC
-DD
-HH
-JJ
-['AA', 'HH']
-BB
-CC
-DD
-EE
-JJ
-['AA', 'JJ']
-BB
-CC
-DD
-EE
-HH
-['AA', 'BB', 'CC']
-DD
-EE
-HH
-JJ
-['AA', 'BB', 'DD']
-CC
-EE
-HH
-JJ
-['AA', 'BB', 'EE']
-CC
-DD
-HH
-JJ
-['AA', 'BB', 'HH']
-CC
-DD
-EE
-JJ
-['AA', 'BB', 'JJ']
-CC
-DD
-EE
-HH
-['AA', 'CC', 'BB']
-DD
-EE
-HH
-JJ
-['AA', 'CC', 'DD']
-BB
-EE
-HH
-JJ
-['AA', 'CC', 'EE']
-BB
-DD
-HH
-JJ
-['AA', 'CC', 'HH']
-BB
-DD
-EE
-JJ
-['AA', 'CC', 'JJ']
-BB
-DD
-EE
-HH
-['AA', 'DD', 'BB']
-CC
-EE
-HH
-JJ
-['AA', 'DD', 'CC']
-BB
-EE
-HH
-JJ
-['AA', 'DD', 'EE']
-BB
-CC
-HH
-JJ
-['AA', 'DD', 'HH']
-BB
-CC
-EE
-JJ
-['AA', 'DD', 'JJ']
-BB
-CC
-EE
-HH
-['AA', 'EE', 'BB']
-CC
-DD
-HH
-JJ
-['AA', 'EE', 'CC']
-BB
-DD
-HH
-JJ
-['AA', 'EE', 'DD']
-BB
-CC
-HH
-JJ
-['AA', 'EE', 'HH']
-BB
-CC
-DD
-JJ
-['AA', 'EE', 'JJ']
-BB
-CC
-DD
-HH
-['AA', 'HH', 'BB']
-CC
-DD
-EE
-JJ
-['AA', 'HH', 'CC']
-BB
-DD
-EE
-JJ
-['AA', 'HH', 'DD']
-BB
-CC
-EE
-JJ
-['AA', 'HH', 'EE']
-BB
-CC
-DD
-JJ
-['AA', 'HH', 'JJ']
-BB
-CC
-DD
-EE
-['AA', 'JJ', 'BB']
-CC
-DD
-EE
-HH
-['AA', 'JJ', 'CC']
-BB
-DD
-EE
-HH
-['AA', 'JJ', 'DD']
-BB
-CC
-EE
-HH
-['AA', 'JJ', 'EE']
-BB
-CC
-DD
-HH
-['AA', 'JJ', 'HH']
-BB
-CC
-DD
-EE
-['AA', 'BB', 'CC', 'DD']
-EE
-HH
-JJ
-['AA', 'BB', 'CC', 'EE']
-DD
-HH
-JJ
-['AA', 'BB', 'CC', 'HH']
-DD
-EE
-JJ
-['AA', 'BB', 'CC', 'JJ']
-DD
-EE
-HH
-['AA', 'BB', 'DD', 'CC']
-EE
-HH
-JJ
-['AA', 'BB', 'DD', 'EE']
-CC
-HH
-JJ
-['AA', 'BB', 'DD', 'HH']
-CC
-EE
-JJ
-['AA', 'BB', 'DD', 'JJ']
-CC
-EE
-HH
-['AA', 'BB', 'EE', 'CC']
-DD
-HH
-JJ
-['AA', 'BB', 'EE', 'DD']
-CC
-HH
-JJ
-['AA', 'BB', 'EE', 'HH']
-CC
-DD
-JJ
-['AA', 'BB', 'EE', 'JJ']
-CC
-DD
-HH
-['AA', 'BB', 'HH', 'CC']
-DD
-EE
-JJ
-['AA', 'BB', 'HH', 'DD']
-CC
-EE
-JJ
-['AA', 'BB', 'HH', 'EE']
-CC
-DD
-JJ
-['AA', 'BB', 'HH', 'JJ']
-CC
-DD
-EE
-['AA', 'BB', 'JJ', 'CC']
-DD
-EE
-HH
-['AA', 'BB', 'JJ', 'DD']
-CC
-EE
-HH
-['AA', 'BB', 'JJ', 'EE']
-CC
-DD
-HH
-['AA', 'BB', 'JJ', 'HH']
-CC
-DD
-EE
-['AA', 'CC', 'BB', 'DD']
-EE
-HH
-JJ
-['AA', 'CC', 'BB', 'EE']
-DD
-HH
-JJ
-['AA', 'CC', 'BB', 'HH']
-DD
-EE
-JJ
-['AA', 'CC', 'BB', 'JJ']
-DD
-EE
-HH
-['AA', 'CC', 'DD', 'BB']
-EE
-HH
-JJ
-['AA', 'CC', 'DD', 'EE']
-BB
-HH
-JJ
-['AA', 'CC', 'DD', 'HH']
-BB
-EE
-JJ
-['AA', 'CC', 'DD', 'JJ']
-BB
-EE
-HH
-['AA', 'CC', 'EE', 'BB']
-DD
-HH
-JJ
-['AA', 'CC', 'EE', 'DD']
-BB
-HH
-JJ
-['AA', 'CC', 'EE', 'HH']
-BB
-DD
-JJ
-['AA', 'CC', 'EE', 'JJ']
-BB
-DD
-HH
-['AA', 'CC', 'HH', 'BB']
-DD
-EE
-JJ
-['AA', 'CC', 'HH', 'DD']
-BB
-EE
-JJ
-['AA', 'CC', 'HH', 'EE']
-BB
-DD
-JJ
-['AA', 'CC', 'HH', 'JJ']
-BB
-DD
-EE
-['AA', 'CC', 'JJ', 'BB']
-DD
-EE
-HH
-['AA', 'CC', 'JJ', 'DD']
-BB
-EE
-HH
-['AA', 'CC', 'JJ', 'EE']
-BB
-DD
-HH
-['AA', 'CC', 'JJ', 'HH']
-BB
-DD
-EE
-['AA', 'DD', 'BB', 'CC']
-EE
-HH
-JJ
-['AA', 'DD', 'BB', 'EE']
-CC
-HH
-JJ
-['AA', 'DD', 'BB', 'HH']
-CC
-EE
-JJ
-['AA', 'DD', 'BB', 'JJ']
-CC
-EE
-HH
-['AA', 'DD', 'CC', 'BB']
-EE
-HH
-JJ
-['AA', 'DD', 'CC', 'EE']
-BB
-HH
-JJ
-['AA', 'DD', 'CC', 'HH']
-BB
-EE
-JJ
-['AA', 'DD', 'CC', 'JJ']
-BB
-EE
-HH
-['AA', 'DD', 'EE', 'BB']
-CC
-HH
-JJ
-['AA', 'DD', 'EE', 'CC']
-BB
-HH
-JJ
+['BB', 'BB'] ['DD', 'CC', 'CC']
+['BB', 'BB'] ['DD', 'DD']
+['BB', 'BB'] ['DD', 'EE', 'EE']
+['BB', 'BB'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['BB', 'BB'] ['II', 'JJ', 'JJ']
+['DD', 'CC', 'CC'] ['BB', 'BB']
+['DD', 'CC', 'CC'] ['DD', 'DD']
+['DD', 'CC', 'CC'] ['DD', 'EE', 'EE']
+['DD', 'CC', 'CC'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['II', 'JJ', 'JJ']
+['DD', 'DD'] ['BB', 'BB']
+['DD', 'DD'] ['DD', 'CC', 'CC']
+['DD', 'DD'] ['DD', 'EE', 'EE']
+['DD', 'DD'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['II', 'JJ', 'JJ']
+['DD', 'EE', 'EE'] ['BB', 'BB']
+['DD', 'EE', 'EE'] ['DD', 'CC', 'CC']
+['DD', 'EE', 'EE'] ['DD', 'DD']
+['DD', 'EE', 'EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'CC']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['BB', 'BB']
+['II', 'JJ', 'JJ'] ['DD', 'CC', 'CC']
+['II', 'JJ', 'JJ'] ['DD', 'DD']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'DD'] ['CC']
+['CC', 'DD', 'EE', 'EE'] ['CC']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC']
+['AA', 'II', 'JJ', 'JJ'] ['CC']
+['BB'] ['CC', 'CC']
+['BB'] ['EE', 'EE']
+['BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['BB'] ['AA', 'II', 'JJ', 'JJ']
+['CC', 'CC'] ['EE']
+['CC', 'DD', 'DD'] ['EE']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['AA', 'II', 'JJ', 'JJ'] ['EE']
+['CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'DD'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'CC'] ['JJ']
+['CC', 'DD', 'DD'] ['JJ']
+['CC', 'DD', 'EE', 'EE'] ['JJ']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['JJ']
+['CC'] ['CC', 'DD', 'DD']
+['CC'] ['CC', 'DD', 'EE', 'EE']
+['CC'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['AA', 'II', 'JJ', 'JJ']
+['CC'] ['CC', 'BB', 'BB']
+['CC'] ['EE', 'EE']
+['CC'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['AA', 'II', 'JJ', 'JJ']
+['CC'] ['DD', 'CC', 'BB', 'BB']
+['CC'] ['DD', 'DD']
+['CC'] ['FF', 'GG', 'HH', 'HH']
+['CC'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['BB', 'BB'] ['GG', 'HH', 'HH']
+['DD', 'DD'] ['GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['CC'] ['II', 'AA', 'BB', 'BB']
+['CC'] ['II', 'AA', 'DD', 'DD']
+['CC'] ['II', 'AA', 'DD', 'EE', 'EE']
+['CC'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD'] ['CC', 'CC']
+['DD'] ['CC', 'DD', 'EE', 'EE']
+['DD'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD'] ['AA', 'II', 'JJ', 'JJ']
+['CC', 'BB', 'BB'] ['CC']
+['EE', 'EE'] ['CC']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['CC']
+['AA', 'II', 'JJ', 'JJ'] ['CC']
+['CC', 'BB', 'BB'] ['EE']
+['CC', 'CC'] ['EE']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['AA', 'II', 'JJ', 'JJ'] ['EE']
+['CC', 'BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'BB', 'BB'] ['JJ']
+['CC', 'CC'] ['JJ']
+['EE', 'EE'] ['JJ']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['JJ']
+['EE'] ['CC', 'CC']
+['EE'] ['CC', 'DD', 'DD']
+['EE'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE'] ['AA', 'II', 'JJ', 'JJ']
+['EE'] ['BB', 'BB']
+['EE'] ['DD', 'DD']
+['EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['EE'] ['CC', 'BB', 'BB']
+['EE'] ['CC', 'CC']
+['EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['EE'] ['AA', 'II', 'JJ', 'JJ']
+['DD', 'CC', 'BB', 'BB'] ['GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['GG', 'HH', 'HH']
+['DD', 'DD'] ['GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['EE'] ['II', 'AA', 'BB', 'BB']
+['EE'] ['II', 'AA', 'DD', 'CC', 'CC']
+['EE'] ['II', 'AA', 'DD', 'DD']
+['EE'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'DD', 'DD']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'DD', 'EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'HH', 'HH'] ['BB', 'BB']
+['GG', 'HH', 'HH'] ['DD', 'DD']
+['GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'HH', 'HH'] ['DD', 'CC', 'BB', 'BB']
+['GG', 'HH', 'HH'] ['DD', 'CC', 'CC']
+['GG', 'HH', 'HH'] ['DD', 'DD']
+['GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['GG', 'HH', 'HH'] ['II', 'AA', 'BB', 'BB']
+['GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'DD']
+['GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['JJ'] ['CC', 'CC']
+['JJ'] ['CC', 'DD', 'DD']
+['JJ'] ['CC', 'DD', 'EE', 'EE']
+['JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['JJ'] ['BB', 'BB']
+['JJ'] ['DD', 'DD']
+['JJ'] ['DD', 'EE', 'EE']
+['JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['JJ'] ['CC', 'BB', 'BB']
+['JJ'] ['CC', 'CC']
+['JJ'] ['EE', 'EE']
+['JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['JJ'] ['DD', 'CC', 'BB', 'BB']
+['JJ'] ['DD', 'CC', 'CC']
+['JJ'] ['DD', 'DD']
+['JJ'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'BB', 'BB'] ['GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'DD'] ['GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'EE'] ['GG', 'HH', 'HH']
+['DD', 'DD'] ['DD', 'EE', 'EE']
+['DD', 'DD'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'EE', 'EE'] ['DD', 'DD']
+['DD', 'EE', 'EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['DD', 'DD']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'EE'] ['CC']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC']
+['AA', 'II', 'JJ', 'JJ'] ['CC']
+['CC', 'CC'] ['EE']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['AA', 'II', 'JJ', 'JJ'] ['EE']
+['CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'CC'] ['II', 'JJ', 'JJ']
+['CC', 'DD', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['CC'] ['DD', 'DD']
+['CC'] ['FF', 'GG', 'HH', 'HH']
+['CC'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'DD'] ['DD', 'CC', 'CC']
+['DD', 'DD'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'CC']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['DD', 'CC', 'CC']
+['II', 'JJ', 'JJ'] ['DD', 'DD']
+['II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['HH', 'HH']
+['DD', 'EE', 'EE'] ['HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['HH', 'HH']
+['CC', 'CC'] ['HH']
+['EE', 'EE'] ['HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['JJ'] ['GG', 'FF', 'EE', 'EE']
+['CC'] ['II', 'AA', 'DD', 'DD']
+['CC'] ['II', 'AA', 'DD', 'EE', 'EE']
+['CC'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['II', 'AA', 'DD', 'CC', 'CC']
+['DD', 'DD'] ['II', 'AA', 'DD', 'EE', 'EE']
+['DD', 'DD'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['II', 'AA', 'DD', 'CC', 'CC']
+['DD', 'EE', 'EE'] ['II', 'AA', 'DD', 'DD']
+['DD', 'EE', 'EE'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'DD']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['DD', 'EE', 'EE'] ['DD', 'DD']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'DD']
+['DD', 'DD'] ['DD', 'EE', 'EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['DD', 'DD'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['II', 'JJ', 'JJ']
+['DD', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['DD', 'EE', 'EE'] ['BB', 'BB']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['BB', 'BB']
+['BB', 'BB'] ['EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['EE']
+['BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['BB', 'BB'] ['II', 'JJ', 'JJ']
+['DD', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['DD', 'DD'] ['CC', 'BB', 'BB']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'BB', 'BB']
+['BB', 'BB'] ['DD']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD']
+['BB', 'BB'] ['GG', 'HH', 'HH']
+['DD', 'DD'] ['GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['BB', 'BB'] ['AA', 'II', 'JJ', 'JJ']
+['DD', 'DD'] ['AA', 'II', 'JJ', 'JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['CC', 'DD', 'DD'] ['HH']
+['CC', 'DD', 'EE', 'EE'] ['HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['CC', 'BB', 'BB'] ['HH']
+['EE', 'EE'] ['HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'EE']
+['DD', 'DD'] ['AA', 'BB', 'BB']
+['DD', 'EE', 'EE'] ['AA', 'BB', 'BB']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'BB', 'BB']
+['BB', 'BB'] ['AA', 'DD', 'DD']
+['DD', 'EE', 'EE'] ['AA', 'DD', 'DD']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'DD']
+['BB', 'BB'] ['AA', 'DD', 'EE', 'EE']
+['DD', 'DD'] ['AA', 'DD', 'EE', 'EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'EE', 'EE']
+['BB', 'BB'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'EE'] ['CC']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['CC']
+['AA', 'II', 'JJ', 'JJ'] ['CC']
+['CC', 'CC'] ['DD', 'EE', 'EE']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['CC', 'CC'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'CC'] ['II', 'JJ', 'JJ']
+['EE', 'EE'] ['II', 'JJ', 'JJ']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['BB', 'BB'] ['DD', 'EE', 'EE']
+['BB', 'BB'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['BB', 'BB'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['EE'] ['BB', 'BB']
+['EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['BB', 'BB']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['BB', 'BB'] ['DD', 'CC', 'CC']
+['BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['BB', 'BB'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['CC'] ['DD', 'CC', 'BB', 'BB']
+['CC'] ['FF', 'GG', 'HH', 'HH']
+['CC'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'BB', 'BB']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'CC']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['DD', 'CC', 'BB', 'BB']
+['II', 'JJ', 'JJ'] ['DD', 'CC', 'CC']
+['II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'CC'] ['HH']
+['CC', 'DD', 'EE', 'EE'] ['HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['BB', 'BB'] ['HH', 'HH']
+['DD', 'EE', 'EE'] ['HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['HH', 'HH']
+['DD', 'CC', 'BB', 'BB'] ['HH', 'HH']
+['DD', 'CC', 'CC'] ['HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['HH', 'HH']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['JJ'] ['GG', 'FF', 'EE', 'EE']
+['BB', 'BB'] ['II', 'AA', 'DD', 'CC', 'CC']
+['BB', 'BB'] ['II', 'AA', 'DD', 'EE', 'EE']
+['BB', 'BB'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['II', 'AA', 'BB', 'BB']
+['CC'] ['II', 'AA', 'DD', 'EE', 'EE']
+['CC'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE'] ['II', 'AA', 'BB', 'BB']
+['EE'] ['II', 'AA', 'DD', 'CC', 'CC']
+['EE'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'BB', 'BB']
+['FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['DD', 'DD'] ['CC']
+['FF', 'GG', 'HH', 'HH'] ['CC']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['CC']
+['DD', 'CC', 'CC'] ['DD', 'DD']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'DD']
+['DD', 'CC', 'CC'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['II', 'JJ', 'JJ']
+['DD', 'DD'] ['II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['DD', 'DD'] ['BB']
+['FF', 'GG', 'HH', 'HH'] ['BB']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['BB']
+['DD', 'CC', 'BB', 'BB'] ['DD']
+['FF', 'GG', 'HH', 'HH'] ['DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD']
+['DD', 'CC', 'BB', 'BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'BB', 'BB'] ['AA', 'II', 'JJ', 'JJ']
+['DD', 'DD'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['DD', 'CC', 'CC'] ['BB', 'BB']
+['FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['CC']
+['FF', 'GG', 'HH', 'HH'] ['CC']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['CC']
+['DD', 'CC', 'BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'BB', 'BB'] ['II', 'JJ', 'JJ']
+['DD', 'CC', 'CC'] ['II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['CC', 'BB', 'BB'] ['HH']
+['CC', 'CC'] ['HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['DD', 'CC', 'CC'] ['AA', 'BB', 'BB']
+['DD', 'DD'] ['AA', 'BB', 'BB']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['AA', 'DD', 'CC', 'CC']
+['DD', 'DD'] ['AA', 'DD', 'CC', 'CC']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'CC', 'CC']
+['DD', 'CC', 'BB', 'BB'] ['AA', 'DD', 'DD']
+['DD', 'CC', 'CC'] ['AA', 'DD', 'DD']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'DD']
+['DD', 'CC', 'BB', 'BB'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['HH', 'HH'] ['DD', 'DD']
+['HH', 'HH'] ['DD', 'EE', 'EE']
+['HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH'] ['CC', 'CC']
+['HH'] ['EE', 'EE']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['DD', 'CC', 'CC']
+['HH'] ['DD', 'DD']
+['HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['HH'] ['II', 'AA', 'DD', 'DD']
+['HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['HH'] ['CC', 'DD', 'DD']
+['HH'] ['CC', 'DD', 'EE', 'EE']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['CC', 'BB', 'BB']
+['HH'] ['EE', 'EE']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['DD', 'CC', 'BB', 'BB']
+['HH'] ['DD', 'DD']
+['HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['JJ', 'JJ']
+['GG', 'FF', 'EE', 'EE'] ['JJ', 'JJ']
+['HH'] ['CC', 'CC']
+['HH'] ['CC', 'DD', 'EE', 'EE']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH', 'HH'] ['BB', 'BB']
+['HH', 'HH'] ['DD', 'EE', 'EE']
+['HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH', 'HH'] ['DD', 'CC', 'BB', 'BB']
+['HH', 'HH'] ['DD', 'CC', 'CC']
+['HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'BB', 'BB']
+['HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['BB']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['BB']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['BB']
+['HH'] ['BB', 'BB']
+['HH'] ['DD', 'DD']
+['HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH'] ['CC', 'BB', 'BB']
+['HH'] ['CC', 'CC']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['BB']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['BB']
+['GG', 'FF', 'EE', 'EE'] ['BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['CC', 'CC']
+['GG', 'FF', 'EE', 'EE'] ['CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['DD']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['DD']
+['GG', 'FF', 'EE', 'EE'] ['DD']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['EE', 'EE']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['EE', 'EE']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['EE', 'EE']
+['II', 'AA', 'DD', 'DD'] ['CC']
+['II', 'AA', 'DD', 'EE', 'EE'] ['CC']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC']
+['II', 'AA', 'DD', 'CC', 'CC'] ['DD', 'DD']
+['II', 'AA', 'DD', 'EE', 'EE'] ['DD', 'DD']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['II', 'AA', 'DD', 'CC', 'CC'] ['DD', 'EE', 'EE']
+['II', 'AA', 'DD', 'DD'] ['DD', 'EE', 'EE']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['II', 'AA', 'DD', 'CC', 'CC'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'DD'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'DD'] ['BB']
+['II', 'AA', 'DD', 'EE', 'EE'] ['BB']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['BB']
+['II', 'AA', 'BB', 'BB'] ['DD']
+['II', 'AA', 'DD', 'EE', 'EE'] ['DD']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD']
+['II', 'AA', 'BB', 'BB'] ['EE', 'EE']
+['II', 'AA', 'DD', 'DD'] ['EE', 'EE']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['II', 'AA', 'BB', 'BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'DD'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['BB', 'BB']
+['II', 'AA', 'DD', 'EE', 'EE'] ['BB', 'BB']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['CC']
+['II', 'AA', 'DD', 'EE', 'EE'] ['CC']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC']
+['II', 'AA', 'BB', 'BB'] ['EE']
+['II', 'AA', 'DD', 'CC', 'CC'] ['EE']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['II', 'AA', 'BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['CC', 'BB', 'BB']
+['II', 'AA', 'DD', 'DD'] ['CC', 'BB', 'BB']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['CC', 'CC']
+['II', 'AA', 'DD', 'DD'] ['CC', 'CC']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['II', 'AA', 'BB', 'BB'] ['DD']
+['II', 'AA', 'DD', 'CC', 'CC'] ['DD']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD']
+['II', 'AA', 'BB', 'BB'] ['GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'DD'] ['GG', 'HH', 'HH']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['BB'] ['GG', 'FF', 'EE', 'EE']
+['CC', 'CC'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['CC', 'CC'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['CC', 'CC'] ['GG', 'FF', 'EE', 'EE']
+['DD'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['DD'] ['GG', 'FF', 'EE', 'EE']
+['EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['AA', 'II', 'JJ', 'JJ'] ['EE']
+['EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['EE', 'EE'] ['II', 'JJ', 'JJ']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['EE'] ['AA', 'II', 'JJ', 'JJ']
+['DD', 'DD'] ['GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['DD', 'DD'] ['JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'HH', 'HH'] ['DD', 'DD']
+['GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'DD', 'DD']
+['HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['JJ'] ['EE', 'EE']
+['JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['JJ'] ['DD', 'DD']
+['JJ'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'DD'] ['GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'EE'] ['GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['FF', 'GG', 'HH', 'HH']
+['CC'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'CC']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['DD', 'CC', 'CC']
+['II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['HH', 'HH']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['JJ'] ['GG', 'FF', 'EE', 'EE']
+['DD', 'EE', 'EE'] ['JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['JJ']
+['EE'] ['II', 'AA', 'DD', 'CC', 'CC']
+['EE'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD']
+['DD', 'DD'] ['GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['DD', 'DD'] ['AA', 'II', 'JJ', 'JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['CC']
+['AA', 'II', 'JJ', 'JJ'] ['CC']
+['CC', 'CC'] ['HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH', 'HH']
+['CC', 'CC'] ['II', 'JJ', 'JJ']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['GG', 'HH', 'HH'] ['DD', 'DD']
+['GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['HH'] ['II', 'AA', 'DD', 'DD']
+['JJ'] ['DD', 'DD']
+['JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['JJ'] ['CC', 'CC']
+['JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['HH']
+['II', 'AA', 'DD', 'DD'] ['HH']
+['DD'] ['GG', 'FF', 'EE', 'EE']
+['DD'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'EE']
+['CC'] ['GG', 'FF', 'EE', 'EE']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'EE']
+['DD', 'DD'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['DD', 'CC', 'CC'] ['FF', 'EE', 'DD', 'DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'DD']
+['DD', 'CC', 'CC'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'DD'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'DD'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['II', 'AA', 'DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['II', 'AA', 'DD', 'CC', 'CC'] ['FF', 'EE', 'DD', 'DD']
+['II', 'AA', 'DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'DD']
+['II', 'AA', 'DD', 'CC', 'CC'] ['FF', 'EE', 'EE']
+['II', 'AA', 'DD', 'DD'] ['FF', 'EE', 'EE']
+['DD', 'EE', 'EE'] ['AA', 'DD', 'DD']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'DD']
+['DD', 'DD'] ['AA', 'DD', 'EE', 'EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'EE', 'EE']
+['DD', 'DD'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'EE'] ['DD', 'CC', 'CC']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'CC']
+['CC', 'CC'] ['DD', 'EE', 'EE']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['CC', 'CC'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['CC', 'CC']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['DD', 'CC', 'CC'] ['DD']
+['FF', 'GG', 'HH', 'HH'] ['DD']
+['DD', 'CC', 'CC'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['HH'] ['DD', 'DD']
+['HH'] ['DD', 'EE', 'EE']
+['HH', 'HH'] ['CC', 'CC']
+['HH', 'HH'] ['EE', 'EE']
+['HH'] ['DD', 'CC', 'CC']
+['HH'] ['DD', 'DD']
+['EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['EE'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['EE', 'EE']
+['II', 'JJ', 'JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['AA', 'II', 'JJ', 'JJ'] ['EE']
+['GG', 'HH', 'HH'] ['DD', 'DD']
+['GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['JJ', 'JJ'] ['DD', 'DD']
+['JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'DD'] ['HH']
+['II', 'AA', 'DD', 'EE', 'EE'] ['HH']
+['EE', 'EE'] ['JJ']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['JJ']
+['EE'] ['II', 'AA', 'DD', 'DD']
+['EE'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'DD']
+['GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['EE'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'DD', 'EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['CC', 'DD', 'EE', 'EE']
+['II', 'JJ', 'JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['BB'] ['FF', 'GG', 'HH', 'HH']
+['BB'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'BB', 'BB']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['DD', 'CC', 'BB', 'BB']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'EE'] ['HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH', 'HH']
+['DD', 'CC', 'BB', 'BB'] ['HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['JJ'] ['GG', 'FF', 'EE', 'EE']
+['CC', 'DD', 'EE', 'EE'] ['JJ']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['JJ']
+['EE'] ['II', 'AA', 'BB', 'BB']
+['EE'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['II', 'AA', 'BB', 'BB']
+['GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['BB']
+['AA', 'II', 'JJ', 'JJ'] ['BB']
+['GG', 'HH', 'HH'] ['CC', 'DD', 'DD']
+['GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['JJ', 'JJ'] ['CC', 'DD', 'DD']
+['JJ', 'JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['BB'] ['AA', 'II', 'JJ', 'JJ']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['CC', 'BB', 'BB']
+['AA', 'II', 'JJ', 'JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'DD'] ['HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['CC', 'BB', 'BB'] ['HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['CC', 'DD', 'DD'] ['JJ', 'JJ']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['JJ', 'JJ']
+['CC', 'BB', 'BB'] ['JJ', 'JJ']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['JJ', 'JJ']
+['HH', 'HH'] ['II', 'AA', 'BB', 'BB']
+['HH', 'HH'] ['II', 'AA', 'DD', 'DD']
+['DD', 'DD'] ['GG', 'FF', 'EE', 'EE']
+['DD', 'DD'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['DD', 'EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'EE']
+['BB', 'BB'] ['GG', 'FF', 'EE', 'EE']
+['BB', 'BB'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'EE']
+['DD', 'DD'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['FF', 'EE', 'DD', 'DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'DD']
+['DD', 'CC', 'BB', 'BB'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'DD'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'DD'] ['EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'DD', 'EE', 'EE'] ['EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['EE', 'DD', 'DD']
+['II', 'AA', 'DD', 'EE', 'EE'] ['EE', 'DD', 'DD']
+['II', 'AA', 'BB', 'BB'] ['EE', 'EE']
+['II', 'AA', 'DD', 'DD'] ['EE', 'EE']
+['EE', 'EE'] ['BB']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['BB']
+['EE'] ['CC', 'DD', 'DD']
+['EE'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['CC', 'DD', 'DD']
+['GG', 'HH', 'HH'] ['CC', 'DD', 'EE', 'EE']
+['CC', 'DD', 'EE', 'EE'] ['DD']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD']
+['EE'] ['CC', 'BB', 'BB']
+['EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['GG', 'HH', 'HH'] ['EE', 'EE']
+['CC', 'DD', 'DD'] ['EE', 'EE']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['CC', 'BB', 'BB'] ['EE', 'EE']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['HH', 'HH'] ['DD', 'CC', 'BB', 'BB']
+['HH', 'HH'] ['DD', 'DD']
+['CC', 'DD', 'DD'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'BB', 'BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['FF', 'GG', 'HH', 'HH']
+['EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['EE']
+['HH', 'HH'] ['DD', 'CC', 'CC']
+['HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['JJ'] ['DD', 'CC', 'CC']
+['JJ'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'EE'] ['HH', 'HH']
+['DD', 'EE', 'EE'] ['JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['JJ']
+['DD', 'CC', 'CC'] ['JJ']
+['FF', 'GG', 'HH', 'HH'] ['JJ']
+['HH', 'HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['AA', 'II', 'JJ', 'JJ'] ['EE']
+['CC', 'DD', 'EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['BB']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['BB']
+['DD', 'CC', 'BB', 'BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'BB', 'BB'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH', 'HH'] ['CC', 'DD', 'EE', 'EE']
+['HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['DD', 'CC', 'BB', 'BB']
+['HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['JJ']
+['GG', 'FF', 'EE', 'EE'] ['JJ']
+['JJ'] ['CC', 'DD', 'EE', 'EE']
+['JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['JJ'] ['DD', 'CC', 'BB', 'BB']
+['JJ'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'BB', 'BB'] ['GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'EE'] ['GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC']
+['AA', 'II', 'JJ', 'JJ'] ['CC']
+['CC', 'CC'] ['HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH', 'HH']
+['CC', 'CC'] ['II', 'JJ', 'JJ']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'BB', 'BB']
+['BB', 'BB'] ['GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['BB', 'BB'] ['AA', 'II', 'JJ', 'JJ']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['CC', 'CC']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['BB', 'BB']
+['HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['JJ']
+['II', 'AA', 'DD', 'CC', 'CC'] ['BB']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['BB']
+['JJ'] ['BB', 'BB']
+['JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'BB', 'BB'] ['HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['HH']
+['CC'] ['GG', 'FF', 'EE', 'EE']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['DD', 'EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'EE']
+['BB'] ['GG', 'FF', 'EE', 'EE']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'EE']
+['BB', 'BB'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['BB', 'BB'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['II', 'AA', 'DD', 'CC', 'CC'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['II', 'AA', 'DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['II', 'AA', 'BB', 'BB'] ['FF', 'EE', 'EE']
+['II', 'AA', 'DD', 'CC', 'CC'] ['FF', 'EE', 'EE']
+['CC', 'DD', 'EE', 'EE'] ['DD', 'CC', 'CC']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'CC']
+['CC', 'CC'] ['DD', 'EE', 'EE']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['CC', 'CC'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['AA', 'BB', 'BB']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'BB', 'BB']
+['BB', 'BB'] ['AA', 'DD', 'EE', 'EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'EE', 'EE']
+['BB', 'BB'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['AA', 'BB', 'BB']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['AA', 'DD', 'CC', 'CC']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'CC', 'CC']
+['DD', 'CC', 'BB', 'BB'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['HH'] ['CC', 'CC']
+['HH'] ['CC', 'DD', 'EE', 'EE']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['CC']
+['GG', 'FF', 'EE', 'EE'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['EE']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['EE']
+['DD'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['GG', 'HH', 'HH'] ['DD', 'DD']
+['GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['DD', 'DD']
+['AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['AA', 'II', 'JJ', 'JJ']
+['HH', 'HH'] ['CC', 'CC']
+['HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['CC', 'CC']
+['II', 'JJ', 'JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['HH']
+['II', 'AA', 'DD', 'DD'] ['HH']
+['CC'] ['II', 'AA', 'DD', 'DD']
+['CC'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'CC'] ['JJ']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['JJ']
+['HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['HH'] ['II', 'AA', 'DD', 'DD']
+['DD'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'HH', 'HH'] ['CC', 'DD', 'DD']
+['GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['CC', 'DD', 'DD']
+['AA', 'II', 'JJ', 'JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'BB', 'BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'BB', 'BB'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['CC', 'BB', 'BB']
+['AA', 'II', 'JJ', 'JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'DD'] ['HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['CC', 'BB', 'BB'] ['GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['BB'] ['II', 'AA', 'DD', 'DD']
+['BB'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'BB', 'BB'] ['JJ', 'JJ']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['JJ', 'JJ']
+['HH'] ['II', 'AA', 'BB', 'BB']
+['HH'] ['II', 'AA', 'DD', 'DD']
+['CC'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['AA', 'II', 'JJ', 'JJ']
+['HH', 'HH'] ['CC', 'CC']
+['HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['CC', 'CC']
+['II', 'JJ', 'JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'BB', 'BB'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'BB', 'BB'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['GG', 'HH', 'HH'] ['BB', 'BB']
+['GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['BB', 'BB']
+['AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['BB', 'BB'] ['HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['BB'] ['II', 'AA', 'DD', 'CC', 'CC']
+['BB'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['II', 'AA', 'BB', 'BB']
+['CC'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['HH'] ['II', 'AA', 'BB', 'BB']
+['HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['CC', 'DD', 'DD'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'CC'] ['FF', 'EE', 'DD', 'DD']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'DD']
+['CC', 'CC'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['CC', 'DD', 'DD'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'DD'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['BB', 'BB'] ['FF', 'EE', 'DD', 'DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'DD']
+['BB', 'BB'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'DD'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['BB', 'BB'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['BB', 'BB'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['II', 'AA', 'DD', 'CC', 'CC'] ['EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'DD', 'DD'] ['EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['EE', 'DD', 'CC', 'CC']
+['II', 'AA', 'DD', 'DD'] ['EE', 'DD', 'CC', 'CC']
+['II', 'AA', 'BB', 'BB'] ['EE', 'DD', 'DD']
+['II', 'AA', 'DD', 'CC', 'CC'] ['EE', 'DD', 'DD']
+['CC'] ['CC', 'DD', 'DD']
+['CC'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'CC'] ['BB']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['BB']
+['HH'] ['CC', 'CC']
+['HH'] ['CC', 'DD', 'DD']
+['BB'] ['DD', 'DD']
+['BB'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'BB', 'BB'] ['CC', 'CC']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['HH'] ['BB', 'BB']
+['HH'] ['DD', 'DD']
+['BB'] ['CC', 'CC']
+['BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['CC', 'BB', 'BB']
+['CC'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['HH'] ['CC', 'BB', 'BB']
+['HH'] ['CC', 'CC']
+['CC', 'CC'] ['GG', 'HH', 'HH']
+['CC', 'DD', 'DD'] ['GG', 'HH', 'HH']
+['BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'BB', 'BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'CC'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['HH'] ['EE', 'EE']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['EE']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['EE']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'EE'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['EE']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['EE']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['DD']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['AA', 'DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'EE'] ['AA', 'DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['AA', 'DD', 'DD']
+['GG', 'FF', 'EE', 'EE'] ['AA', 'DD', 'DD']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['AA', 'DD', 'EE', 'EE']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['AA', 'DD', 'EE', 'EE']
+['GG', 'FF', 'EE', 'EE'] ['DD', 'DD']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'DD']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['DD', 'EE', 'EE']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'EE'] ['BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['EE']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['EE']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['CC', 'BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['DD']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['AA', 'II', 'JJ', 'JJ']
+['EE', 'DD', 'CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'DD']
+['EE', 'DD', 'CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'EE', 'EE']
+['EE', 'DD', 'DD'] ['II', 'AA', 'BB', 'BB']
+['EE', 'DD', 'DD'] ['II', 'AA', 'DD', 'EE', 'EE']
+['EE', 'EE'] ['II', 'AA', 'BB', 'BB']
+['EE', 'EE'] ['II', 'AA', 'DD', 'DD']
+['GG', 'FF', 'EE', 'EE'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['DD', 'EE', 'EE']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['HH'] ['CC', 'DD', 'EE', 'EE']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['EE']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['EE']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['AA', 'BB', 'BB']
+['GG', 'FF', 'EE', 'EE'] ['AA', 'BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['AA', 'DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'EE'] ['AA', 'DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['AA', 'DD', 'EE', 'EE']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['AA', 'DD', 'EE', 'EE']
+['FF', 'EE', 'DD', 'CC', 'CC'] ['CC', 'DD', 'DD']
+['FF', 'EE', 'DD', 'CC', 'CC'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'DD'] ['CC', 'CC']
+['FF', 'EE', 'DD', 'DD'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'CC']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'DD', 'DD']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['BB']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['DD']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['II', 'JJ', 'JJ']
+['EE', 'DD', 'CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'CC', 'CC']
+['EE', 'DD', 'CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'DD']
+['EE', 'DD', 'CC', 'CC'] ['II', 'AA', 'BB', 'BB']
+['EE', 'DD', 'CC', 'CC'] ['II', 'AA', 'DD', 'DD']
+['EE', 'DD', 'DD'] ['II', 'AA', 'BB', 'BB']
+['EE', 'DD', 'DD'] ['II', 'AA', 'DD', 'CC', 'CC']
+['FF', 'EE', 'DD', 'CC', 'CC'] ['CC', 'DD', 'DD']
+['FF', 'EE', 'DD', 'CC', 'CC'] ['CC', 'DD', 'EE', 'EE']
+['FF', 'EE', 'DD', 'DD'] ['CC', 'CC']
+['FF', 'EE', 'DD', 'DD'] ['CC', 'DD', 'EE', 'EE']
+['FF', 'EE', 'EE'] ['CC', 'CC']
+['FF', 'EE', 'EE'] ['CC', 'DD', 'DD']
+['EE', 'DD', 'CC', 'BB', 'BB'] ['DD', 'DD']
+['EE', 'DD', 'CC', 'BB', 'BB'] ['DD', 'EE', 'EE']
+['EE', 'DD', 'DD'] ['BB', 'BB']
+['EE', 'DD', 'DD'] ['DD', 'EE', 'EE']
+['EE', 'EE'] ['BB', 'BB']
+['EE', 'EE'] ['DD', 'DD']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['CC', 'CC']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['EE', 'EE']
+['FF', 'EE', 'DD', 'CC', 'CC'] ['CC', 'BB', 'BB']
+['FF', 'EE', 'DD', 'CC', 'CC'] ['EE', 'EE']
+['FF', 'EE', 'EE'] ['CC', 'BB', 'BB']
+['FF', 'EE', 'EE'] ['CC', 'CC']
+['EE', 'DD', 'CC', 'BB', 'BB'] ['DD', 'CC', 'CC']
+['EE', 'DD', 'CC', 'BB', 'BB'] ['DD', 'DD']
+['EE', 'DD', 'CC', 'CC'] ['DD', 'CC', 'BB', 'BB']
+['EE', 'DD', 'CC', 'CC'] ['DD', 'DD']
+['EE', 'DD', 'DD'] ['DD', 'CC', 'BB', 'BB']
+['EE', 'DD', 'DD'] ['DD', 'CC', 'CC']
+['AA', 'DD', 'DD'] ['DD', 'EE', 'EE']
+['AA', 'DD', 'DD'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'EE', 'EE'] ['DD', 'DD']
+['AA', 'DD', 'EE', 'EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['DD', 'CC', 'CC'] ['EE', 'EE']
+['DD', 'CC', 'CC'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['CC', 'CC']
+['DD', 'EE', 'EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['CC', 'CC'] ['DD', 'DD']
+['CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['DD'] ['DD', 'CC', 'CC']
+['DD'] ['FF', 'GG', 'HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'CC']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['DD', 'DD'] ['HH']
+['DD', 'EE', 'EE'] ['HH']
+['CC', 'CC'] ['HH', 'HH']
+['EE', 'EE'] ['HH', 'HH']
+['DD', 'CC', 'CC'] ['HH']
+['DD', 'DD'] ['HH']
+['AA', 'DD', 'DD'] ['CC', 'DD', 'EE', 'EE']
+['AA', 'DD', 'DD'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'EE', 'EE'] ['CC', 'DD', 'DD']
+['AA', 'DD', 'EE', 'EE'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'DD', 'DD']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'DD', 'EE', 'EE']
+['AA', 'BB', 'BB'] ['EE', 'EE']
+['AA', 'BB', 'BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'EE', 'EE'] ['CC', 'BB', 'BB']
+['AA', 'DD', 'EE', 'EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['BB', 'BB'] ['DD', 'DD']
+['BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['DD', 'CC', 'BB', 'BB']
+['DD', 'DD'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'BB', 'BB']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['CC', 'DD', 'DD'] ['HH']
+['CC', 'DD', 'EE', 'EE'] ['HH']
+['CC', 'BB', 'BB'] ['HH']
+['EE', 'EE'] ['HH']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['DD', 'CC', 'CC'] ['CC', 'DD', 'EE', 'EE']
+['DD', 'CC', 'CC'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['CC', 'CC']
+['DD', 'EE', 'EE'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'DD', 'EE', 'EE']
+['AA', 'BB', 'BB'] ['DD', 'EE', 'EE']
+['AA', 'BB', 'BB'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'EE', 'EE'] ['BB', 'BB']
+['AA', 'DD', 'EE', 'EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['AA', 'BB', 'BB'] ['DD', 'CC', 'CC']
+['AA', 'BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'CC', 'CC'] ['DD', 'CC', 'BB', 'BB']
+['AA', 'DD', 'CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'BB', 'BB']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'CC']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['BB'] ['GG', 'FF', 'EE', 'EE']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['CC'] ['GG', 'FF', 'EE', 'EE']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'CC'] ['CC', 'DD', 'DD']
+['CC', 'CC'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD'] ['CC', 'CC']
+['DD'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'DD', 'DD']
+['BB', 'BB'] ['DD', 'DD']
+['BB', 'BB'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['BB', 'BB']
+['DD', 'DD'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['AA', 'BB', 'BB'] ['CC', 'CC']
+['AA', 'BB', 'BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'CC', 'CC'] ['CC', 'BB', 'BB']
+['AA', 'DD', 'CC', 'CC'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['CC', 'CC'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['CC', 'CC'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['DD'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'DD', 'DD'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'CC'] ['FF', 'EE', 'DD', 'DD']
+['CC', 'DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'DD']
+['CC', 'CC'] ['FF', 'EE', 'EE']
+['CC', 'DD', 'DD'] ['FF', 'EE', 'EE']
+['DD', 'DD'] ['EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'EE', 'EE'] ['EE', 'DD', 'CC', 'BB', 'BB']
+['BB', 'BB'] ['EE', 'DD', 'DD']
+['DD', 'EE', 'EE'] ['EE', 'DD', 'DD']
+['BB', 'BB'] ['EE', 'EE']
+['DD', 'DD'] ['EE', 'EE']
+['CC', 'CC'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['EE', 'EE'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['CC', 'BB', 'BB'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['EE', 'EE'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'BB', 'BB'] ['FF', 'EE', 'EE']
+['CC', 'CC'] ['FF', 'EE', 'EE']
+['DD', 'CC', 'CC'] ['EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'DD'] ['EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['EE', 'DD', 'CC', 'CC']
+['DD', 'DD'] ['EE', 'DD', 'CC', 'CC']
+['DD', 'CC', 'BB', 'BB'] ['EE', 'DD', 'DD']
+['DD', 'CC', 'CC'] ['EE', 'DD', 'DD']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['HH', 'HH']
+['JJ'] ['GG', 'FF', 'EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['JJ']
+['HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['DD'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['HH', 'HH'] ['II', 'AA', 'DD', 'DD']
+['HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['JJ', 'JJ']
+['GG', 'FF', 'EE', 'EE'] ['AA', 'DD', 'DD']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['AA', 'DD', 'EE', 'EE']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['II', 'AA', 'DD', 'EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD']
+['II', 'AA', 'DD', 'DD'] ['GG', 'HH', 'HH']
+['DD'] ['GG', 'FF', 'EE', 'EE']
+['EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['JJ', 'JJ']
+['GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['JJ'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'EE'] ['GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['HH']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'EE']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['DD', 'CC', 'CC'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['II', 'AA', 'DD', 'CC', 'CC'] ['FF', 'EE', 'EE']
+['EE', 'EE'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'CC', 'CC']
+['DD', 'CC', 'CC'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'FF', 'EE', 'EE'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['EE']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['JJ', 'JJ']
+['HH', 'HH'] ['II', 'AA', 'DD', 'DD']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['JJ']
+['HH', 'HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['JJ', 'JJ']
+['HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['AA', 'DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['AA', 'DD', 'DD']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD']
+['II', 'AA', 'DD', 'DD'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC']
+['II', 'AA', 'DD', 'CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'CC', 'CC'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['AA', 'DD', 'DD'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'EE']
+['EE', 'EE'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'DD']
+['DD', 'DD'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'EE', 'EE'] ['DD', 'DD']
+['II', 'AA', 'DD', 'DD'] ['EE']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'EE']
+['DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['DD', 'CC', 'CC'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'EE', 'EE'] ['DD', 'CC', 'CC']
+['II', 'AA', 'DD', 'CC', 'CC'] ['EE']
+['AA', 'II', 'JJ', 'JJ'] ['DD', 'CC', 'CC']
+['JJ'] ['DD', 'DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD']
+['JJ'] ['CC', 'CC']
+['DD', 'DD'] ['AA', 'II', 'JJ', 'JJ']
+['CC', 'CC'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['EE', 'EE'] ['CC']
+['EE'] ['DD', 'DD']
+['CC'] ['EE', 'EE']
+['EE'] ['CC', 'CC']
+['CC', 'CC'] ['DD', 'DD']
+['DD'] ['DD', 'CC', 'CC']
+['EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['EE', 'EE']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['HH', 'HH'] ['DD', 'DD']
+['EE', 'EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['CC']
+['HH', 'HH'] ['DD', 'EE', 'EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['HH', 'HH'] ['DD', 'CC', 'CC']
+['DD', 'EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['DD'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['HH', 'HH'] ['DD', 'DD']
+['CC', 'CC'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['CC', 'CC']
+['DD', 'DD'] ['HH', 'HH']
+['CC', 'CC'] ['GG', 'HH', 'HH']
+['GG', 'FF', 'EE', 'EE'] ['DD']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['EE', 'EE']
+['HH'] ['DD', 'EE', 'EE']
+['HH'] ['DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['JJ'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'EE'] ['HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['JJ', 'JJ']
+['JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'DD'] ['HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['HH', 'HH']
+['JJ'] ['GG', 'FF', 'EE', 'EE']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['AA', 'DD', 'DD'] ['GG', 'FF', 'EE', 'EE']
+['AA', 'DD', 'EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['EE'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'DD']
+['DD', 'DD'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'FF', 'EE', 'EE'] ['DD']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['EE', 'EE']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['II', 'AA', 'DD', 'EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'BB', 'BB']
+['JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'EE']
+['CC', 'BB', 'BB'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['FF', 'EE', 'EE']
+['DD', 'EE', 'EE'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'FF', 'EE', 'EE'] ['BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['JJ']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD']
+['II', 'AA', 'DD', 'DD'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['II', 'AA', 'BB', 'BB']
+['JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'BB', 'BB'] ['HH']
+['DD', 'DD'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['BB', 'BB'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'DD', 'DD'] ['EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['EE', 'DD', 'DD']
+['DD'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'DD']
+['BB'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['II', 'AA', 'BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['DD', 'DD']
+['AA', 'II', 'JJ', 'JJ'] ['EE', 'EE']
+['EE', 'EE'] ['EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'DD']
+['DD', 'DD'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'EE', 'EE'] ['DD', 'DD']
+['II', 'AA', 'DD', 'DD'] ['EE']
+['AA', 'II', 'JJ', 'JJ'] ['EE', 'EE']
+['CC', 'DD', 'EE', 'EE'] ['EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'EE', 'EE'] ['DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['EE']
+['AA', 'II', 'JJ', 'JJ'] ['DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'DD', 'DD'] ['BB']
+['BB'] ['AA', 'II', 'JJ', 'JJ']
+['JJ'] ['CC', 'BB', 'BB']
+['CC', 'DD', 'DD'] ['II', 'JJ', 'JJ']
+['CC', 'BB', 'BB'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['EE', 'EE'] ['BB']
+['EE'] ['CC', 'DD', 'DD']
+['BB'] ['EE', 'EE']
+['EE', 'EE'] ['CC', 'BB', 'BB']
+['BB', 'BB'] ['DD', 'DD']
+['DD', 'DD'] ['DD', 'CC', 'BB', 'BB']
+['EE'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'DD', 'EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['DD', 'DD'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['HH'] ['EE', 'EE']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['EE']
+['DD', 'EE', 'EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['HH'] ['CC', 'DD', 'EE', 'EE']
+['HH'] ['DD', 'CC', 'BB', 'BB']
+['DD'] ['FF', 'GG', 'HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['BB'] ['FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['DD', 'CC', 'BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['BB', 'BB']
+['HH'] ['CC', 'BB', 'BB']
+['EE', 'EE'] ['HH', 'HH']
+['DD', 'DD'] ['HH']
+['CC', 'DD', 'EE', 'EE'] ['HH', 'HH']
+['DD', 'CC', 'BB', 'BB'] ['GG', 'HH', 'HH']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['CC', 'BB', 'BB'] ['HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'EE'] ['JJ']
+['JJ'] ['FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'EE'] ['GG', 'HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['II', 'AA', 'DD', 'CC', 'CC'] ['GG', 'HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ'] ['GG', 'FF', 'EE', 'EE']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['DD', 'CC', 'CC'] ['GG', 'FF', 'EE', 'EE']
+['DD', 'EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['EE', 'EE'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['CC', 'CC'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'EE'] ['DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['DD', 'EE', 'EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['JJ'] ['GG', 'FF', 'EE', 'EE']
+['EE'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'EE', 'EE']
+['GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['BB'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['HH'] ['II', 'AA', 'BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['EE', 'EE']
+['GG', 'FF', 'EE', 'EE'] ['JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'EE', 'EE']
+['FF', 'EE', 'EE'] ['II', 'AA', 'BB', 'BB']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['II', 'AA', 'DD', 'EE', 'EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['GG', 'HH', 'HH']
+['BB'] ['GG', 'FF', 'EE', 'EE']
+['EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['JJ']
+['FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['JJ', 'JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['JJ', 'JJ']
+['HH', 'HH'] ['II', 'AA', 'BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'CC', 'CC']
+['FF', 'EE', 'DD', 'CC', 'CC'] ['II', 'AA', 'BB', 'BB']
+['AA', 'DD', 'CC', 'CC'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['BB']
+['II', 'AA', 'BB', 'BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['AA', 'BB', 'BB'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['AA', 'DD', 'CC', 'CC'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'EE']
+['DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'CC', 'CC']
+['DD', 'CC', 'CC'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'EE', 'EE'] ['DD', 'CC', 'CC']
+['II', 'AA', 'DD', 'CC', 'CC'] ['EE']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'EE']
+['CC', 'DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'EE', 'EE'] ['DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['EE']
+['AA', 'II', 'JJ', 'JJ'] ['EE', 'DD', 'CC', 'CC']
+['CC', 'CC'] ['EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['BB', 'BB'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'CC', 'CC'] ['DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['DD', 'CC', 'CC']
+['DD', 'EE', 'EE'] ['BB']
+['DD', 'CC', 'CC'] ['BB']
+['CC', 'DD', 'EE', 'EE'] ['CC']
+['EE'] ['BB', 'BB']
+['BB'] ['DD', 'CC', 'CC']
+['CC', 'CC'] ['DD', 'CC', 'BB', 'BB']
+['EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'CC']
+['DD', 'EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['HH', 'HH']
+['EE'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['CC', 'DD', 'EE', 'EE']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['HH', 'HH'] ['DD', 'CC', 'BB', 'BB']
+['CC', 'DD', 'EE', 'EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['CC'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['HH'] ['CC', 'CC']
+['BB'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['HH'] ['BB', 'BB']
+['CC', 'CC'] ['GG', 'HH', 'HH']
+['BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['GG', 'FF', 'EE', 'EE'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['DD', 'EE', 'EE']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['DD', 'EE', 'EE']
+['FF', 'EE', 'EE'] ['BB', 'BB']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['DD', 'CC', 'CC']
+['FF', 'EE', 'DD', 'CC', 'CC'] ['DD', 'CC', 'BB', 'BB']
+['AA', 'II', 'JJ', 'JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'II', 'JJ', 'JJ']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['JJ', 'JJ']
+['JJ', 'JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'DD'] ['HH', 'HH']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['JJ', 'JJ']
+['JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH']
+['JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['HH', 'HH']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['AA', 'DD', 'CC', 'CC'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['AA', 'DD', 'DD'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'DD']
+['DD', 'DD'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['II', 'AA', 'DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['AA', 'DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['AA', 'DD', 'DD']
+['AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['JJ']
+['JJ'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'DD'] ['GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['HH', 'HH']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['JJ']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['JJ']
+['JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'BB', 'BB'] ['HH']
+['DD', 'DD'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'DD', 'DD'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['FF', 'EE', 'DD', 'DD']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'DD']
+['CC', 'DD', 'DD'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['BB'] ['II', 'AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['II', 'AA', 'BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['AA', 'BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['AA', 'DD', 'DD']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['II', 'JJ', 'JJ']
+['HH'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['JJ', 'JJ']
+['JJ'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'DD', 'CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['JJ', 'JJ']
+['HH'] ['AA', 'II', 'JJ', 'JJ']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['JJ', 'JJ']
+['JJ', 'JJ'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['II', 'AA', 'BB', 'BB'] ['HH', 'HH']
+['AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'CC'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['BB'] ['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'DD', 'CC', 'CC'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'DD', 'CC', 'CC']
+['CC', 'CC'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['AA', 'BB', 'BB']
+['BB', 'BB'] ['AA', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['AA', 'BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['AA', 'DD', 'CC', 'CC']
+['AA', 'II', 'JJ', 'JJ'] ['CC', 'CC']
+['II', 'AA', 'DD', 'DD'] ['CC']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'DD']
+['JJ'] ['CC', 'CC']
+['DD', 'DD'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['CC', 'CC'] ['AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'DD', 'DD'] ['BB']
+['AA', 'II', 'JJ', 'JJ'] ['DD', 'DD']
+['JJ'] ['CC', 'BB', 'BB']
+['CC', 'DD', 'DD'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['CC', 'BB', 'BB'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['AA', 'II', 'JJ', 'JJ'] ['EE', 'DD', 'CC', 'CC']
+['CC', 'CC'] ['EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['BB', 'BB'] ['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ']
+['II', 'AA', 'DD', 'CC', 'CC'] ['DD', 'CC', 'BB', 'BB']
+['II', 'AA', 'BB', 'BB'] ['DD', 'CC', 'CC']
+['CC'] ['CC', 'DD', 'DD']
+['CC', 'CC'] ['BB']
+['BB'] ['DD', 'DD']
+['DD'] ['BB', 'BB']
+['BB'] ['CC', 'CC']
+['CC', 'CC'] ['CC', 'BB', 'BB']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['DD', 'DD'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['CC']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['DD', 'DD']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD']
+['CC', 'DD', 'DD'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['BB'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'DD'] ['BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['DD']
+['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['CC']
+['CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['GG', 'FF', 'EE', 'DD', 'CC', 'CC'] ['BB', 'BB']
+['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['CC']
+['DD', 'DD'] ['HH']
+['DD'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'DD', 'DD'] ['HH', 'HH']
+['CC', 'BB', 'BB'] ['HH', 'HH']
+['CC', 'CC'] ['HH', 'HH']
+['BB', 'BB'] ['GG', 'HH', 'HH']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['EE']
+['GG', 'FF', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'DD'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'DD']
+['DD', 'DD'] ['II', 'AA', 'DD', 'EE', 'EE']
+['EE'] ['II', 'AA', 'DD', 'DD']
+['FF', 'EE', 'EE'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['FF', 'EE', 'DD', 'CC', 'CC'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'CC', 'CC']
+['DD', 'CC', 'CC'] ['II', 'AA', 'DD', 'EE', 'EE']
+['EE'] ['II', 'AA', 'DD', 'CC', 'CC']
+['EE', 'DD', 'DD'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'DD']
+['FF', 'EE', 'DD', 'CC', 'CC'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'CC']
+['CC', 'CC'] ['II', 'AA', 'DD', 'DD']
+['DD'] ['II', 'AA', 'DD', 'CC', 'CC']
+['DD'] ['DD', 'EE', 'EE']
+['EE'] ['DD', 'DD']
+['DD', 'CC', 'CC'] ['EE', 'EE']
+['EE'] ['CC', 'CC']
+['CC', 'CC'] ['DD', 'DD']
+['DD'] ['DD', 'CC', 'CC']
+['EE', 'EE'] ['AA', 'II', 'JJ', 'JJ']
+['EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['EE', 'EE']
+['DD', 'DD'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'DD']
+['DD', 'DD'] ['II', 'AA', 'DD', 'EE', 'EE']
+['EE'] ['II', 'AA', 'DD', 'DD']
+['EE', 'EE'] ['AA', 'II', 'JJ', 'JJ']
+['EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'DD', 'EE', 'EE']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'CC', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'EE', 'EE']
+['EE'] ['II', 'AA', 'BB', 'BB']
+['DD', 'DD'] ['AA', 'II', 'JJ', 'JJ']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'DD', 'DD']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'BB', 'BB']
+['CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'DD']
+['DD'] ['II', 'AA', 'BB', 'BB']
+['BB'] ['EE', 'EE']
+['BB'] ['DD', 'DD']
+['EE', 'EE'] ['BB']
+['CC', 'BB', 'BB'] ['EE', 'EE']
+['DD', 'DD'] ['BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['DD', 'DD']
+['FF', 'EE', 'EE'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['DD', 'CC', 'CC'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'CC', 'CC']
+['DD', 'CC', 'CC'] ['II', 'AA', 'DD', 'EE', 'EE']
+['EE'] ['II', 'AA', 'DD', 'CC', 'CC']
+['GG', 'FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'EE', 'EE']
+['GG', 'FF', 'EE', 'EE'] ['II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'CC', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'EE', 'EE']
+['EE'] ['II', 'AA', 'BB', 'BB']
+['EE', 'DD', 'CC', 'CC'] ['AA', 'II', 'JJ', 'JJ']
+['EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'CC']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'CC', 'CC']
+['DD', 'CC', 'CC'] ['II', 'AA', 'BB', 'BB']
+['DD', 'CC', 'CC'] ['CC', 'DD', 'EE', 'EE']
+['EE'] ['CC', 'CC']
+['CC', 'BB', 'BB'] ['DD', 'EE', 'EE']
+['EE'] ['BB', 'BB']
+['CC', 'BB', 'BB'] ['DD', 'CC', 'CC']
+['CC', 'CC'] ['DD', 'CC', 'BB', 'BB']
+['CC', 'CC'] ['AA', 'II', 'JJ', 'JJ']
+['CC'] ['II', 'AA', 'DD', 'DD']
+['DD', 'DD'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['DD'] ['II', 'AA', 'DD', 'CC', 'CC']
+['DD', 'AA', 'II', 'JJ', 'JJ'] ['DD', 'DD']
+['AA', 'II', 'JJ', 'JJ'] ['CC', 'CC']
+['FF', 'EE', 'DD', 'DD'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'DD', 'DD']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'BB', 'BB']
+['CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'DD']
+['DD'] ['II', 'AA', 'BB', 'BB']
+['EE', 'DD', 'CC', 'CC'] ['AA', 'II', 'JJ', 'JJ']
+['EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['CC', 'CC']
+['FF', 'EE', 'DD', 'CC', 'BB', 'BB'] ['DD', 'AA', 'II', 'JJ', 'JJ']
+['FF', 'EE', 'DD', 'AA', 'II', 'JJ', 'JJ'] ['BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['II', 'AA', 'DD', 'CC', 'CC']
+['DD', 'CC', 'CC'] ['II', 'AA', 'BB', 'BB']
+['BB'] ['DD', 'DD']
+['BB'] ['CC', 'CC']
+['CC'] ['CC', 'DD', 'DD']
+['CC'] ['CC', 'BB', 'BB']
+['CC', 'CC'] ['BB']
+['CC', 'BB', 'BB'] ['CC', 'CC']
+['CC', 'CC'] ['EE', 'EE']
+['CC'] ['DD', 'DD']
+['DD', 'DD'] ['DD', 'EE', 'EE']
+['DD'] ['DD', 'CC', 'CC']
+['EE'] ['DD', 'DD']
+['EE'] ['CC', 'CC']
+['CC', 'BB', 'BB'] ['EE', 'EE']
+['BB', 'BB'] ['DD', 'DD']
+['DD'] ['CC', 'DD', 'EE', 'EE']
+['DD'] ['DD', 'CC', 'BB', 'BB']
+['EE'] ['CC', 'DD', 'DD']
+['EE'] ['CC', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['DD', 'EE', 'EE']
+['DD', 'CC', 'BB', 'BB'] ['DD', 'CC', 'CC']
+['CC', 'CC'] ['CC', 'DD', 'EE', 'EE']
+['DD', 'CC', 'CC'] ['DD', 'CC', 'BB', 'BB']
+['EE'] ['CC', 'CC']
+['EE'] ['BB', 'BB']
+['BB', 'BB'] ['DD', 'DD']
+['CC', 'BB', 'BB'] ['CC', 'CC']
+['CC'] ['CC', 'DD', 'DD']
+['CC', 'CC'] ['CC', 'BB', 'BB']
+['CC', 'CC'] ['BB']
+['DD'] ['BB', 'BB']
+['DD'] ['FF', 'GG', 'HH', 'HH']
+['EE', 'EE'] ['GG', 'HH', 'HH']
+['EE', 'EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'DD']
+['CC'] ['FF', 'GG', 'HH', 'HH']
+['DD', 'EE', 'EE'] ['HH', 'HH']
+['EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'CC']
+['CC'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['CC', 'CC'] ['GG', 'HH', 'HH']
+['HH', 'HH'] ['DD', 'DD']
+['GG', 'HH', 'HH'] ['CC', 'CC']
+['DD'] ['GG', 'FF', 'EE', 'EE']
+['EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['CC'] ['GG', 'FF', 'EE', 'EE']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'CC'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['DD'] ['GG', 'FF', 'EE', 'DD', 'CC', 'CC']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['EE'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'DD'] ['GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['EE', 'EE']
+['GG', 'HH', 'HH'] ['DD', 'DD']
+['BB'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'EE'] ['HH', 'HH']
+['EE'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'BB', 'BB'] ['HH']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'DD', 'EE', 'EE']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'BB', 'BB']
+['BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'DD'] ['HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['CC', 'BB', 'BB'] ['HH', 'HH']
+['HH', 'HH'] ['CC', 'DD', 'DD']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['DD', 'DD'] ['GG', 'FF', 'EE', 'EE']
+['DD', 'EE', 'EE'] ['GG', 'FF', 'EE', 'DD', 'DD']
+['BB', 'BB'] ['GG', 'FF', 'EE', 'EE']
+['EE'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'DD'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['FF', 'EE', 'DD', 'DD']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['EE']
+['DD', 'EE', 'EE'] ['FF', 'GG', 'HH', 'HH']
+['EE'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'CC'] ['FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'EE', 'EE']
+['HH', 'HH'] ['DD', 'CC', 'CC']
+['BB'] ['FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'EE', 'EE'] ['GG', 'HH', 'HH']
+['EE', 'EE'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['DD', 'CC', 'BB', 'BB'] ['HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['CC', 'DD', 'EE', 'EE']
+['FF', 'GG', 'HH', 'HH'] ['DD', 'CC', 'BB', 'BB']
+['BB'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'CC'] ['HH']
+['CC'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC'] ['GG', 'FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['GG', 'HH', 'HH'] ['CC', 'CC']
+['FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['CC', 'DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'CC'] ['FF', 'EE', 'EE']
+['DD', 'EE', 'EE'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['BB', 'BB'] ['FF', 'EE', 'EE']
+['DD', 'CC', 'CC'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['DD', 'CC', 'BB', 'BB'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['DD', 'EE', 'FF', 'GG', 'HH', 'HH'] ['DD']
+['DD', 'DD'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['CC']
+['CC', 'CC'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['GG', 'HH', 'HH'] ['DD', 'DD']
+['HH', 'HH'] ['CC', 'CC']
+['BB'] ['EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'DD', 'DD'] ['FF', 'GG', 'HH', 'HH']
+['DD'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'BB', 'BB'] ['FF', 'GG', 'HH', 'HH']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'DD', 'DD']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'BB', 'BB']
+['BB'] ['DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['CC', 'CC'] ['HH', 'HH']
+['CC'] ['CC', 'DD', 'EE', 'FF', 'GG', 'HH', 'HH']
+['BB', 'BB'] ['HH']
+['FF', 'GG', 'HH', 'HH'] ['CC', 'CC']
+['EE', 'FF', 'GG', 'HH', 'HH'] ['BB', 'BB']
+['CC', 'DD', 'DD'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['CC', 'CC'] ['FF', 'EE', 'DD', 'DD']
+['DD', 'DD'] ['EE', 'DD', 'CC', 'BB', 'BB']
+['BB', 'BB'] ['EE', 'DD', 'DD']
+['CC', 'CC'] ['FF', 'EE', 'DD', 'CC', 'BB', 'BB']
+['CC', 'BB', 'BB'] ['FF', 'EE', 'DD', 'CC', 'CC']
+['EE', 'EE'] ['CC', 'CC']
+['DD', 'DD'] ['CC']
+['DD', 'EE', 'EE'] ['DD', 'DD']
+['EE'] ['CC', 'CC']
+['DD', 'DD'] ['EE']
+['DD'] ['DD', 'CC', 'CC']
+['EE', 'EE'] ['CC', 'BB', 'BB']
+['DD', 'DD'] ['BB', 'BB']
+['CC', 'DD', 'EE', 'EE'] ['DD']
+['EE'] ['CC', 'BB', 'BB']
+['BB'] ['DD', 'DD']
+['DD'] ['DD', 'CC', 'BB', 'BB']
+['DD', 'EE', 'EE'] ['DD', 'CC', 'BB', 'BB']
+['DD', 'CC', 'CC'] ['DD', 'CC', 'BB', 'BB']
+['CC', 'DD', 'EE', 'EE'] ['CC', 'CC']
+['DD', 'CC', 'BB', 'BB'] ['DD', 'CC', 'CC']
+['BB'] ['DD', 'CC', 'CC']
+['BB', 'BB'] ['EE']
+['DD', 'DD'] ['BB', 'BB']
+['CC', 'CC'] ['CC', 'BB', 'BB']
+['BB'] ['DD', 'DD']
+['CC', 'BB', 'BB'] ['CC', 'CC']
+['BB'] ['CC', 'CC']
+['CC'] ['CC', 'BB', 'BB']
+If I do this methodically I should be able to release 1672 units of pressure and save the elephants and me before the volcano erupts!
 ['AA', 'DD', 'EE', 'HH']
-BB
-CC
-JJ
-['AA', 'DD', 'EE', 'JJ']
-BB
-CC
-HH
-['AA', 'DD', 'HH', 'BB']
-CC
-EE
-JJ
-['AA', 'DD', 'HH', 'CC']
-BB
-EE
-JJ
-['AA', 'DD', 'HH', 'EE']
-BB
-CC
-JJ
-['AA', 'DD', 'HH', 'JJ']
-BB
-CC
-EE
-['AA', 'DD', 'JJ', 'BB']
-CC
-EE
-HH
-['AA', 'DD', 'JJ', 'CC']
-BB
-EE
-HH
-['AA', 'DD', 'JJ', 'EE']
-BB
-CC
-HH
-['AA', 'DD', 'JJ', 'HH']
-BB
-CC
-EE
-['AA', 'EE', 'BB', 'CC']
-DD
-HH
-JJ
-['AA', 'EE', 'BB', 'DD']
-CC
-HH
-JJ
-['AA', 'EE', 'BB', 'HH']
-CC
-DD
-JJ
-['AA', 'EE', 'BB', 'JJ']
-CC
-DD
-HH
-['AA', 'EE', 'CC', 'BB']
-DD
-HH
-JJ
-['AA', 'EE', 'CC', 'DD']
-BB
-HH
-JJ
-['AA', 'EE', 'CC', 'HH']
-BB
-DD
-JJ
-['AA', 'EE', 'CC', 'JJ']
-BB
-DD
-HH
-['AA', 'EE', 'DD', 'BB']
-CC
-HH
-JJ
-['AA', 'EE', 'DD', 'CC']
-BB
-HH
-JJ
-['AA', 'EE', 'DD', 'HH']
-BB
-CC
-JJ
-['AA', 'EE', 'DD', 'JJ']
-BB
-CC
-HH
-['AA', 'EE', 'HH', 'BB']
-CC
-DD
-JJ
-['AA', 'EE', 'HH', 'CC']
-BB
-DD
-JJ
-['AA', 'EE', 'HH', 'DD']
-BB
-CC
-JJ
-['AA', 'EE', 'HH', 'JJ']
-BB
-CC
-DD
-['AA', 'EE', 'JJ', 'BB']
-CC
-DD
-HH
-['AA', 'EE', 'JJ', 'CC']
-BB
-DD
-HH
-['AA', 'EE', 'JJ', 'DD']
-BB
-CC
-HH
-['AA', 'EE', 'JJ', 'HH']
-BB
-CC
-DD
-['AA', 'HH', 'BB', 'CC']
-DD
-EE
-JJ
-['AA', 'HH', 'BB', 'DD']
-CC
-EE
-JJ
-['AA', 'HH', 'BB', 'EE']
-CC
-DD
-JJ
-['AA', 'HH', 'BB', 'JJ']
-CC
-DD
-EE
-['AA', 'HH', 'CC', 'BB']
-DD
-EE
-JJ
-['AA', 'HH', 'CC', 'DD']
-BB
-EE
-JJ
-['AA', 'HH', 'CC', 'EE']
-BB
-DD
-JJ
-['AA', 'HH', 'CC', 'JJ']
-BB
-DD
-EE
-['AA', 'HH', 'DD', 'BB']
-CC
-EE
-JJ
-['AA', 'HH', 'DD', 'CC']
-BB
-EE
-JJ
-['AA', 'HH', 'DD', 'EE']
-BB
-CC
-JJ
-['AA', 'HH', 'DD', 'JJ']
-BB
-CC
-EE
-['AA', 'HH', 'EE', 'BB']
-CC
-DD
-JJ
-['AA', 'HH', 'EE', 'CC']
-BB
-DD
-JJ
-['AA', 'HH', 'EE', 'DD']
-BB
-CC
-JJ
-['AA', 'HH', 'EE', 'JJ']
-BB
-CC
-DD
-['AA', 'HH', 'JJ', 'BB']
-CC
-DD
-EE
-['AA', 'HH', 'JJ', 'CC']
-BB
-DD
-EE
-['AA', 'HH', 'JJ', 'DD']
-BB
-CC
-EE
-['AA', 'HH', 'JJ', 'EE']
-BB
-CC
-DD
-['AA', 'JJ', 'BB', 'CC']
-DD
-EE
-HH
-['AA', 'JJ', 'BB', 'DD']
-CC
-EE
-HH
-['AA', 'JJ', 'BB', 'EE']
-CC
-DD
-HH
-['AA', 'JJ', 'BB', 'HH']
-CC
-DD
-EE
-['AA', 'JJ', 'CC', 'BB']
-DD
-EE
-HH
-['AA', 'JJ', 'CC', 'DD']
-BB
-EE
-HH
-['AA', 'JJ', 'CC', 'EE']
-BB
-DD
-HH
-['AA', 'JJ', 'CC', 'HH']
-BB
-DD
-EE
-['AA', 'JJ', 'DD', 'BB']
-CC
-EE
-HH
-['AA', 'JJ', 'DD', 'CC']
-BB
-EE
-HH
-['AA', 'JJ', 'DD', 'EE']
-BB
-CC
-HH
-['AA', 'JJ', 'DD', 'HH']
-BB
-CC
-EE
-['AA', 'JJ', 'EE', 'BB']
-CC
-DD
-HH
-['AA', 'JJ', 'EE', 'CC']
-BB
-DD
-HH
-['AA', 'JJ', 'EE', 'DD']
-BB
-CC
-HH
-['AA', 'JJ', 'EE', 'HH']
-BB
-CC
-DD
-['AA', 'JJ', 'HH', 'BB']
-CC
-DD
-EE
-['AA', 'JJ', 'HH', 'CC']
-BB
-DD
-EE
-['AA', 'JJ', 'HH', 'DD']
-BB
-CC
-EE
-['AA', 'JJ', 'HH', 'EE']
-BB
-CC
-DD
-['AA', 'BB', 'CC', 'DD', 'EE']
-HH
-JJ
-['AA', 'BB', 'CC', 'DD', 'HH']
-EE
-JJ
-['AA', 'BB', 'CC', 'DD', 'JJ']
-EE
-HH
-['AA', 'BB', 'CC', 'EE', 'DD']
-HH
-JJ
-['AA', 'BB', 'CC', 'EE', 'HH']
-DD
-JJ
-['AA', 'BB', 'CC', 'EE', 'JJ']
-DD
-HH
-['AA', 'BB', 'CC', 'HH', 'DD']
-EE
-JJ
-['AA', 'BB', 'CC', 'HH', 'EE']
-DD
-JJ
-['AA', 'BB', 'CC', 'HH', 'JJ']
-DD
-EE
-['AA', 'BB', 'CC', 'JJ', 'DD']
-EE
-HH
-['AA', 'BB', 'CC', 'JJ', 'EE']
-DD
-HH
-['AA', 'BB', 'CC', 'JJ', 'HH']
-DD
-EE
-['AA', 'BB', 'DD', 'CC', 'EE']
-HH
-JJ
-['AA', 'BB', 'DD', 'CC', 'HH']
-EE
-JJ
-['AA', 'BB', 'DD', 'CC', 'JJ']
-EE
-HH
-['AA', 'BB', 'DD', 'EE', 'CC']
-HH
-JJ
-['AA', 'BB', 'DD', 'EE', 'HH']
-CC
-JJ
-['AA', 'BB', 'DD', 'EE', 'JJ']
-CC
-HH
-['AA', 'BB', 'DD', 'HH', 'CC']
-EE
-JJ
-['AA', 'BB', 'DD', 'HH', 'EE']
-CC
-JJ
-['AA', 'BB', 'DD', 'HH', 'JJ']
-CC
-EE
-['AA', 'BB', 'DD', 'JJ', 'CC']
-EE
-HH
-['AA', 'BB', 'DD', 'JJ', 'EE']
-CC
-HH
-['AA', 'BB', 'DD', 'JJ', 'HH']
-CC
-EE
-['AA', 'BB', 'EE', 'CC', 'DD']
-HH
-JJ
-['AA', 'BB', 'EE', 'CC', 'HH']
-DD
-JJ
-['AA', 'BB', 'EE', 'CC', 'JJ']
-DD
-HH
-['AA', 'BB', 'EE', 'DD', 'CC']
-HH
-JJ
-['AA', 'BB', 'EE', 'DD', 'HH']
-CC
-JJ
-['AA', 'BB', 'EE', 'DD', 'JJ']
-CC
-HH
-['AA', 'BB', 'EE', 'HH', 'CC']
-DD
-JJ
-['AA', 'BB', 'EE', 'HH', 'DD']
-CC
-JJ
-['AA', 'BB', 'EE', 'HH', 'JJ']
-CC
-DD
-['AA', 'BB', 'EE', 'JJ', 'CC']
-DD
-HH
-['AA', 'BB', 'EE', 'JJ', 'DD']
-CC
-HH
-['AA', 'BB', 'EE', 'JJ', 'HH']
-CC
-DD
-['AA', 'BB', 'HH', 'CC', 'DD']
-EE
-JJ
-['AA', 'BB', 'HH', 'CC', 'EE']
-DD
-JJ
-['AA', 'BB', 'HH', 'CC', 'JJ']
-DD
-EE
-['AA', 'BB', 'HH', 'DD', 'CC']
-EE
-JJ
-['AA', 'BB', 'HH', 'DD', 'EE']
-CC
-JJ
-['AA', 'BB', 'HH', 'DD', 'JJ']
-CC
-EE
-['AA', 'BB', 'HH', 'EE', 'CC']
-DD
-JJ
-['AA', 'BB', 'HH', 'EE', 'DD']
-CC
-JJ
-['AA', 'BB', 'HH', 'EE', 'JJ']
-CC
-DD
-['AA', 'BB', 'HH', 'JJ', 'CC']
-DD
-EE
-['AA', 'BB', 'HH', 'JJ', 'DD']
-CC
-EE
-['AA', 'BB', 'HH', 'JJ', 'EE']
-CC
-DD
-['AA', 'BB', 'JJ', 'CC', 'DD']
-EE
-HH
-['AA', 'BB', 'JJ', 'CC', 'EE']
-DD
-HH
-['AA', 'BB', 'JJ', 'CC', 'HH']
-DD
-EE
-['AA', 'BB', 'JJ', 'DD', 'CC']
-EE
-HH
-['AA', 'BB', 'JJ', 'DD', 'EE']
-CC
-HH
-['AA', 'BB', 'JJ', 'DD', 'HH']
-CC
-EE
-['AA', 'BB', 'JJ', 'EE', 'CC']
-DD
-HH
-['AA', 'BB', 'JJ', 'EE', 'DD']
-CC
-HH
-['AA', 'BB', 'JJ', 'EE', 'HH']
-CC
-DD
-['AA', 'BB', 'JJ', 'HH', 'CC']
-DD
-EE
-['AA', 'BB', 'JJ', 'HH', 'DD']
-CC
-EE
-['AA', 'BB', 'JJ', 'HH', 'EE']
-CC
-DD
-['AA', 'CC', 'BB', 'DD', 'EE']
-HH
-JJ
-['AA', 'CC', 'BB', 'DD', 'HH']
-EE
-JJ
-['AA', 'CC', 'BB', 'DD', 'JJ']
-EE
-HH
-['AA', 'CC', 'BB', 'EE', 'DD']
-HH
-JJ
-['AA', 'CC', 'BB', 'EE', 'HH']
-DD
-JJ
-['AA', 'CC', 'BB', 'EE', 'JJ']
-DD
-HH
-['AA', 'CC', 'BB', 'HH', 'DD']
-EE
-JJ
-['AA', 'CC', 'BB', 'HH', 'EE']
-DD
-JJ
-['AA', 'CC', 'BB', 'HH', 'JJ']
-DD
-EE
-['AA', 'CC', 'BB', 'JJ', 'DD']
-EE
-HH
-['AA', 'CC', 'BB', 'JJ', 'EE']
-DD
-HH
-['AA', 'CC', 'BB', 'JJ', 'HH']
-DD
-EE
-['AA', 'CC', 'DD', 'BB', 'EE']
-HH
-JJ
-['AA', 'CC', 'DD', 'BB', 'HH']
-EE
-JJ
-['AA', 'CC', 'DD', 'BB', 'JJ']
-EE
-HH
-['AA', 'CC', 'DD', 'EE', 'BB']
-HH
-JJ
-['AA', 'CC', 'DD', 'EE', 'HH']
-BB
-JJ
-['AA', 'CC', 'DD', 'EE', 'JJ']
-BB
-HH
-['AA', 'CC', 'DD', 'HH', 'BB']
-EE
-JJ
-['AA', 'CC', 'DD', 'HH', 'EE']
-BB
-JJ
-['AA', 'CC', 'DD', 'HH', 'JJ']
-BB
-EE
-['AA', 'CC', 'DD', 'JJ', 'BB']
-EE
-HH
-['AA', 'CC', 'DD', 'JJ', 'EE']
-BB
-HH
-['AA', 'CC', 'DD', 'JJ', 'HH']
-BB
-EE
-['AA', 'CC', 'EE', 'BB', 'DD']
-HH
-JJ
-['AA', 'CC', 'EE', 'BB', 'HH']
-DD
-JJ
-['AA', 'CC', 'EE', 'BB', 'JJ']
-DD
-HH
-['AA', 'CC', 'EE', 'DD', 'BB']
-HH
-JJ
-['AA', 'CC', 'EE', 'DD', 'HH']
-BB
-JJ
-['AA', 'CC', 'EE', 'DD', 'JJ']
-BB
-HH
-['AA', 'CC', 'EE', 'HH', 'BB']
-DD
-JJ
-['AA', 'CC', 'EE', 'HH', 'DD']
-BB
-JJ
-['AA', 'CC', 'EE', 'HH', 'JJ']
-BB
-DD
-['AA', 'CC', 'EE', 'JJ', 'BB']
-DD
-HH
-['AA', 'CC', 'EE', 'JJ', 'DD']
-BB
-HH
-['AA', 'CC', 'EE', 'JJ', 'HH']
-BB
-DD
-['AA', 'CC', 'HH', 'BB', 'DD']
-EE
-JJ
-['AA', 'CC', 'HH', 'BB', 'EE']
-DD
-JJ
-['AA', 'CC', 'HH', 'BB', 'JJ']
-DD
-EE
-['AA', 'CC', 'HH', 'DD', 'BB']
-EE
-JJ
-['AA', 'CC', 'HH', 'DD', 'EE']
-BB
-JJ
-['AA', 'CC', 'HH', 'DD', 'JJ']
-BB
-EE
-['AA', 'CC', 'HH', 'EE', 'BB']
-DD
-JJ
-['AA', 'CC', 'HH', 'EE', 'DD']
-BB
-JJ
-['AA', 'CC', 'HH', 'EE', 'JJ']
-BB
-DD
-['AA', 'CC', 'HH', 'JJ', 'BB']
-DD
-EE
-['AA', 'CC', 'HH', 'JJ', 'DD']
-BB
-EE
-['AA', 'CC', 'HH', 'JJ', 'EE']
-BB
-DD
-['AA', 'CC', 'JJ', 'BB', 'DD']
-EE
-HH
-['AA', 'CC', 'JJ', 'BB', 'EE']
-DD
-HH
-['AA', 'CC', 'JJ', 'BB', 'HH']
-DD
-EE
-['AA', 'CC', 'JJ', 'DD', 'BB']
-EE
-HH
-['AA', 'CC', 'JJ', 'DD', 'EE']
-BB
-HH
-['AA', 'CC', 'JJ', 'DD', 'HH']
-BB
-EE
-['AA', 'CC', 'JJ', 'EE', 'BB']
-DD
-HH
-['AA', 'CC', 'JJ', 'EE', 'DD']
-BB
-HH
-['AA', 'CC', 'JJ', 'EE', 'HH']
-BB
-DD
-['AA', 'CC', 'JJ', 'HH', 'BB']
-DD
-EE
-['AA', 'CC', 'JJ', 'HH', 'DD']
-BB
-EE
-['AA', 'CC', 'JJ', 'HH', 'EE']
-BB
-DD
-['AA', 'DD', 'BB', 'CC', 'EE']
-HH
-JJ
-['AA', 'DD', 'BB', 'CC', 'HH']
-EE
-JJ
-['AA', 'DD', 'BB', 'CC', 'JJ']
-EE
-HH
-['AA', 'DD', 'BB', 'EE', 'CC']
-HH
-JJ
-['AA', 'DD', 'BB', 'EE', 'HH']
-CC
-JJ
-['AA', 'DD', 'BB', 'EE', 'JJ']
-CC
-HH
-['AA', 'DD', 'BB', 'HH', 'CC']
-EE
-JJ
-['AA', 'DD', 'BB', 'HH', 'EE']
-CC
-JJ
-['AA', 'DD', 'BB', 'HH', 'JJ']
-CC
-EE
-['AA', 'DD', 'BB', 'JJ', 'CC']
-EE
-HH
-['AA', 'DD', 'BB', 'JJ', 'EE']
-CC
-HH
-['AA', 'DD', 'BB', 'JJ', 'HH']
-CC
-EE
-['AA', 'DD', 'CC', 'BB', 'EE']
-HH
-JJ
-['AA', 'DD', 'CC', 'BB', 'HH']
-EE
-JJ
-['AA', 'DD', 'CC', 'BB', 'JJ']
-EE
-HH
-['AA', 'DD', 'CC', 'EE', 'BB']
-HH
-JJ
-['AA', 'DD', 'CC', 'EE', 'HH']
-BB
-JJ
-['AA', 'DD', 'CC', 'EE', 'JJ']
-BB
-HH
-['AA', 'DD', 'CC', 'HH', 'BB']
-EE
-JJ
-['AA', 'DD', 'CC', 'HH', 'EE']
-BB
-JJ
-['AA', 'DD', 'CC', 'HH', 'JJ']
-BB
-EE
-['AA', 'DD', 'CC', 'JJ', 'BB']
-EE
-HH
-['AA', 'DD', 'CC', 'JJ', 'EE']
-BB
-HH
-['AA', 'DD', 'CC', 'JJ', 'HH']
-BB
-EE
-['AA', 'DD', 'EE', 'BB', 'CC']
-HH
-JJ
-['AA', 'DD', 'EE', 'BB', 'HH']
-CC
-JJ
-['AA', 'DD', 'EE', 'BB', 'JJ']
-CC
-HH
-['AA', 'DD', 'EE', 'CC', 'BB']
-HH
-JJ
-['AA', 'DD', 'EE', 'CC', 'HH']
-BB
-JJ
-['AA', 'DD', 'EE', 'CC', 'JJ']
-BB
-HH
-['AA', 'DD', 'EE', 'HH', 'BB']
-CC
-JJ
-['AA', 'DD', 'EE', 'HH', 'CC']
-BB
-JJ
-['AA', 'DD', 'EE', 'HH', 'JJ']
-BB
-CC
-['AA', 'DD', 'EE', 'JJ', 'BB']
-CC
-HH
-['AA', 'DD', 'EE', 'JJ', 'CC']
-BB
-HH
-['AA', 'DD', 'EE', 'JJ', 'HH']
-BB
-CC
-['AA', 'DD', 'HH', 'BB', 'CC']
-EE
-JJ
-['AA', 'DD', 'HH', 'BB', 'EE']
-CC
-JJ
-['AA', 'DD', 'HH', 'BB', 'JJ']
-CC
-EE
-['AA', 'DD', 'HH', 'CC', 'BB']
-EE
-JJ
-['AA', 'DD', 'HH', 'CC', 'EE']
-BB
-JJ
-['AA', 'DD', 'HH', 'CC', 'JJ']
-BB
-EE
-['AA', 'DD', 'HH', 'EE', 'BB']
-CC
-JJ
-['AA', 'DD', 'HH', 'EE', 'CC']
-BB
-JJ
-['AA', 'DD', 'HH', 'EE', 'JJ']
-BB
-CC
-['AA', 'DD', 'HH', 'JJ', 'BB']
-CC
-EE
-['AA', 'DD', 'HH', 'JJ', 'CC']
-BB
-EE
-['AA', 'DD', 'HH', 'JJ', 'EE']
-BB
-CC
-['AA', 'DD', 'JJ', 'BB', 'CC']
-EE
-HH
-['AA', 'DD', 'JJ', 'BB', 'EE']
-CC
-HH
-['AA', 'DD', 'JJ', 'BB', 'HH']
-CC
-EE
-['AA', 'DD', 'JJ', 'CC', 'BB']
-EE
-HH
-['AA', 'DD', 'JJ', 'CC', 'EE']
-BB
-HH
-['AA', 'DD', 'JJ', 'CC', 'HH']
-BB
-EE
-['AA', 'DD', 'JJ', 'EE', 'BB']
-CC
-HH
-['AA', 'DD', 'JJ', 'EE', 'CC']
-BB
-HH
-['AA', 'DD', 'JJ', 'EE', 'HH']
-BB
-CC
-['AA', 'DD', 'JJ', 'HH', 'BB']
-CC
-EE
-['AA', 'DD', 'JJ', 'HH', 'CC']
-BB
-EE
-['AA', 'DD', 'JJ', 'HH', 'EE']
-BB
-CC
-['AA', 'EE', 'BB', 'CC', 'DD']
-HH
-JJ
-['AA', 'EE', 'BB', 'CC', 'HH']
-DD
-JJ
-['AA', 'EE', 'BB', 'CC', 'JJ']
-DD
-HH
-['AA', 'EE', 'BB', 'DD', 'CC']
-HH
-JJ
-['AA', 'EE', 'BB', 'DD', 'HH']
-CC
-JJ
-['AA', 'EE', 'BB', 'DD', 'JJ']
-CC
-HH
-['AA', 'EE', 'BB', 'HH', 'CC']
-DD
-JJ
-['AA', 'EE', 'BB', 'HH', 'DD']
-CC
-JJ
-['AA', 'EE', 'BB', 'HH', 'JJ']
-CC
-DD
-['AA', 'EE', 'BB', 'JJ', 'CC']
-DD
-HH
-['AA', 'EE', 'BB', 'JJ', 'DD']
-CC
-HH
-['AA', 'EE', 'BB', 'JJ', 'HH']
-CC
-DD
-['AA', 'EE', 'CC', 'BB', 'DD']
-HH
-JJ
-['AA', 'EE', 'CC', 'BB', 'HH']
-DD
-JJ
-['AA', 'EE', 'CC', 'BB', 'JJ']
-DD
-HH
-['AA', 'EE', 'CC', 'DD', 'BB']
-HH
-JJ
-['AA', 'EE', 'CC', 'DD', 'HH']
-BB
-JJ
-['AA', 'EE', 'CC', 'DD', 'JJ']
-BB
-HH
-['AA', 'EE', 'CC', 'HH', 'BB']
-DD
-JJ
-['AA', 'EE', 'CC', 'HH', 'DD']
-BB
-JJ
-['AA', 'EE', 'CC', 'HH', 'JJ']
-BB
-DD
-['AA', 'EE', 'CC', 'JJ', 'BB']
-DD
-HH
-['AA', 'EE', 'CC', 'JJ', 'DD']
-BB
-HH
-['AA', 'EE', 'CC', 'JJ', 'HH']
-BB
-DD
-['AA', 'EE', 'DD', 'BB', 'CC']
-HH
-JJ
-['AA', 'EE', 'DD', 'BB', 'HH']
-CC
-JJ
-['AA', 'EE', 'DD', 'BB', 'JJ']
-CC
-HH
-['AA', 'EE', 'DD', 'CC', 'BB']
-HH
-JJ
-['AA', 'EE', 'DD', 'CC', 'HH']
-BB
-JJ
-['AA', 'EE', 'DD', 'CC', 'JJ']
-BB
-HH
-['AA', 'EE', 'DD', 'HH', 'BB']
-CC
-JJ
-['AA', 'EE', 'DD', 'HH', 'CC']
-BB
-JJ
-['AA', 'EE', 'DD', 'HH', 'JJ']
-BB
-CC
-['AA', 'EE', 'DD', 'JJ', 'BB']
-CC
-HH
-['AA', 'EE', 'DD', 'JJ', 'CC']
-BB
-HH
-['AA', 'EE', 'DD', 'JJ', 'HH']
-BB
-CC
-['AA', 'EE', 'HH', 'BB', 'CC']
-DD
-JJ
-['AA', 'EE', 'HH', 'BB', 'DD']
-CC
-JJ
-['AA', 'EE', 'HH', 'BB', 'JJ']
-CC
-DD
-['AA', 'EE', 'HH', 'CC', 'BB']
-DD
-JJ
-['AA', 'EE', 'HH', 'CC', 'DD']
-BB
-JJ
-['AA', 'EE', 'HH', 'CC', 'JJ']
-BB
-DD
-['AA', 'EE', 'HH', 'DD', 'BB']
-CC
-JJ
-['AA', 'EE', 'HH', 'DD', 'CC']
-BB
-JJ
-['AA', 'EE', 'HH', 'DD', 'JJ']
-BB
-CC
-['AA', 'EE', 'HH', 'JJ', 'BB']
-CC
-DD
-['AA', 'EE', 'HH', 'JJ', 'CC']
-BB
-DD
-['AA', 'EE', 'HH', 'JJ', 'DD']
-BB
-CC
-['AA', 'EE', 'JJ', 'BB', 'CC']
-DD
-HH
-['AA', 'EE', 'JJ', 'BB', 'DD']
-CC
-HH
-['AA', 'EE', 'JJ', 'BB', 'HH']
-CC
-DD
-['AA', 'EE', 'JJ', 'CC', 'BB']
-DD
-HH
-['AA', 'EE', 'JJ', 'CC', 'DD']
-BB
-HH
-['AA', 'EE', 'JJ', 'CC', 'HH']
-BB
-DD
-['AA', 'EE', 'JJ', 'DD', 'BB']
-CC
-HH
-['AA', 'EE', 'JJ', 'DD', 'CC']
-BB
-HH
-['AA', 'EE', 'JJ', 'DD', 'HH']
-BB
-CC
-['AA', 'EE', 'JJ', 'HH', 'BB']
-CC
-DD
-['AA', 'EE', 'JJ', 'HH', 'CC']
-BB
-DD
-['AA', 'EE', 'JJ', 'HH', 'DD']
-BB
-CC
-['AA', 'HH', 'BB', 'CC', 'DD']
-EE
-JJ
-['AA', 'HH', 'BB', 'CC', 'EE']
-DD
-JJ
-['AA', 'HH', 'BB', 'CC', 'JJ']
-DD
-EE
-['AA', 'HH', 'BB', 'DD', 'CC']
-EE
-JJ
-['AA', 'HH', 'BB', 'DD', 'EE']
-CC
-JJ
-['AA', 'HH', 'BB', 'DD', 'JJ']
-CC
-EE
-['AA', 'HH', 'BB', 'EE', 'CC']
-DD
-JJ
-['AA', 'HH', 'BB', 'EE', 'DD']
-CC
-JJ
-['AA', 'HH', 'BB', 'EE', 'JJ']
-CC
-DD
-['AA', 'HH', 'BB', 'JJ', 'CC']
-DD
-EE
-['AA', 'HH', 'BB', 'JJ', 'DD']
-CC
-EE
-['AA', 'HH', 'BB', 'JJ', 'EE']
-CC
-DD
-['AA', 'HH', 'CC', 'BB', 'DD']
-EE
-JJ
-['AA', 'HH', 'CC', 'BB', 'EE']
-DD
-JJ
-['AA', 'HH', 'CC', 'BB', 'JJ']
-DD
-EE
-['AA', 'HH', 'CC', 'DD', 'BB']
-EE
-JJ
-['AA', 'HH', 'CC', 'DD', 'EE']
-BB
-JJ
-['AA', 'HH', 'CC', 'DD', 'JJ']
-BB
-EE
-['AA', 'HH', 'CC', 'EE', 'BB']
-DD
-JJ
-['AA', 'HH', 'CC', 'EE', 'DD']
-BB
-JJ
-['AA', 'HH', 'CC', 'EE', 'JJ']
-BB
-DD
-['AA', 'HH', 'CC', 'JJ', 'BB']
-DD
-EE
-['AA', 'HH', 'CC', 'JJ', 'DD']
-BB
-EE
-['AA', 'HH', 'CC', 'JJ', 'EE']
-BB
-DD
-['AA', 'HH', 'DD', 'BB', 'CC']
-EE
-JJ
-['AA', 'HH', 'DD', 'BB', 'EE']
-CC
-JJ
-['AA', 'HH', 'DD', 'BB', 'JJ']
-CC
-EE
-['AA', 'HH', 'DD', 'CC', 'BB']
-EE
-JJ
-['AA', 'HH', 'DD', 'CC', 'EE']
-BB
-JJ
-['AA', 'HH', 'DD', 'CC', 'JJ']
-BB
-EE
-['AA', 'HH', 'DD', 'EE', 'BB']
-CC
-JJ
-['AA', 'HH', 'DD', 'EE', 'CC']
-BB
-JJ
-['AA', 'HH', 'DD', 'EE', 'JJ']
-BB
-CC
-['AA', 'HH', 'DD', 'JJ', 'BB']
-CC
-EE
-['AA', 'HH', 'DD', 'JJ', 'CC']
-BB
-EE
-['AA', 'HH', 'DD', 'JJ', 'EE']
-BB
-CC
-['AA', 'HH', 'EE', 'BB', 'CC']
-DD
-JJ
-['AA', 'HH', 'EE', 'BB', 'DD']
-CC
-JJ
-['AA', 'HH', 'EE', 'BB', 'JJ']
-CC
-DD
-['AA', 'HH', 'EE', 'CC', 'BB']
-DD
-JJ
-['AA', 'HH', 'EE', 'CC', 'DD']
-BB
-JJ
-['AA', 'HH', 'EE', 'CC', 'JJ']
-BB
-DD
-['AA', 'HH', 'EE', 'DD', 'BB']
-CC
-JJ
-['AA', 'HH', 'EE', 'DD', 'CC']
-BB
-JJ
-['AA', 'HH', 'EE', 'DD', 'JJ']
-BB
-CC
-['AA', 'HH', 'EE', 'JJ', 'BB']
-CC
-DD
-['AA', 'HH', 'EE', 'JJ', 'CC']
-BB
-DD
-['AA', 'HH', 'EE', 'JJ', 'DD']
-BB
-CC
-['AA', 'HH', 'JJ', 'BB', 'CC']
-DD
-EE
-['AA', 'HH', 'JJ', 'BB', 'DD']
-CC
-EE
-['AA', 'HH', 'JJ', 'BB', 'EE']
-CC
-DD
-['AA', 'HH', 'JJ', 'CC', 'BB']
-DD
-EE
-['AA', 'HH', 'JJ', 'CC', 'DD']
-BB
-EE
-['AA', 'HH', 'JJ', 'CC', 'EE']
-BB
-DD
-['AA', 'HH', 'JJ', 'DD', 'BB']
-CC
-EE
-['AA', 'HH', 'JJ', 'DD', 'CC']
-BB
-EE
-['AA', 'HH', 'JJ', 'DD', 'EE']
-BB
-CC
-['AA', 'HH', 'JJ', 'EE', 'BB']
-CC
-DD
-['AA', 'HH', 'JJ', 'EE', 'CC']
-BB
-DD
-['AA', 'HH', 'JJ', 'EE', 'DD']
-BB
-CC
-['AA', 'JJ', 'BB', 'CC', 'DD']
-EE
-HH
-['AA', 'JJ', 'BB', 'CC', 'EE']
-DD
-HH
-['AA', 'JJ', 'BB', 'CC', 'HH']
-DD
-EE
-['AA', 'JJ', 'BB', 'DD', 'CC']
-EE
-HH
-['AA', 'JJ', 'BB', 'DD', 'EE']
-CC
-HH
-['AA', 'JJ', 'BB', 'DD', 'HH']
-CC
-EE
-['AA', 'JJ', 'BB', 'EE', 'CC']
-DD
-HH
-['AA', 'JJ', 'BB', 'EE', 'DD']
-CC
-HH
-['AA', 'JJ', 'BB', 'EE', 'HH']
-CC
-DD
-['AA', 'JJ', 'BB', 'HH', 'CC']
-DD
-EE
-['AA', 'JJ', 'BB', 'HH', 'DD']
-CC
-EE
-['AA', 'JJ', 'BB', 'HH', 'EE']
-CC
-DD
-['AA', 'JJ', 'CC', 'BB', 'DD']
-EE
-HH
-['AA', 'JJ', 'CC', 'BB', 'EE']
-DD
-HH
-['AA', 'JJ', 'CC', 'BB', 'HH']
-DD
-EE
-['AA', 'JJ', 'CC', 'DD', 'BB']
-EE
-HH
-['AA', 'JJ', 'CC', 'DD', 'EE']
-BB
-HH
-['AA', 'JJ', 'CC', 'DD', 'HH']
-BB
-EE
-['AA', 'JJ', 'CC', 'EE', 'BB']
-DD
-HH
-['AA', 'JJ', 'CC', 'EE', 'DD']
-BB
-HH
-['AA', 'JJ', 'CC', 'EE', 'HH']
-BB
-DD
-['AA', 'JJ', 'CC', 'HH', 'BB']
-DD
-EE
-['AA', 'JJ', 'CC', 'HH', 'DD']
-BB
-EE
-['AA', 'JJ', 'CC', 'HH', 'EE']
-BB
-DD
-['AA', 'JJ', 'DD', 'BB', 'CC']
-EE
-HH
-['AA', 'JJ', 'DD', 'BB', 'EE']
-CC
-HH
-['AA', 'JJ', 'DD', 'BB', 'HH']
-CC
-EE
-['AA', 'JJ', 'DD', 'CC', 'BB']
-EE
-HH
-['AA', 'JJ', 'DD', 'CC', 'EE']
-BB
-HH
-['AA', 'JJ', 'DD', 'CC', 'HH']
-BB
-EE
-['AA', 'JJ', 'DD', 'EE', 'BB']
-CC
-HH
-['AA', 'JJ', 'DD', 'EE', 'CC']
-BB
-HH
-['AA', 'JJ', 'DD', 'EE', 'HH']
-BB
-CC
-['AA', 'JJ', 'DD', 'HH', 'BB']
-CC
-EE
-['AA', 'JJ', 'DD', 'HH', 'CC']
-BB
-EE
-['AA', 'JJ', 'DD', 'HH', 'EE']
-BB
-CC
-['AA', 'JJ', 'EE', 'BB', 'CC']
-DD
-HH
-['AA', 'JJ', 'EE', 'BB', 'DD']
-CC
-HH
-['AA', 'JJ', 'EE', 'BB', 'HH']
-CC
-DD
-['AA', 'JJ', 'EE', 'CC', 'BB']
-DD
-HH
-['AA', 'JJ', 'EE', 'CC', 'DD']
-BB
-HH
-['AA', 'JJ', 'EE', 'CC', 'HH']
-BB
-DD
-['AA', 'JJ', 'EE', 'DD', 'BB']
-CC
-HH
-['AA', 'JJ', 'EE', 'DD', 'CC']
-BB
-HH
-['AA', 'JJ', 'EE', 'DD', 'HH']
-BB
-CC
-['AA', 'JJ', 'EE', 'HH', 'BB']
-CC
-DD
-['AA', 'JJ', 'EE', 'HH', 'CC']
-BB
-DD
-['AA', 'JJ', 'EE', 'HH', 'DD']
-BB
-CC
-['AA', 'JJ', 'HH', 'BB', 'CC']
-DD
-EE
-['AA', 'JJ', 'HH', 'BB', 'DD']
-CC
-EE
-['AA', 'JJ', 'HH', 'BB', 'EE']
-CC
-DD
-['AA', 'JJ', 'HH', 'CC', 'BB']
-DD
-EE
-['AA', 'JJ', 'HH', 'CC', 'DD']
-BB
-EE
-['AA', 'JJ', 'HH', 'CC', 'EE']
-BB
-DD
-['AA', 'JJ', 'HH', 'DD', 'BB']
-CC
-EE
-['AA', 'JJ', 'HH', 'DD', 'CC']
-BB
-EE
-['AA', 'JJ', 'HH', 'DD', 'EE']
-BB
-CC
-['AA', 'JJ', 'HH', 'EE', 'BB']
-CC
-DD
-['AA', 'JJ', 'HH', 'EE', 'CC']
-BB
-DD
-['AA', 'JJ', 'HH', 'EE', 'DD']
-BB
-CC
-['AA', 'BB', 'CC', 'DD', 'EE', 'HH']
-JJ
-['AA', 'BB', 'CC', 'DD', 'EE', 'JJ']
-HH
-['AA', 'BB', 'CC', 'DD', 'HH', 'EE']
-JJ
-['AA', 'BB', 'CC', 'DD', 'HH', 'JJ']
-EE
-['AA', 'BB', 'CC', 'DD', 'JJ', 'EE']
-HH
-['AA', 'BB', 'CC', 'DD', 'JJ', 'HH']
-EE
-['AA', 'BB', 'CC', 'EE', 'DD', 'HH']
-JJ
-['AA', 'BB', 'CC', 'EE', 'DD', 'JJ']
-HH
-['AA', 'BB', 'CC', 'EE', 'HH', 'DD']
-JJ
-['AA', 'BB', 'CC', 'EE', 'HH', 'JJ']
-DD
-['AA', 'BB', 'CC', 'EE', 'JJ', 'DD']
-HH
-['AA', 'BB', 'CC', 'EE', 'JJ', 'HH']
-DD
-['AA', 'BB', 'CC', 'HH', 'DD', 'EE']
-JJ
-['AA', 'BB', 'CC', 'HH', 'DD', 'JJ']
-EE
-['AA', 'BB', 'CC', 'HH', 'EE', 'DD']
-JJ
-['AA', 'BB', 'CC', 'HH', 'EE', 'JJ']
-DD
-['AA', 'BB', 'CC', 'HH', 'JJ', 'DD']
-EE
-['AA', 'BB', 'CC', 'HH', 'JJ', 'EE']
-DD
-['AA', 'BB', 'CC', 'JJ', 'DD', 'EE']
-HH
-['AA', 'BB', 'CC', 'JJ', 'DD', 'HH']
-EE
-['AA', 'BB', 'CC', 'JJ', 'EE', 'DD']
-HH
-['AA', 'BB', 'CC', 'JJ', 'EE', 'HH']
-DD
-['AA', 'BB', 'CC', 'JJ', 'HH', 'DD']
-EE
-['AA', 'BB', 'CC', 'JJ', 'HH', 'EE']
-DD
-['AA', 'BB', 'DD', 'CC', 'EE', 'HH']
-JJ
-['AA', 'BB', 'DD', 'CC', 'EE', 'JJ']
-HH
-['AA', 'BB', 'DD', 'CC', 'HH', 'EE']
-JJ
-['AA', 'BB', 'DD', 'CC', 'HH', 'JJ']
-EE
-['AA', 'BB', 'DD', 'CC', 'JJ', 'EE']
-HH
-['AA', 'BB', 'DD', 'CC', 'JJ', 'HH']
-EE
-['AA', 'BB', 'DD', 'EE', 'CC', 'HH']
-JJ
-['AA', 'BB', 'DD', 'EE', 'CC', 'JJ']
-HH
-['AA', 'BB', 'DD', 'EE', 'HH', 'CC']
-JJ
-['AA', 'BB', 'DD', 'EE', 'HH', 'JJ']
-CC
-['AA', 'BB', 'DD', 'EE', 'JJ', 'CC']
-HH
-['AA', 'BB', 'DD', 'EE', 'JJ', 'HH']
-CC
-['AA', 'BB', 'DD', 'HH', 'CC', 'EE']
-JJ
-['AA', 'BB', 'DD', 'HH', 'CC', 'JJ']
-EE
-['AA', 'BB', 'DD', 'HH', 'EE', 'CC']
-JJ
-['AA', 'BB', 'DD', 'HH', 'EE', 'JJ']
-CC
-['AA', 'BB', 'DD', 'HH', 'JJ', 'CC']
-EE
-['AA', 'BB', 'DD', 'HH', 'JJ', 'EE']
-CC
-['AA', 'BB', 'DD', 'JJ', 'CC', 'EE']
-HH
-['AA', 'BB', 'DD', 'JJ', 'CC', 'HH']
-EE
-['AA', 'BB', 'DD', 'JJ', 'EE', 'CC']
-HH
-['AA', 'BB', 'DD', 'JJ', 'EE', 'HH']
-CC
-['AA', 'BB', 'DD', 'JJ', 'HH', 'CC']
-EE
-['AA', 'BB', 'DD', 'JJ', 'HH', 'EE']
-CC
-['AA', 'BB', 'EE', 'CC', 'DD', 'HH']
-JJ
-['AA', 'BB', 'EE', 'CC', 'DD', 'JJ']
-HH
-['AA', 'BB', 'EE', 'CC', 'HH', 'DD']
-JJ
-['AA', 'BB', 'EE', 'CC', 'HH', 'JJ']
-DD
-['AA', 'BB', 'EE', 'CC', 'JJ', 'DD']
-HH
-['AA', 'BB', 'EE', 'CC', 'JJ', 'HH']
-DD
-['AA', 'BB', 'EE', 'DD', 'CC', 'HH']
-JJ
-['AA', 'BB', 'EE', 'DD', 'CC', 'JJ']
-HH
-['AA', 'BB', 'EE', 'DD', 'HH', 'CC']
-JJ
-['AA', 'BB', 'EE', 'DD', 'HH', 'JJ']
-CC
-['AA', 'BB', 'EE', 'DD', 'JJ', 'CC']
-HH
-['AA', 'BB', 'EE', 'DD', 'JJ', 'HH']
-CC
-['AA', 'BB', 'EE', 'HH', 'CC', 'DD']
-JJ
-['AA', 'BB', 'EE', 'HH', 'CC', 'JJ']
-DD
-['AA', 'BB', 'EE', 'HH', 'DD', 'CC']
-JJ
-['AA', 'BB', 'EE', 'HH', 'DD', 'JJ']
-CC
-['AA', 'BB', 'EE', 'HH', 'JJ', 'CC']
-DD
-['AA', 'BB', 'EE', 'HH', 'JJ', 'DD']
-CC
-['AA', 'BB', 'EE', 'JJ', 'CC', 'DD']
-HH
-['AA', 'BB', 'EE', 'JJ', 'CC', 'HH']
-DD
-['AA', 'BB', 'EE', 'JJ', 'DD', 'CC']
-HH
-['AA', 'BB', 'EE', 'JJ', 'DD', 'HH']
-CC
-['AA', 'BB', 'EE', 'JJ', 'HH', 'CC']
-DD
-['AA', 'BB', 'EE', 'JJ', 'HH', 'DD']
-CC
-['AA', 'BB', 'HH', 'CC', 'DD', 'EE']
-JJ
-['AA', 'BB', 'HH', 'CC', 'DD', 'JJ']
-EE
-['AA', 'BB', 'HH', 'CC', 'EE', 'DD']
-JJ
-['AA', 'BB', 'HH', 'CC', 'EE', 'JJ']
-DD
-['AA', 'BB', 'HH', 'CC', 'JJ', 'DD']
-EE
-['AA', 'BB', 'HH', 'CC', 'JJ', 'EE']
-DD
-['AA', 'BB', 'HH', 'DD', 'CC', 'EE']
-JJ
-['AA', 'BB', 'HH', 'DD', 'CC', 'JJ']
-EE
-['AA', 'BB', 'HH', 'DD', 'EE', 'CC']
-JJ
-['AA', 'BB', 'HH', 'DD', 'EE', 'JJ']
-CC
-['AA', 'BB', 'HH', 'DD', 'JJ', 'CC']
-EE
-['AA', 'BB', 'HH', 'DD', 'JJ', 'EE']
-CC
-['AA', 'BB', 'HH', 'EE', 'CC', 'DD']
-JJ
-['AA', 'BB', 'HH', 'EE', 'CC', 'JJ']
-DD
-['AA', 'BB', 'HH', 'EE', 'DD', 'CC']
-JJ
-['AA', 'BB', 'HH', 'EE', 'DD', 'JJ']
-CC
-['AA', 'BB', 'HH', 'EE', 'JJ', 'CC']
-DD
-['AA', 'BB', 'HH', 'EE', 'JJ', 'DD']
-CC
-['AA', 'BB', 'HH', 'JJ', 'CC', 'DD']
-EE
-['AA', 'BB', 'HH', 'JJ', 'CC', 'EE']
-DD
-['AA', 'BB', 'HH', 'JJ', 'DD', 'CC']
-EE
-['AA', 'BB', 'HH', 'JJ', 'DD', 'EE']
-CC
-['AA', 'BB', 'HH', 'JJ', 'EE', 'CC']
-DD
-['AA', 'BB', 'HH', 'JJ', 'EE', 'DD']
-CC
-['AA', 'BB', 'JJ', 'CC', 'DD', 'EE']
-HH
-['AA', 'BB', 'JJ', 'CC', 'DD', 'HH']
-EE
-['AA', 'BB', 'JJ', 'CC', 'EE', 'DD']
-HH
-['AA', 'BB', 'JJ', 'CC', 'EE', 'HH']
-DD
-['AA', 'BB', 'JJ', 'CC', 'HH', 'DD']
-EE
-['AA', 'BB', 'JJ', 'CC', 'HH', 'EE']
-DD
-['AA', 'BB', 'JJ', 'DD', 'CC', 'EE']
-HH
-['AA', 'BB', 'JJ', 'DD', 'CC', 'HH']
-EE
-['AA', 'BB', 'JJ', 'DD', 'EE', 'CC']
-HH
-['AA', 'BB', 'JJ', 'DD', 'EE', 'HH']
-CC
-['AA', 'BB', 'JJ', 'DD', 'HH', 'CC']
-EE
-['AA', 'BB', 'JJ', 'DD', 'HH', 'EE']
-CC
-['AA', 'BB', 'JJ', 'EE', 'CC', 'DD']
-HH
-['AA', 'BB', 'JJ', 'EE', 'CC', 'HH']
-DD
-['AA', 'BB', 'JJ', 'EE', 'DD', 'CC']
-HH
-['AA', 'BB', 'JJ', 'EE', 'DD', 'HH']
-CC
-['AA', 'BB', 'JJ', 'EE', 'HH', 'CC']
-DD
-['AA', 'BB', 'JJ', 'EE', 'HH', 'DD']
-CC
-['AA', 'BB', 'JJ', 'HH', 'CC', 'DD']
-EE
-['AA', 'BB', 'JJ', 'HH', 'CC', 'EE']
-DD
-['AA', 'BB', 'JJ', 'HH', 'DD', 'CC']
-EE
-['AA', 'BB', 'JJ', 'HH', 'DD', 'EE']
-CC
-['AA', 'BB', 'JJ', 'HH', 'EE', 'CC']
-DD
-['AA', 'BB', 'JJ', 'HH', 'EE', 'DD']
-CC
-['AA', 'CC', 'BB', 'DD', 'EE', 'HH']
-JJ
-['AA', 'CC', 'BB', 'DD', 'EE', 'JJ']
-HH
-['AA', 'CC', 'BB', 'DD', 'HH', 'EE']
-JJ
-['AA', 'CC', 'BB', 'DD', 'HH', 'JJ']
-EE
-['AA', 'CC', 'BB', 'DD', 'JJ', 'EE']
-HH
-['AA', 'CC', 'BB', 'DD', 'JJ', 'HH']
-EE
-['AA', 'CC', 'BB', 'EE', 'DD', 'HH']
-JJ
-['AA', 'CC', 'BB', 'EE', 'DD', 'JJ']
-HH
-['AA', 'CC', 'BB', 'EE', 'HH', 'DD']
-JJ
-['AA', 'CC', 'BB', 'EE', 'HH', 'JJ']
-DD
-['AA', 'CC', 'BB', 'EE', 'JJ', 'DD']
-HH
-['AA', 'CC', 'BB', 'EE', 'JJ', 'HH']
-DD
-['AA', 'CC', 'BB', 'HH', 'DD', 'EE']
-JJ
-['AA', 'CC', 'BB', 'HH', 'DD', 'JJ']
-EE
-['AA', 'CC', 'BB', 'HH', 'EE', 'DD']
-JJ
-['AA', 'CC', 'BB', 'HH', 'EE', 'JJ']
-DD
-['AA', 'CC', 'BB', 'HH', 'JJ', 'DD']
-EE
-['AA', 'CC', 'BB', 'HH', 'JJ', 'EE']
-DD
-['AA', 'CC', 'BB', 'JJ', 'DD', 'EE']
-HH
-['AA', 'CC', 'BB', 'JJ', 'DD', 'HH']
-EE
-['AA', 'CC', 'BB', 'JJ', 'EE', 'DD']
-HH
-['AA', 'CC', 'BB', 'JJ', 'EE', 'HH']
-DD
-['AA', 'CC', 'BB', 'JJ', 'HH', 'DD']
-EE
-['AA', 'CC', 'BB', 'JJ', 'HH', 'EE']
-DD
-['AA', 'CC', 'DD', 'BB', 'EE', 'HH']
-JJ
-['AA', 'CC', 'DD', 'BB', 'EE', 'JJ']
-HH
-['AA', 'CC', 'DD', 'BB', 'HH', 'EE']
-JJ
-['AA', 'CC', 'DD', 'BB', 'HH', 'JJ']
-EE
-['AA', 'CC', 'DD', 'BB', 'JJ', 'EE']
-HH
-['AA', 'CC', 'DD', 'BB', 'JJ', 'HH']
-EE
-['AA', 'CC', 'DD', 'EE', 'BB', 'HH']
-JJ
-['AA', 'CC', 'DD', 'EE', 'BB', 'JJ']
-HH
-['AA', 'CC', 'DD', 'EE', 'HH', 'BB']
-JJ
-['AA', 'CC', 'DD', 'EE', 'HH', 'JJ']
-BB
-['AA', 'CC', 'DD', 'EE', 'JJ', 'BB']
-HH
-['AA', 'CC', 'DD', 'EE', 'JJ', 'HH']
-BB
-['AA', 'CC', 'DD', 'HH', 'BB', 'EE']
-JJ
-['AA', 'CC', 'DD', 'HH', 'BB', 'JJ']
-EE
-['AA', 'CC', 'DD', 'HH', 'EE', 'BB']
-JJ
-['AA', 'CC', 'DD', 'HH', 'EE', 'JJ']
-BB
-['AA', 'CC', 'DD', 'HH', 'JJ', 'BB']
-EE
-['AA', 'CC', 'DD', 'HH', 'JJ', 'EE']
-BB
-['AA', 'CC', 'DD', 'JJ', 'BB', 'EE']
-HH
-['AA', 'CC', 'DD', 'JJ', 'BB', 'HH']
-EE
-['AA', 'CC', 'DD', 'JJ', 'EE', 'BB']
-HH
-['AA', 'CC', 'DD', 'JJ', 'EE', 'HH']
-BB
-['AA', 'CC', 'DD', 'JJ', 'HH', 'BB']
-EE
-['AA', 'CC', 'DD', 'JJ', 'HH', 'EE']
-BB
-['AA', 'CC', 'EE', 'BB', 'DD', 'HH']
-JJ
-['AA', 'CC', 'EE', 'BB', 'DD', 'JJ']
-HH
-['AA', 'CC', 'EE', 'BB', 'HH', 'DD']
-JJ
-['AA', 'CC', 'EE', 'BB', 'HH', 'JJ']
-DD
-['AA', 'CC', 'EE', 'BB', 'JJ', 'DD']
-HH
-['AA', 'CC', 'EE', 'BB', 'JJ', 'HH']
-DD
-['AA', 'CC', 'EE', 'DD', 'BB', 'HH']
-JJ
-['AA', 'CC', 'EE', 'DD', 'BB', 'JJ']
-HH
-['AA', 'CC', 'EE', 'DD', 'HH', 'BB']
-JJ
-['AA', 'CC', 'EE', 'DD', 'HH', 'JJ']
-BB
-['AA', 'CC', 'EE', 'DD', 'JJ', 'BB']
-HH
-['AA', 'CC', 'EE', 'DD', 'JJ', 'HH']
-BB
-['AA', 'CC', 'EE', 'HH', 'BB', 'DD']
-JJ
-['AA', 'CC', 'EE', 'HH', 'BB', 'JJ']
-DD
-['AA', 'CC', 'EE', 'HH', 'DD', 'BB']
-JJ
-['AA', 'CC', 'EE', 'HH', 'DD', 'JJ']
-BB
-['AA', 'CC', 'EE', 'HH', 'JJ', 'BB']
-DD
-['AA', 'CC', 'EE', 'HH', 'JJ', 'DD']
-BB
-['AA', 'CC', 'EE', 'JJ', 'BB', 'DD']
-HH
-['AA', 'CC', 'EE', 'JJ', 'BB', 'HH']
-DD
-['AA', 'CC', 'EE', 'JJ', 'DD', 'BB']
-HH
-['AA', 'CC', 'EE', 'JJ', 'DD', 'HH']
-BB
-['AA', 'CC', 'EE', 'JJ', 'HH', 'BB']
-DD
-['AA', 'CC', 'EE', 'JJ', 'HH', 'DD']
-BB
-['AA', 'CC', 'HH', 'BB', 'DD', 'EE']
-JJ
-['AA', 'CC', 'HH', 'BB', 'DD', 'JJ']
-EE
-['AA', 'CC', 'HH', 'BB', 'EE', 'DD']
-JJ
-['AA', 'CC', 'HH', 'BB', 'EE', 'JJ']
-DD
-['AA', 'CC', 'HH', 'BB', 'JJ', 'DD']
-EE
-['AA', 'CC', 'HH', 'BB', 'JJ', 'EE']
-DD
-['AA', 'CC', 'HH', 'DD', 'BB', 'EE']
-JJ
-['AA', 'CC', 'HH', 'DD', 'BB', 'JJ']
-EE
-['AA', 'CC', 'HH', 'DD', 'EE', 'BB']
-JJ
-['AA', 'CC', 'HH', 'DD', 'EE', 'JJ']
-BB
-['AA', 'CC', 'HH', 'DD', 'JJ', 'BB']
-EE
-['AA', 'CC', 'HH', 'DD', 'JJ', 'EE']
-BB
-['AA', 'CC', 'HH', 'EE', 'BB', 'DD']
-JJ
-['AA', 'CC', 'HH', 'EE', 'BB', 'JJ']
-DD
-['AA', 'CC', 'HH', 'EE', 'DD', 'BB']
-JJ
-['AA', 'CC', 'HH', 'EE', 'DD', 'JJ']
-BB
-['AA', 'CC', 'HH', 'EE', 'JJ', 'BB']
-DD
-['AA', 'CC', 'HH', 'EE', 'JJ', 'DD']
-BB
-['AA', 'CC', 'HH', 'JJ', 'BB', 'DD']
-EE
-['AA', 'CC', 'HH', 'JJ', 'BB', 'EE']
-DD
-['AA', 'CC', 'HH', 'JJ', 'DD', 'BB']
-EE
-['AA', 'CC', 'HH', 'JJ', 'DD', 'EE']
-BB
-['AA', 'CC', 'HH', 'JJ', 'EE', 'BB']
-DD
-['AA', 'CC', 'HH', 'JJ', 'EE', 'DD']
-BB
-['AA', 'CC', 'JJ', 'BB', 'DD', 'EE']
-HH
-['AA', 'CC', 'JJ', 'BB', 'DD', 'HH']
-EE
-['AA', 'CC', 'JJ', 'BB', 'EE', 'DD']
-HH
-['AA', 'CC', 'JJ', 'BB', 'EE', 'HH']
-DD
-['AA', 'CC', 'JJ', 'BB', 'HH', 'DD']
-EE
-['AA', 'CC', 'JJ', 'BB', 'HH', 'EE']
-DD
-['AA', 'CC', 'JJ', 'DD', 'BB', 'EE']
-HH
-['AA', 'CC', 'JJ', 'DD', 'BB', 'HH']
-EE
-['AA', 'CC', 'JJ', 'DD', 'EE', 'BB']
-HH
-['AA', 'CC', 'JJ', 'DD', 'EE', 'HH']
-BB
-['AA', 'CC', 'JJ', 'DD', 'HH', 'BB']
-EE
-['AA', 'CC', 'JJ', 'DD', 'HH', 'EE']
-BB
-['AA', 'CC', 'JJ', 'EE', 'BB', 'DD']
-HH
-['AA', 'CC', 'JJ', 'EE', 'BB', 'HH']
-DD
-['AA', 'CC', 'JJ', 'EE', 'DD', 'BB']
-HH
-['AA', 'CC', 'JJ', 'EE', 'DD', 'HH']
-BB
-['AA', 'CC', 'JJ', 'EE', 'HH', 'BB']
-DD
-['AA', 'CC', 'JJ', 'EE', 'HH', 'DD']
-BB
-['AA', 'CC', 'JJ', 'HH', 'BB', 'DD']
-EE
-['AA', 'CC', 'JJ', 'HH', 'BB', 'EE']
-DD
-['AA', 'CC', 'JJ', 'HH', 'DD', 'BB']
-EE
-['AA', 'CC', 'JJ', 'HH', 'DD', 'EE']
-BB
-['AA', 'CC', 'JJ', 'HH', 'EE', 'BB']
-DD
-['AA', 'CC', 'JJ', 'HH', 'EE', 'DD']
-BB
-['AA', 'DD', 'BB', 'CC', 'EE', 'HH']
-JJ
-['AA', 'DD', 'BB', 'CC', 'EE', 'JJ']
-HH
-['AA', 'DD', 'BB', 'CC', 'HH', 'EE']
-JJ
-['AA', 'DD', 'BB', 'CC', 'HH', 'JJ']
-EE
-['AA', 'DD', 'BB', 'CC', 'JJ', 'EE']
-HH
-['AA', 'DD', 'BB', 'CC', 'JJ', 'HH']
-EE
-['AA', 'DD', 'BB', 'EE', 'CC', 'HH']
-JJ
-['AA', 'DD', 'BB', 'EE', 'CC', 'JJ']
-HH
-['AA', 'DD', 'BB', 'EE', 'HH', 'CC']
-JJ
-['AA', 'DD', 'BB', 'EE', 'HH', 'JJ']
-CC
-['AA', 'DD', 'BB', 'EE', 'JJ', 'CC']
-HH
-['AA', 'DD', 'BB', 'EE', 'JJ', 'HH']
-CC
-['AA', 'DD', 'BB', 'HH', 'CC', 'EE']
-JJ
-['AA', 'DD', 'BB', 'HH', 'CC', 'JJ']
-EE
-['AA', 'DD', 'BB', 'HH', 'EE', 'CC']
-JJ
-['AA', 'DD', 'BB', 'HH', 'EE', 'JJ']
-CC
-['AA', 'DD', 'BB', 'HH', 'JJ', 'CC']
-EE
-['AA', 'DD', 'BB', 'HH', 'JJ', 'EE']
-CC
-['AA', 'DD', 'BB', 'JJ', 'CC', 'EE']
-HH
-['AA', 'DD', 'BB', 'JJ', 'CC', 'HH']
-EE
-['AA', 'DD', 'BB', 'JJ', 'EE', 'CC']
-HH
-['AA', 'DD', 'BB', 'JJ', 'EE', 'HH']
-CC
-['AA', 'DD', 'BB', 'JJ', 'HH', 'CC']
-EE
-['AA', 'DD', 'BB', 'JJ', 'HH', 'EE']
-CC
-['AA', 'DD', 'CC', 'BB', 'EE', 'HH']
-JJ
-['AA', 'DD', 'CC', 'BB', 'EE', 'JJ']
-HH
-['AA', 'DD', 'CC', 'BB', 'HH', 'EE']
-JJ
-['AA', 'DD', 'CC', 'BB', 'HH', 'JJ']
-EE
-['AA', 'DD', 'CC', 'BB', 'JJ', 'EE']
-HH
-['AA', 'DD', 'CC', 'BB', 'JJ', 'HH']
-EE
-['AA', 'DD', 'CC', 'EE', 'BB', 'HH']
-JJ
-['AA', 'DD', 'CC', 'EE', 'BB', 'JJ']
-HH
-['AA', 'DD', 'CC', 'EE', 'HH', 'BB']
-JJ
-['AA', 'DD', 'CC', 'EE', 'HH', 'JJ']
-BB
-['AA', 'DD', 'CC', 'EE', 'JJ', 'BB']
-HH
-['AA', 'DD', 'CC', 'EE', 'JJ', 'HH']
-BB
-['AA', 'DD', 'CC', 'HH', 'BB', 'EE']
-JJ
-['AA', 'DD', 'CC', 'HH', 'BB', 'JJ']
-EE
-['AA', 'DD', 'CC', 'HH', 'EE', 'BB']
-JJ
-['AA', 'DD', 'CC', 'HH', 'EE', 'JJ']
-BB
-['AA', 'DD', 'CC', 'HH', 'JJ', 'BB']
-EE
-['AA', 'DD', 'CC', 'HH', 'JJ', 'EE']
-BB
-['AA', 'DD', 'CC', 'JJ', 'BB', 'EE']
-HH
-['AA', 'DD', 'CC', 'JJ', 'BB', 'HH']
-EE
-['AA', 'DD', 'CC', 'JJ', 'EE', 'BB']
-HH
-['AA', 'DD', 'CC', 'JJ', 'EE', 'HH']
-BB
-['AA', 'DD', 'CC', 'JJ', 'HH', 'BB']
-EE
-['AA', 'DD', 'CC', 'JJ', 'HH', 'EE']
-BB
-['AA', 'DD', 'EE', 'BB', 'CC', 'HH']
-JJ
-['AA', 'DD', 'EE', 'BB', 'CC', 'JJ']
-HH
-['AA', 'DD', 'EE', 'BB', 'HH', 'CC']
-JJ
-['AA', 'DD', 'EE', 'BB', 'HH', 'JJ']
-CC
-['AA', 'DD', 'EE', 'BB', 'JJ', 'CC']
-HH
-['AA', 'DD', 'EE', 'BB', 'JJ', 'HH']
-CC
-['AA', 'DD', 'EE', 'CC', 'BB', 'HH']
-JJ
-['AA', 'DD', 'EE', 'CC', 'BB', 'JJ']
-HH
-['AA', 'DD', 'EE', 'CC', 'HH', 'BB']
-JJ
-['AA', 'DD', 'EE', 'CC', 'HH', 'JJ']
-BB
-['AA', 'DD', 'EE', 'CC', 'JJ', 'BB']
-HH
-['AA', 'DD', 'EE', 'CC', 'JJ', 'HH']
-BB
-['AA', 'DD', 'EE', 'HH', 'BB', 'CC']
-JJ
-['AA', 'DD', 'EE', 'HH', 'BB', 'JJ']
-CC
-['AA', 'DD', 'EE', 'HH', 'CC', 'BB']
-JJ
-['AA', 'DD', 'EE', 'HH', 'CC', 'JJ']
-BB
-['AA', 'DD', 'EE', 'HH', 'JJ', 'BB']
-CC
-['AA', 'DD', 'EE', 'HH', 'JJ', 'CC']
-BB
-['AA', 'DD', 'EE', 'JJ', 'BB', 'CC']
-HH
-['AA', 'DD', 'EE', 'JJ', 'BB', 'HH']
-CC
-['AA', 'DD', 'EE', 'JJ', 'CC', 'BB']
-HH
-['AA', 'DD', 'EE', 'JJ', 'CC', 'HH']
-BB
-['AA', 'DD', 'EE', 'JJ', 'HH', 'BB']
-CC
-['AA', 'DD', 'EE', 'JJ', 'HH', 'CC']
-BB
-['AA', 'DD', 'HH', 'BB', 'CC', 'EE']
-JJ
-['AA', 'DD', 'HH', 'BB', 'CC', 'JJ']
-EE
-['AA', 'DD', 'HH', 'BB', 'EE', 'CC']
-JJ
-['AA', 'DD', 'HH', 'BB', 'EE', 'JJ']
-CC
-['AA', 'DD', 'HH', 'BB', 'JJ', 'CC']
-EE
-['AA', 'DD', 'HH', 'BB', 'JJ', 'EE']
-CC
-['AA', 'DD', 'HH', 'CC', 'BB', 'EE']
-JJ
-['AA', 'DD', 'HH', 'CC', 'BB', 'JJ']
-EE
-['AA', 'DD', 'HH', 'CC', 'EE', 'BB']
-JJ
-['AA', 'DD', 'HH', 'CC', 'EE', 'JJ']
-BB
-['AA', 'DD', 'HH', 'CC', 'JJ', 'BB']
-EE
-['AA', 'DD', 'HH', 'CC', 'JJ', 'EE']
-BB
-['AA', 'DD', 'HH', 'EE', 'BB', 'CC']
-JJ
-['AA', 'DD', 'HH', 'EE', 'BB', 'JJ']
-CC
-['AA', 'DD', 'HH', 'EE', 'CC', 'BB']
-JJ
-['AA', 'DD', 'HH', 'EE', 'CC', 'JJ']
-BB
-['AA', 'DD', 'HH', 'EE', 'JJ', 'BB']
-CC
-['AA', 'DD', 'HH', 'EE', 'JJ', 'CC']
-BB
-['AA', 'DD', 'HH', 'JJ', 'BB', 'CC']
-EE
-['AA', 'DD', 'HH', 'JJ', 'BB', 'EE']
-CC
-['AA', 'DD', 'HH', 'JJ', 'CC', 'BB']
-EE
-['AA', 'DD', 'HH', 'JJ', 'CC', 'EE']
-BB
-['AA', 'DD', 'HH', 'JJ', 'EE', 'BB']
-CC
-['AA', 'DD', 'HH', 'JJ', 'EE', 'CC']
-BB
-['AA', 'DD', 'JJ', 'BB', 'CC', 'EE']
-HH
-['AA', 'DD', 'JJ', 'BB', 'CC', 'HH']
-EE
-['AA', 'DD', 'JJ', 'BB', 'EE', 'CC']
-HH
-['AA', 'DD', 'JJ', 'BB', 'EE', 'HH']
-CC
-['AA', 'DD', 'JJ', 'BB', 'HH', 'CC']
-EE
-['AA', 'DD', 'JJ', 'BB', 'HH', 'EE']
-CC
-['AA', 'DD', 'JJ', 'CC', 'BB', 'EE']
-HH
-['AA', 'DD', 'JJ', 'CC', 'BB', 'HH']
-EE
-['AA', 'DD', 'JJ', 'CC', 'EE', 'BB']
-HH
-['AA', 'DD', 'JJ', 'CC', 'EE', 'HH']
-BB
-['AA', 'DD', 'JJ', 'CC', 'HH', 'BB']
-EE
-['AA', 'DD', 'JJ', 'CC', 'HH', 'EE']
-BB
-['AA', 'DD', 'JJ', 'EE', 'BB', 'CC']
-HH
-['AA', 'DD', 'JJ', 'EE', 'BB', 'HH']
-CC
-['AA', 'DD', 'JJ', 'EE', 'CC', 'BB']
-HH
-['AA', 'DD', 'JJ', 'EE', 'CC', 'HH']
-BB
-['AA', 'DD', 'JJ', 'EE', 'HH', 'BB']
-CC
-['AA', 'DD', 'JJ', 'EE', 'HH', 'CC']
-BB
-['AA', 'DD', 'JJ', 'HH', 'BB', 'CC']
-EE
-['AA', 'DD', 'JJ', 'HH', 'BB', 'EE']
-CC
-['AA', 'DD', 'JJ', 'HH', 'CC', 'BB']
-EE
-['AA', 'DD', 'JJ', 'HH', 'CC', 'EE']
-BB
-['AA', 'DD', 'JJ', 'HH', 'EE', 'BB']
-CC
-['AA', 'DD', 'JJ', 'HH', 'EE', 'CC']
-BB
-['AA', 'EE', 'BB', 'CC', 'DD', 'HH']
-JJ
-['AA', 'EE', 'BB', 'CC', 'DD', 'JJ']
-HH
-['AA', 'EE', 'BB', 'CC', 'HH', 'DD']
-JJ
-['AA', 'EE', 'BB', 'CC', 'HH', 'JJ']
-DD
-['AA', 'EE', 'BB', 'CC', 'JJ', 'DD']
-HH
-['AA', 'EE', 'BB', 'CC', 'JJ', 'HH']
-DD
-['AA', 'EE', 'BB', 'DD', 'CC', 'HH']
-JJ
-['AA', 'EE', 'BB', 'DD', 'CC', 'JJ']
-HH
-['AA', 'EE', 'BB', 'DD', 'HH', 'CC']
-JJ
-['AA', 'EE', 'BB', 'DD', 'HH', 'JJ']
-CC
-['AA', 'EE', 'BB', 'DD', 'JJ', 'CC']
-HH
-['AA', 'EE', 'BB', 'DD', 'JJ', 'HH']
-CC
-['AA', 'EE', 'BB', 'HH', 'CC', 'DD']
-JJ
-['AA', 'EE', 'BB', 'HH', 'CC', 'JJ']
-DD
-['AA', 'EE', 'BB', 'HH', 'DD', 'CC']
-JJ
-['AA', 'EE', 'BB', 'HH', 'DD', 'JJ']
-CC
-['AA', 'EE', 'BB', 'HH', 'JJ', 'CC']
-DD
-['AA', 'EE', 'BB', 'HH', 'JJ', 'DD']
-CC
-['AA', 'EE', 'BB', 'JJ', 'CC', 'DD']
-HH
-['AA', 'EE', 'BB', 'JJ', 'CC', 'HH']
-DD
-['AA', 'EE', 'BB', 'JJ', 'DD', 'CC']
-HH
-['AA', 'EE', 'BB', 'JJ', 'DD', 'HH']
-CC
-['AA', 'EE', 'BB', 'JJ', 'HH', 'CC']
-DD
-['AA', 'EE', 'BB', 'JJ', 'HH', 'DD']
-CC
-['AA', 'EE', 'CC', 'BB', 'DD', 'HH']
-JJ
-['AA', 'EE', 'CC', 'BB', 'DD', 'JJ']
-HH
-['AA', 'EE', 'CC', 'BB', 'HH', 'DD']
-JJ
-['AA', 'EE', 'CC', 'BB', 'HH', 'JJ']
-DD
-['AA', 'EE', 'CC', 'BB', 'JJ', 'DD']
-HH
-['AA', 'EE', 'CC', 'BB', 'JJ', 'HH']
-DD
-['AA', 'EE', 'CC', 'DD', 'BB', 'HH']
-JJ
-['AA', 'EE', 'CC', 'DD', 'BB', 'JJ']
-HH
-['AA', 'EE', 'CC', 'DD', 'HH', 'BB']
-JJ
-['AA', 'EE', 'CC', 'DD', 'HH', 'JJ']
-BB
-['AA', 'EE', 'CC', 'DD', 'JJ', 'BB']
-HH
-['AA', 'EE', 'CC', 'DD', 'JJ', 'HH']
-BB
-['AA', 'EE', 'CC', 'HH', 'BB', 'DD']
-JJ
-['AA', 'EE', 'CC', 'HH', 'BB', 'JJ']
-DD
-['AA', 'EE', 'CC', 'HH', 'DD', 'BB']
-JJ
-['AA', 'EE', 'CC', 'HH', 'DD', 'JJ']
-BB
-['AA', 'EE', 'CC', 'HH', 'JJ', 'BB']
-DD
-['AA', 'EE', 'CC', 'HH', 'JJ', 'DD']
-BB
-['AA', 'EE', 'CC', 'JJ', 'BB', 'DD']
-HH
-['AA', 'EE', 'CC', 'JJ', 'BB', 'HH']
-DD
-['AA', 'EE', 'CC', 'JJ', 'DD', 'BB']
-HH
-['AA', 'EE', 'CC', 'JJ', 'DD', 'HH']
-BB
-['AA', 'EE', 'CC', 'JJ', 'HH', 'BB']
-DD
-['AA', 'EE', 'CC', 'JJ', 'HH', 'DD']
-BB
-['AA', 'EE', 'DD', 'BB', 'CC', 'HH']
-JJ
-['AA', 'EE', 'DD', 'BB', 'CC', 'JJ']
-HH
-['AA', 'EE', 'DD', 'BB', 'HH', 'CC']
-JJ
-['AA', 'EE', 'DD', 'BB', 'HH', 'JJ']
-CC
-['AA', 'EE', 'DD', 'BB', 'JJ', 'CC']
-HH
-['AA', 'EE', 'DD', 'BB', 'JJ', 'HH']
-CC
-['AA', 'EE', 'DD', 'CC', 'BB', 'HH']
-JJ
-['AA', 'EE', 'DD', 'CC', 'BB', 'JJ']
-HH
-['AA', 'EE', 'DD', 'CC', 'HH', 'BB']
-JJ
-['AA', 'EE', 'DD', 'CC', 'HH', 'JJ']
-BB
-['AA', 'EE', 'DD', 'CC', 'JJ', 'BB']
-HH
-['AA', 'EE', 'DD', 'CC', 'JJ', 'HH']
-BB
-['AA', 'EE', 'DD', 'HH', 'BB', 'CC']
-JJ
-['AA', 'EE', 'DD', 'HH', 'BB', 'JJ']
-CC
-['AA', 'EE', 'DD', 'HH', 'CC', 'BB']
-JJ
-['AA', 'EE', 'DD', 'HH', 'CC', 'JJ']
-BB
-['AA', 'EE', 'DD', 'HH', 'JJ', 'BB']
-CC
-['AA', 'EE', 'DD', 'HH', 'JJ', 'CC']
-BB
-['AA', 'EE', 'DD', 'JJ', 'BB', 'CC']
-HH
-['AA', 'EE', 'DD', 'JJ', 'BB', 'HH']
-CC
-['AA', 'EE', 'DD', 'JJ', 'CC', 'BB']
-HH
-['AA', 'EE', 'DD', 'JJ', 'CC', 'HH']
-BB
-['AA', 'EE', 'DD', 'JJ', 'HH', 'BB']
-CC
-['AA', 'EE', 'DD', 'JJ', 'HH', 'CC']
-BB
-['AA', 'EE', 'HH', 'BB', 'CC', 'DD']
-JJ
-['AA', 'EE', 'HH', 'BB', 'CC', 'JJ']
-DD
-['AA', 'EE', 'HH', 'BB', 'DD', 'CC']
-JJ
-['AA', 'EE', 'HH', 'BB', 'DD', 'JJ']
-CC
-['AA', 'EE', 'HH', 'BB', 'JJ', 'CC']
-DD
-['AA', 'EE', 'HH', 'BB', 'JJ', 'DD']
-CC
-['AA', 'EE', 'HH', 'CC', 'BB', 'DD']
-JJ
-['AA', 'EE', 'HH', 'CC', 'BB', 'JJ']
-DD
-['AA', 'EE', 'HH', 'CC', 'DD', 'BB']
-JJ
-['AA', 'EE', 'HH', 'CC', 'DD', 'JJ']
-BB
-['AA', 'EE', 'HH', 'CC', 'JJ', 'BB']
-DD
-['AA', 'EE', 'HH', 'CC', 'JJ', 'DD']
-BB
-['AA', 'EE', 'HH', 'DD', 'BB', 'CC']
-JJ
-['AA', 'EE', 'HH', 'DD', 'BB', 'JJ']
-CC
-['AA', 'EE', 'HH', 'DD', 'CC', 'BB']
-JJ
-['AA', 'EE', 'HH', 'DD', 'CC', 'JJ']
-BB
-['AA', 'EE', 'HH', 'DD', 'JJ', 'BB']
-CC
-['AA', 'EE', 'HH', 'DD', 'JJ', 'CC']
-BB
-['AA', 'EE', 'HH', 'JJ', 'BB', 'CC']
-DD
-['AA', 'EE', 'HH', 'JJ', 'BB', 'DD']
-CC
-['AA', 'EE', 'HH', 'JJ', 'CC', 'BB']
-DD
-['AA', 'EE', 'HH', 'JJ', 'CC', 'DD']
-BB
-['AA', 'EE', 'HH', 'JJ', 'DD', 'BB']
-CC
-['AA', 'EE', 'HH', 'JJ', 'DD', 'CC']
-BB
-['AA', 'EE', 'JJ', 'BB', 'CC', 'DD']
-HH
-['AA', 'EE', 'JJ', 'BB', 'CC', 'HH']
-DD
-['AA', 'EE', 'JJ', 'BB', 'DD', 'CC']
-HH
-['AA', 'EE', 'JJ', 'BB', 'DD', 'HH']
-CC
-['AA', 'EE', 'JJ', 'BB', 'HH', 'CC']
-DD
-['AA', 'EE', 'JJ', 'BB', 'HH', 'DD']
-CC
-['AA', 'EE', 'JJ', 'CC', 'BB', 'DD']
-HH
-['AA', 'EE', 'JJ', 'CC', 'BB', 'HH']
-DD
-['AA', 'EE', 'JJ', 'CC', 'DD', 'BB']
-HH
-['AA', 'EE', 'JJ', 'CC', 'DD', 'HH']
-BB
-['AA', 'EE', 'JJ', 'CC', 'HH', 'BB']
-DD
-['AA', 'EE', 'JJ', 'CC', 'HH', 'DD']
-BB
-['AA', 'EE', 'JJ', 'DD', 'BB', 'CC']
-HH
-['AA', 'EE', 'JJ', 'DD', 'BB', 'HH']
-CC
-['AA', 'EE', 'JJ', 'DD', 'CC', 'BB']
-HH
-['AA', 'EE', 'JJ', 'DD', 'CC', 'HH']
-BB
-['AA', 'EE', 'JJ', 'DD', 'HH', 'BB']
-CC
-['AA', 'EE', 'JJ', 'DD', 'HH', 'CC']
-BB
-['AA', 'EE', 'JJ', 'HH', 'BB', 'CC']
-DD
-['AA', 'EE', 'JJ', 'HH', 'BB', 'DD']
-CC
-['AA', 'EE', 'JJ', 'HH', 'CC', 'BB']
-DD
-['AA', 'EE', 'JJ', 'HH', 'CC', 'DD']
-BB
-['AA', 'EE', 'JJ', 'HH', 'DD', 'BB']
-CC
-['AA', 'EE', 'JJ', 'HH', 'DD', 'CC']
-BB
-['AA', 'HH', 'BB', 'CC', 'DD', 'EE']
-JJ
-['AA', 'HH', 'BB', 'CC', 'DD', 'JJ']
-EE
-['AA', 'HH', 'BB', 'CC', 'EE', 'DD']
-JJ
-['AA', 'HH', 'BB', 'CC', 'EE', 'JJ']
-DD
-['AA', 'HH', 'BB', 'CC', 'JJ', 'DD']
-EE
-['AA', 'HH', 'BB', 'CC', 'JJ', 'EE']
-DD
-['AA', 'HH', 'BB', 'DD', 'CC', 'EE']
-JJ
-['AA', 'HH', 'BB', 'DD', 'CC', 'JJ']
-EE
-['AA', 'HH', 'BB', 'DD', 'EE', 'CC']
-JJ
-['AA', 'HH', 'BB', 'DD', 'EE', 'JJ']
-CC
-['AA', 'HH', 'BB', 'DD', 'JJ', 'CC']
-EE
-['AA', 'HH', 'BB', 'DD', 'JJ', 'EE']
-CC
-['AA', 'HH', 'BB', 'EE', 'CC', 'DD']
-JJ
-['AA', 'HH', 'BB', 'EE', 'CC', 'JJ']
-DD
-['AA', 'HH', 'BB', 'EE', 'DD', 'CC']
-JJ
-['AA', 'HH', 'BB', 'EE', 'DD', 'JJ']
-CC
-['AA', 'HH', 'BB', 'EE', 'JJ', 'CC']
-DD
-['AA', 'HH', 'BB', 'EE', 'JJ', 'DD']
-CC
-['AA', 'HH', 'BB', 'JJ', 'CC', 'DD']
-EE
-['AA', 'HH', 'BB', 'JJ', 'CC', 'EE']
-DD
-['AA', 'HH', 'BB', 'JJ', 'DD', 'CC']
-EE
-['AA', 'HH', 'BB', 'JJ', 'DD', 'EE']
-CC
-['AA', 'HH', 'BB', 'JJ', 'EE', 'CC']
-DD
-['AA', 'HH', 'BB', 'JJ', 'EE', 'DD']
-CC
-['AA', 'HH', 'CC', 'BB', 'DD', 'EE']
-JJ
-['AA', 'HH', 'CC', 'BB', 'DD', 'JJ']
-EE
-['AA', 'HH', 'CC', 'BB', 'EE', 'DD']
-JJ
-['AA', 'HH', 'CC', 'BB', 'EE', 'JJ']
-DD
-['AA', 'HH', 'CC', 'BB', 'JJ', 'DD']
-EE
-['AA', 'HH', 'CC', 'BB', 'JJ', 'EE']
-DD
-['AA', 'HH', 'CC', 'DD', 'BB', 'EE']
-JJ
-['AA', 'HH', 'CC', 'DD', 'BB', 'JJ']
-EE
-['AA', 'HH', 'CC', 'DD', 'EE', 'BB']
-JJ
-['AA', 'HH', 'CC', 'DD', 'EE', 'JJ']
-BB
-['AA', 'HH', 'CC', 'DD', 'JJ', 'BB']
-EE
-['AA', 'HH', 'CC', 'DD', 'JJ', 'EE']
-BB
-['AA', 'HH', 'CC', 'EE', 'BB', 'DD']
-JJ
-['AA', 'HH', 'CC', 'EE', 'BB', 'JJ']
-DD
-['AA', 'HH', 'CC', 'EE', 'DD', 'BB']
-JJ
-['AA', 'HH', 'CC', 'EE', 'DD', 'JJ']
-BB
-['AA', 'HH', 'CC', 'EE', 'JJ', 'BB']
-DD
-['AA', 'HH', 'CC', 'EE', 'JJ', 'DD']
-BB
-['AA', 'HH', 'CC', 'JJ', 'BB', 'DD']
-EE
-['AA', 'HH', 'CC', 'JJ', 'BB', 'EE']
-DD
-['AA', 'HH', 'CC', 'JJ', 'DD', 'BB']
-EE
-['AA', 'HH', 'CC', 'JJ', 'DD', 'EE']
-BB
-['AA', 'HH', 'CC', 'JJ', 'EE', 'BB']
-DD
-['AA', 'HH', 'CC', 'JJ', 'EE', 'DD']
-BB
-['AA', 'HH', 'DD', 'BB', 'CC', 'EE']
-JJ
-['AA', 'HH', 'DD', 'BB', 'CC', 'JJ']
-EE
-['AA', 'HH', 'DD', 'BB', 'EE', 'CC']
-JJ
-['AA', 'HH', 'DD', 'BB', 'EE', 'JJ']
-CC
-['AA', 'HH', 'DD', 'BB', 'JJ', 'CC']
-EE
-['AA', 'HH', 'DD', 'BB', 'JJ', 'EE']
-CC
-['AA', 'HH', 'DD', 'CC', 'BB', 'EE']
-JJ
-['AA', 'HH', 'DD', 'CC', 'BB', 'JJ']
-EE
-['AA', 'HH', 'DD', 'CC', 'EE', 'BB']
-JJ
-['AA', 'HH', 'DD', 'CC', 'EE', 'JJ']
-BB
-['AA', 'HH', 'DD', 'CC', 'JJ', 'BB']
-EE
-['AA', 'HH', 'DD', 'CC', 'JJ', 'EE']
-BB
-['AA', 'HH', 'DD', 'EE', 'BB', 'CC']
-JJ
-['AA', 'HH', 'DD', 'EE', 'BB', 'JJ']
-CC
-['AA', 'HH', 'DD', 'EE', 'CC', 'BB']
-JJ
-['AA', 'HH', 'DD', 'EE', 'CC', 'JJ']
-BB
-['AA', 'HH', 'DD', 'EE', 'JJ', 'BB']
-CC
-['AA', 'HH', 'DD', 'EE', 'JJ', 'CC']
-BB
-['AA', 'HH', 'DD', 'JJ', 'BB', 'CC']
-EE
-['AA', 'HH', 'DD', 'JJ', 'BB', 'EE']
-CC
-['AA', 'HH', 'DD', 'JJ', 'CC', 'BB']
-EE
-['AA', 'HH', 'DD', 'JJ', 'CC', 'EE']
-BB
-['AA', 'HH', 'DD', 'JJ', 'EE', 'BB']
-CC
-['AA', 'HH', 'DD', 'JJ', 'EE', 'CC']
-BB
-['AA', 'HH', 'EE', 'BB', 'CC', 'DD']
-JJ
-['AA', 'HH', 'EE', 'BB', 'CC', 'JJ']
-DD
-['AA', 'HH', 'EE', 'BB', 'DD', 'CC']
-JJ
-['AA', 'HH', 'EE', 'BB', 'DD', 'JJ']
-CC
-['AA', 'HH', 'EE', 'BB', 'JJ', 'CC']
-DD
-['AA', 'HH', 'EE', 'BB', 'JJ', 'DD']
-CC
-['AA', 'HH', 'EE', 'CC', 'BB', 'DD']
-JJ
-['AA', 'HH', 'EE', 'CC', 'BB', 'JJ']
-DD
-['AA', 'HH', 'EE', 'CC', 'DD', 'BB']
-JJ
-['AA', 'HH', 'EE', 'CC', 'DD', 'JJ']
-BB
-['AA', 'HH', 'EE', 'CC', 'JJ', 'BB']
-DD
-['AA', 'HH', 'EE', 'CC', 'JJ', 'DD']
-BB
-['AA', 'HH', 'EE', 'DD', 'BB', 'CC']
-JJ
-['AA', 'HH', 'EE', 'DD', 'BB', 'JJ']
-CC
-['AA', 'HH', 'EE', 'DD', 'CC', 'BB']
-JJ
-['AA', 'HH', 'EE', 'DD', 'CC', 'JJ']
-BB
-['AA', 'HH', 'EE', 'DD', 'JJ', 'BB']
-CC
-['AA', 'HH', 'EE', 'DD', 'JJ', 'CC']
-BB
-['AA', 'HH', 'EE', 'JJ', 'BB', 'CC']
-DD
-['AA', 'HH', 'EE', 'JJ', 'BB', 'DD']
-CC
-['AA', 'HH', 'EE', 'JJ', 'CC', 'BB']
-DD
-['AA', 'HH', 'EE', 'JJ', 'CC', 'DD']
-BB
-['AA', 'HH', 'EE', 'JJ', 'DD', 'BB']
-CC
-['AA', 'HH', 'EE', 'JJ', 'DD', 'CC']
-BB
-['AA', 'HH', 'JJ', 'BB', 'CC', 'DD']
-EE
-['AA', 'HH', 'JJ', 'BB', 'CC', 'EE']
-DD
-['AA', 'HH', 'JJ', 'BB', 'DD', 'CC']
-EE
-['AA', 'HH', 'JJ', 'BB', 'DD', 'EE']
-CC
-['AA', 'HH', 'JJ', 'BB', 'EE', 'CC']
-DD
-['AA', 'HH', 'JJ', 'BB', 'EE', 'DD']
-CC
-['AA', 'HH', 'JJ', 'CC', 'BB', 'DD']
-EE
-['AA', 'HH', 'JJ', 'CC', 'BB', 'EE']
-DD
-['AA', 'HH', 'JJ', 'CC', 'DD', 'BB']
-EE
-['AA', 'HH', 'JJ', 'CC', 'DD', 'EE']
-BB
-['AA', 'HH', 'JJ', 'CC', 'EE', 'BB']
-DD
-['AA', 'HH', 'JJ', 'CC', 'EE', 'DD']
-BB
-['AA', 'HH', 'JJ', 'DD', 'BB', 'CC']
-EE
-['AA', 'HH', 'JJ', 'DD', 'BB', 'EE']
-CC
-['AA', 'HH', 'JJ', 'DD', 'CC', 'BB']
-EE
-['AA', 'HH', 'JJ', 'DD', 'CC', 'EE']
-BB
-['AA', 'HH', 'JJ', 'DD', 'EE', 'BB']
-CC
-['AA', 'HH', 'JJ', 'DD', 'EE', 'CC']
-BB
-['AA', 'HH', 'JJ', 'EE', 'BB', 'CC']
-DD
-['AA', 'HH', 'JJ', 'EE', 'BB', 'DD']
-CC
-['AA', 'HH', 'JJ', 'EE', 'CC', 'BB']
-DD
-['AA', 'HH', 'JJ', 'EE', 'CC', 'DD']
-BB
-['AA', 'HH', 'JJ', 'EE', 'DD', 'BB']
-CC
-['AA', 'HH', 'JJ', 'EE', 'DD', 'CC']
-BB
-['AA', 'JJ', 'BB', 'CC', 'DD', 'EE']
-HH
-['AA', 'JJ', 'BB', 'CC', 'DD', 'HH']
-EE
-['AA', 'JJ', 'BB', 'CC', 'EE', 'DD']
-HH
-['AA', 'JJ', 'BB', 'CC', 'EE', 'HH']
-DD
-['AA', 'JJ', 'BB', 'CC', 'HH', 'DD']
-EE
-['AA', 'JJ', 'BB', 'CC', 'HH', 'EE']
-DD
-['AA', 'JJ', 'BB', 'DD', 'CC', 'EE']
-HH
-['AA', 'JJ', 'BB', 'DD', 'CC', 'HH']
-EE
-['AA', 'JJ', 'BB', 'DD', 'EE', 'CC']
-HH
-['AA', 'JJ', 'BB', 'DD', 'EE', 'HH']
-CC
-['AA', 'JJ', 'BB', 'DD', 'HH', 'CC']
-EE
-['AA', 'JJ', 'BB', 'DD', 'HH', 'EE']
-CC
-['AA', 'JJ', 'BB', 'EE', 'CC', 'DD']
-HH
-['AA', 'JJ', 'BB', 'EE', 'CC', 'HH']
-DD
-['AA', 'JJ', 'BB', 'EE', 'DD', 'CC']
-HH
-['AA', 'JJ', 'BB', 'EE', 'DD', 'HH']
-CC
-['AA', 'JJ', 'BB', 'EE', 'HH', 'CC']
-DD
-['AA', 'JJ', 'BB', 'EE', 'HH', 'DD']
-CC
-['AA', 'JJ', 'BB', 'HH', 'CC', 'DD']
-EE
-['AA', 'JJ', 'BB', 'HH', 'CC', 'EE']
-DD
-['AA', 'JJ', 'BB', 'HH', 'DD', 'CC']
-EE
-['AA', 'JJ', 'BB', 'HH', 'DD', 'EE']
-CC
-['AA', 'JJ', 'BB', 'HH', 'EE', 'CC']
-DD
-['AA', 'JJ', 'BB', 'HH', 'EE', 'DD']
-CC
-['AA', 'JJ', 'CC', 'BB', 'DD', 'EE']
-HH
-['AA', 'JJ', 'CC', 'BB', 'DD', 'HH']
-EE
-['AA', 'JJ', 'CC', 'BB', 'EE', 'DD']
-HH
-['AA', 'JJ', 'CC', 'BB', 'EE', 'HH']
-DD
-['AA', 'JJ', 'CC', 'BB', 'HH', 'DD']
-EE
-['AA', 'JJ', 'CC', 'BB', 'HH', 'EE']
-DD
-['AA', 'JJ', 'CC', 'DD', 'BB', 'EE']
-HH
-['AA', 'JJ', 'CC', 'DD', 'BB', 'HH']
-EE
-['AA', 'JJ', 'CC', 'DD', 'EE', 'BB']
-HH
-['AA', 'JJ', 'CC', 'DD', 'EE', 'HH']
-BB
-['AA', 'JJ', 'CC', 'DD', 'HH', 'BB']
-EE
-['AA', 'JJ', 'CC', 'DD', 'HH', 'EE']
-BB
-['AA', 'JJ', 'CC', 'EE', 'BB', 'DD']
-HH
-['AA', 'JJ', 'CC', 'EE', 'BB', 'HH']
-DD
-['AA', 'JJ', 'CC', 'EE', 'DD', 'BB']
-HH
-['AA', 'JJ', 'CC', 'EE', 'DD', 'HH']
-BB
-['AA', 'JJ', 'CC', 'EE', 'HH', 'BB']
-DD
-['AA', 'JJ', 'CC', 'EE', 'HH', 'DD']
-BB
-['AA', 'JJ', 'CC', 'HH', 'BB', 'DD']
-EE
-['AA', 'JJ', 'CC', 'HH', 'BB', 'EE']
-DD
-['AA', 'JJ', 'CC', 'HH', 'DD', 'BB']
-EE
-['AA', 'JJ', 'CC', 'HH', 'DD', 'EE']
-BB
-['AA', 'JJ', 'CC', 'HH', 'EE', 'BB']
-DD
-['AA', 'JJ', 'CC', 'HH', 'EE', 'DD']
-BB
-['AA', 'JJ', 'DD', 'BB', 'CC', 'EE']
-HH
-['AA', 'JJ', 'DD', 'BB', 'CC', 'HH']
-EE
-['AA', 'JJ', 'DD', 'BB', 'EE', 'CC']
-HH
-['AA', 'JJ', 'DD', 'BB', 'EE', 'HH']
-CC
-['AA', 'JJ', 'DD', 'BB', 'HH', 'CC']
-EE
-['AA', 'JJ', 'DD', 'BB', 'HH', 'EE']
-CC
-['AA', 'JJ', 'DD', 'CC', 'BB', 'EE']
-HH
-['AA', 'JJ', 'DD', 'CC', 'BB', 'HH']
-EE
-['AA', 'JJ', 'DD', 'CC', 'EE', 'BB']
-HH
-['AA', 'JJ', 'DD', 'CC', 'EE', 'HH']
-BB
-['AA', 'JJ', 'DD', 'CC', 'HH', 'BB']
-EE
-['AA', 'JJ', 'DD', 'CC', 'HH', 'EE']
-BB
-['AA', 'JJ', 'DD', 'EE', 'BB', 'CC']
-HH
-['AA', 'JJ', 'DD', 'EE', 'BB', 'HH']
-CC
-['AA', 'JJ', 'DD', 'EE', 'CC', 'BB']
-HH
-['AA', 'JJ', 'DD', 'EE', 'CC', 'HH']
-BB
-['AA', 'JJ', 'DD', 'EE', 'HH', 'BB']
-CC
-['AA', 'JJ', 'DD', 'EE', 'HH', 'CC']
-BB
-['AA', 'JJ', 'DD', 'HH', 'BB', 'CC']
-EE
-['AA', 'JJ', 'DD', 'HH', 'BB', 'EE']
-CC
-['AA', 'JJ', 'DD', 'HH', 'CC', 'BB']
-EE
-['AA', 'JJ', 'DD', 'HH', 'CC', 'EE']
-BB
-['AA', 'JJ', 'DD', 'HH', 'EE', 'BB']
-CC
-['AA', 'JJ', 'DD', 'HH', 'EE', 'CC']
-BB
-['AA', 'JJ', 'EE', 'BB', 'CC', 'DD']
-HH
-['AA', 'JJ', 'EE', 'BB', 'CC', 'HH']
-DD
-['AA', 'JJ', 'EE', 'BB', 'DD', 'CC']
-HH
-['AA', 'JJ', 'EE', 'BB', 'DD', 'HH']
-CC
-['AA', 'JJ', 'EE', 'BB', 'HH', 'CC']
-DD
-['AA', 'JJ', 'EE', 'BB', 'HH', 'DD']
-CC
-['AA', 'JJ', 'EE', 'CC', 'BB', 'DD']
-HH
-['AA', 'JJ', 'EE', 'CC', 'BB', 'HH']
-DD
-['AA', 'JJ', 'EE', 'CC', 'DD', 'BB']
-HH
-['AA', 'JJ', 'EE', 'CC', 'DD', 'HH']
-BB
-['AA', 'JJ', 'EE', 'CC', 'HH', 'BB']
-DD
-['AA', 'JJ', 'EE', 'CC', 'HH', 'DD']
-BB
-['AA', 'JJ', 'EE', 'DD', 'BB', 'CC']
-HH
-['AA', 'JJ', 'EE', 'DD', 'BB', 'HH']
-CC
-['AA', 'JJ', 'EE', 'DD', 'CC', 'BB']
-HH
-['AA', 'JJ', 'EE', 'DD', 'CC', 'HH']
-BB
-['AA', 'JJ', 'EE', 'DD', 'HH', 'BB']
-CC
-['AA', 'JJ', 'EE', 'DD', 'HH', 'CC']
-BB
-['AA', 'JJ', 'EE', 'HH', 'BB', 'CC']
-DD
-['AA', 'JJ', 'EE', 'HH', 'BB', 'DD']
-CC
-['AA', 'JJ', 'EE', 'HH', 'CC', 'BB']
-DD
-['AA', 'JJ', 'EE', 'HH', 'CC', 'DD']
-BB
-['AA', 'JJ', 'EE', 'HH', 'DD', 'BB']
-CC
-['AA', 'JJ', 'EE', 'HH', 'DD', 'CC']
-BB
-['AA', 'JJ', 'HH', 'BB', 'CC', 'DD']
-EE
-['AA', 'JJ', 'HH', 'BB', 'CC', 'EE']
-DD
-['AA', 'JJ', 'HH', 'BB', 'DD', 'CC']
-EE
-['AA', 'JJ', 'HH', 'BB', 'DD', 'EE']
-CC
-['AA', 'JJ', 'HH', 'BB', 'EE', 'CC']
-DD
-['AA', 'JJ', 'HH', 'BB', 'EE', 'DD']
-CC
-['AA', 'JJ', 'HH', 'CC', 'BB', 'DD']
-EE
-['AA', 'JJ', 'HH', 'CC', 'BB', 'EE']
-DD
-['AA', 'JJ', 'HH', 'CC', 'DD', 'BB']
-EE
-['AA', 'JJ', 'HH', 'CC', 'DD', 'EE']
-BB
-['AA', 'JJ', 'HH', 'CC', 'EE', 'BB']
-DD
-['AA', 'JJ', 'HH', 'CC', 'EE', 'DD']
-BB
-['AA', 'JJ', 'HH', 'DD', 'BB', 'CC']
-EE
-['AA', 'JJ', 'HH', 'DD', 'BB', 'EE']
-CC
-['AA', 'JJ', 'HH', 'DD', 'CC', 'BB']
-EE
-['AA', 'JJ', 'HH', 'DD', 'CC', 'EE']
-BB
-['AA', 'JJ', 'HH', 'DD', 'EE', 'BB']
-CC
-['AA', 'JJ', 'HH', 'DD', 'EE', 'CC']
-BB
-['AA', 'JJ', 'HH', 'EE', 'BB', 'CC']
-DD
-['AA', 'JJ', 'HH', 'EE', 'BB', 'DD']
-CC
-['AA', 'JJ', 'HH', 'EE', 'CC', 'BB']
-DD
-['AA', 'JJ', 'HH', 'EE', 'CC', 'DD']
-BB
-['AA', 'JJ', 'HH', 'EE', 'DD', 'BB']
-CC
-['AA', 'JJ', 'HH', 'EE', 'DD', 'CC']
-BB
-['AA', 'BB', 'CC', 'DD', 'EE', 'HH', 'JJ']
-['AA', 'BB', 'CC', 'DD', 'EE', 'JJ', 'HH']
-['AA', 'BB', 'CC', 'DD', 'HH', 'EE', 'JJ']
-['AA', 'BB', 'CC', 'DD', 'HH', 'JJ', 'EE']
-['AA', 'BB', 'CC', 'DD', 'JJ', 'EE', 'HH']
-['AA', 'BB', 'CC', 'DD', 'JJ', 'HH', 'EE']
-['AA', 'BB', 'CC', 'EE', 'DD', 'HH', 'JJ']
-['AA', 'BB', 'CC', 'EE', 'DD', 'JJ', 'HH']
-['AA', 'BB', 'CC', 'EE', 'HH', 'DD', 'JJ']
-['AA', 'BB', 'CC', 'EE', 'HH', 'JJ', 'DD']
-['AA', 'BB', 'CC', 'EE', 'JJ', 'DD', 'HH']
-['AA', 'BB', 'CC', 'EE', 'JJ', 'HH', 'DD']
-['AA', 'BB', 'CC', 'HH', 'DD', 'EE', 'JJ']
-['AA', 'BB', 'CC', 'HH', 'DD', 'JJ', 'EE']
-['AA', 'BB', 'CC', 'HH', 'EE', 'DD', 'JJ']
-['AA', 'BB', 'CC', 'HH', 'EE', 'JJ', 'DD']
-['AA', 'BB', 'CC', 'HH', 'JJ', 'DD', 'EE']
-['AA', 'BB', 'CC', 'HH', 'JJ', 'EE', 'DD']
-['AA', 'BB', 'CC', 'JJ', 'DD', 'EE', 'HH']
-['AA', 'BB', 'CC', 'JJ', 'DD', 'HH', 'EE']
-['AA', 'BB', 'CC', 'JJ', 'EE', 'DD', 'HH']
-['AA', 'BB', 'CC', 'JJ', 'EE', 'HH', 'DD']
-['AA', 'BB', 'CC', 'JJ', 'HH', 'DD', 'EE']
-['AA', 'BB', 'CC', 'JJ', 'HH', 'EE', 'DD']
-['AA', 'BB', 'DD', 'CC', 'EE', 'HH', 'JJ']
-['AA', 'BB', 'DD', 'CC', 'EE', 'JJ', 'HH']
-['AA', 'BB', 'DD', 'CC', 'HH', 'EE', 'JJ']
-['AA', 'BB', 'DD', 'CC', 'HH', 'JJ', 'EE']
-['AA', 'BB', 'DD', 'CC', 'JJ', 'EE', 'HH']
-['AA', 'BB', 'DD', 'CC', 'JJ', 'HH', 'EE']
-['AA', 'BB', 'DD', 'EE', 'CC', 'HH', 'JJ']
-['AA', 'BB', 'DD', 'EE', 'CC', 'JJ', 'HH']
-['AA', 'BB', 'DD', 'EE', 'HH', 'CC', 'JJ']
-['AA', 'BB', 'DD', 'EE', 'HH', 'JJ', 'CC']
-['AA', 'BB', 'DD', 'EE', 'JJ', 'CC', 'HH']
-['AA', 'BB', 'DD', 'EE', 'JJ', 'HH', 'CC']
-['AA', 'BB', 'DD', 'HH', 'CC', 'EE', 'JJ']
-['AA', 'BB', 'DD', 'HH', 'CC', 'JJ', 'EE']
-['AA', 'BB', 'DD', 'HH', 'EE', 'CC', 'JJ']
-['AA', 'BB', 'DD', 'HH', 'EE', 'JJ', 'CC']
-['AA', 'BB', 'DD', 'HH', 'JJ', 'CC', 'EE']
-['AA', 'BB', 'DD', 'HH', 'JJ', 'EE', 'CC']
-['AA', 'BB', 'DD', 'JJ', 'CC', 'EE', 'HH']
-['AA', 'BB', 'DD', 'JJ', 'CC', 'HH', 'EE']
-['AA', 'BB', 'DD', 'JJ', 'EE', 'CC', 'HH']
-['AA', 'BB', 'DD', 'JJ', 'EE', 'HH', 'CC']
-['AA', 'BB', 'DD', 'JJ', 'HH', 'CC', 'EE']
-['AA', 'BB', 'DD', 'JJ', 'HH', 'EE', 'CC']
-['AA', 'BB', 'EE', 'CC', 'DD', 'HH', 'JJ']
-['AA', 'BB', 'EE', 'CC', 'DD', 'JJ', 'HH']
-['AA', 'BB', 'EE', 'CC', 'HH', 'DD', 'JJ']
-['AA', 'BB', 'EE', 'CC', 'HH', 'JJ', 'DD']
-['AA', 'BB', 'EE', 'CC', 'JJ', 'DD', 'HH']
-['AA', 'BB', 'EE', 'CC', 'JJ', 'HH', 'DD']
-['AA', 'BB', 'EE', 'DD', 'CC', 'HH', 'JJ']
-['AA', 'BB', 'EE', 'DD', 'CC', 'JJ', 'HH']
-['AA', 'BB', 'EE', 'DD', 'HH', 'CC', 'JJ']
-['AA', 'BB', 'EE', 'DD', 'HH', 'JJ', 'CC']
-['AA', 'BB', 'EE', 'DD', 'JJ', 'CC', 'HH']
-['AA', 'BB', 'EE', 'DD', 'JJ', 'HH', 'CC']
-['AA', 'BB', 'EE', 'HH', 'CC', 'DD', 'JJ']
-['AA', 'BB', 'EE', 'HH', 'CC', 'JJ', 'DD']
-['AA', 'BB', 'EE', 'HH', 'DD', 'CC', 'JJ']
-['AA', 'BB', 'EE', 'HH', 'DD', 'JJ', 'CC']
-['AA', 'BB', 'EE', 'HH', 'JJ', 'CC', 'DD']
-['AA', 'BB', 'EE', 'HH', 'JJ', 'DD', 'CC']
-['AA', 'BB', 'EE', 'JJ', 'CC', 'DD', 'HH']
-['AA', 'BB', 'EE', 'JJ', 'CC', 'HH', 'DD']
-['AA', 'BB', 'EE', 'JJ', 'DD', 'CC', 'HH']
-['AA', 'BB', 'EE', 'JJ', 'DD', 'HH', 'CC']
-['AA', 'BB', 'EE', 'JJ', 'HH', 'CC', 'DD']
-['AA', 'BB', 'EE', 'JJ', 'HH', 'DD', 'CC']
-['AA', 'BB', 'HH', 'CC', 'DD', 'EE', 'JJ']
-['AA', 'BB', 'HH', 'CC', 'DD', 'JJ', 'EE']
-['AA', 'BB', 'HH', 'CC', 'EE', 'DD', 'JJ']
-['AA', 'BB', 'HH', 'CC', 'EE', 'JJ', 'DD']
-['AA', 'BB', 'HH', 'CC', 'JJ', 'DD', 'EE']
-['AA', 'BB', 'HH', 'CC', 'JJ', 'EE', 'DD']
-['AA', 'BB', 'HH', 'DD', 'CC', 'EE', 'JJ']
-['AA', 'BB', 'HH', 'DD', 'CC', 'JJ', 'EE']
-['AA', 'BB', 'HH', 'DD', 'EE', 'CC', 'JJ']
-['AA', 'BB', 'HH', 'DD', 'EE', 'JJ', 'CC']
-['AA', 'BB', 'HH', 'DD', 'JJ', 'CC', 'EE']
-['AA', 'BB', 'HH', 'DD', 'JJ', 'EE', 'CC']
-['AA', 'BB', 'HH', 'EE', 'CC', 'DD', 'JJ']
-['AA', 'BB', 'HH', 'EE', 'CC', 'JJ', 'DD']
-['AA', 'BB', 'HH', 'EE', 'DD', 'CC', 'JJ']
-['AA', 'BB', 'HH', 'EE', 'DD', 'JJ', 'CC']
-['AA', 'BB', 'HH', 'EE', 'JJ', 'CC', 'DD']
-['AA', 'BB', 'HH', 'EE', 'JJ', 'DD', 'CC']
-['AA', 'BB', 'HH', 'JJ', 'CC', 'DD', 'EE']
-['AA', 'BB', 'HH', 'JJ', 'CC', 'EE', 'DD']
-['AA', 'BB', 'HH', 'JJ', 'DD', 'CC', 'EE']
-['AA', 'BB', 'HH', 'JJ', 'DD', 'EE', 'CC']
-['AA', 'BB', 'HH', 'JJ', 'EE', 'CC', 'DD']
-['AA', 'BB', 'HH', 'JJ', 'EE', 'DD', 'CC']
-['AA', 'BB', 'JJ', 'CC', 'DD', 'EE', 'HH']
-['AA', 'BB', 'JJ', 'CC', 'DD', 'HH', 'EE']
-['AA', 'BB', 'JJ', 'CC', 'EE', 'DD', 'HH']
-['AA', 'BB', 'JJ', 'CC', 'EE', 'HH', 'DD']
-['AA', 'BB', 'JJ', 'CC', 'HH', 'DD', 'EE']
-['AA', 'BB', 'JJ', 'CC', 'HH', 'EE', 'DD']
-['AA', 'BB', 'JJ', 'DD', 'CC', 'EE', 'HH']
-['AA', 'BB', 'JJ', 'DD', 'CC', 'HH', 'EE']
-['AA', 'BB', 'JJ', 'DD', 'EE', 'CC', 'HH']
-['AA', 'BB', 'JJ', 'DD', 'EE', 'HH', 'CC']
-['AA', 'BB', 'JJ', 'DD', 'HH', 'CC', 'EE']
-['AA', 'BB', 'JJ', 'DD', 'HH', 'EE', 'CC']
-['AA', 'BB', 'JJ', 'EE', 'CC', 'DD', 'HH']
-['AA', 'BB', 'JJ', 'EE', 'CC', 'HH', 'DD']
-['AA', 'BB', 'JJ', 'EE', 'DD', 'CC', 'HH']
-['AA', 'BB', 'JJ', 'EE', 'DD', 'HH', 'CC']
-['AA', 'BB', 'JJ', 'EE', 'HH', 'CC', 'DD']
-['AA', 'BB', 'JJ', 'EE', 'HH', 'DD', 'CC']
-['AA', 'BB', 'JJ', 'HH', 'CC', 'DD', 'EE']
-['AA', 'BB', 'JJ', 'HH', 'CC', 'EE', 'DD']
-['AA', 'BB', 'JJ', 'HH', 'DD', 'CC', 'EE']
-['AA', 'BB', 'JJ', 'HH', 'DD', 'EE', 'CC']
-['AA', 'BB', 'JJ', 'HH', 'EE', 'CC', 'DD']
-['AA', 'BB', 'JJ', 'HH', 'EE', 'DD', 'CC']
-['AA', 'CC', 'BB', 'DD', 'EE', 'HH', 'JJ']
-['AA', 'CC', 'BB', 'DD', 'EE', 'JJ', 'HH']
-['AA', 'CC', 'BB', 'DD', 'HH', 'EE', 'JJ']
-['AA', 'CC', 'BB', 'DD', 'HH', 'JJ', 'EE']
-['AA', 'CC', 'BB', 'DD', 'JJ', 'EE', 'HH']
-['AA', 'CC', 'BB', 'DD', 'JJ', 'HH', 'EE']
-['AA', 'CC', 'BB', 'EE', 'DD', 'HH', 'JJ']
-['AA', 'CC', 'BB', 'EE', 'DD', 'JJ', 'HH']
-['AA', 'CC', 'BB', 'EE', 'HH', 'DD', 'JJ']
-['AA', 'CC', 'BB', 'EE', 'HH', 'JJ', 'DD']
-['AA', 'CC', 'BB', 'EE', 'JJ', 'DD', 'HH']
-['AA', 'CC', 'BB', 'EE', 'JJ', 'HH', 'DD']
-['AA', 'CC', 'BB', 'HH', 'DD', 'EE', 'JJ']
-['AA', 'CC', 'BB', 'HH', 'DD', 'JJ', 'EE']
-['AA', 'CC', 'BB', 'HH', 'EE', 'DD', 'JJ']
-['AA', 'CC', 'BB', 'HH', 'EE', 'JJ', 'DD']
-['AA', 'CC', 'BB', 'HH', 'JJ', 'DD', 'EE']
-['AA', 'CC', 'BB', 'HH', 'JJ', 'EE', 'DD']
-['AA', 'CC', 'BB', 'JJ', 'DD', 'EE', 'HH']
-['AA', 'CC', 'BB', 'JJ', 'DD', 'HH', 'EE']
-['AA', 'CC', 'BB', 'JJ', 'EE', 'DD', 'HH']
-['AA', 'CC', 'BB', 'JJ', 'EE', 'HH', 'DD']
-['AA', 'CC', 'BB', 'JJ', 'HH', 'DD', 'EE']
-['AA', 'CC', 'BB', 'JJ', 'HH', 'EE', 'DD']
-['AA', 'CC', 'DD', 'BB', 'EE', 'HH', 'JJ']
-['AA', 'CC', 'DD', 'BB', 'EE', 'JJ', 'HH']
-['AA', 'CC', 'DD', 'BB', 'HH', 'EE', 'JJ']
-['AA', 'CC', 'DD', 'BB', 'HH', 'JJ', 'EE']
-['AA', 'CC', 'DD', 'BB', 'JJ', 'EE', 'HH']
-['AA', 'CC', 'DD', 'BB', 'JJ', 'HH', 'EE']
-['AA', 'CC', 'DD', 'EE', 'BB', 'HH', 'JJ']
-['AA', 'CC', 'DD', 'EE', 'BB', 'JJ', 'HH']
-['AA', 'CC', 'DD', 'EE', 'HH', 'BB', 'JJ']
-['AA', 'CC', 'DD', 'EE', 'HH', 'JJ', 'BB']
-['AA', 'CC', 'DD', 'EE', 'JJ', 'BB', 'HH']
-['AA', 'CC', 'DD', 'EE', 'JJ', 'HH', 'BB']
-['AA', 'CC', 'DD', 'HH', 'BB', 'EE', 'JJ']
-['AA', 'CC', 'DD', 'HH', 'BB', 'JJ', 'EE']
-['AA', 'CC', 'DD', 'HH', 'EE', 'BB', 'JJ']
-['AA', 'CC', 'DD', 'HH', 'EE', 'JJ', 'BB']
-['AA', 'CC', 'DD', 'HH', 'JJ', 'BB', 'EE']
-['AA', 'CC', 'DD', 'HH', 'JJ', 'EE', 'BB']
-['AA', 'CC', 'DD', 'JJ', 'BB', 'EE', 'HH']
-['AA', 'CC', 'DD', 'JJ', 'BB', 'HH', 'EE']
-['AA', 'CC', 'DD', 'JJ', 'EE', 'BB', 'HH']
-['AA', 'CC', 'DD', 'JJ', 'EE', 'HH', 'BB']
-['AA', 'CC', 'DD', 'JJ', 'HH', 'BB', 'EE']
-['AA', 'CC', 'DD', 'JJ', 'HH', 'EE', 'BB']
-['AA', 'CC', 'EE', 'BB', 'DD', 'HH', 'JJ']
-['AA', 'CC', 'EE', 'BB', 'DD', 'JJ', 'HH']
-['AA', 'CC', 'EE', 'BB', 'HH', 'DD', 'JJ']
-['AA', 'CC', 'EE', 'BB', 'HH', 'JJ', 'DD']
-['AA', 'CC', 'EE', 'BB', 'JJ', 'DD', 'HH']
-['AA', 'CC', 'EE', 'BB', 'JJ', 'HH', 'DD']
-['AA', 'CC', 'EE', 'DD', 'BB', 'HH', 'JJ']
-['AA', 'CC', 'EE', 'DD', 'BB', 'JJ', 'HH']
-['AA', 'CC', 'EE', 'DD', 'HH', 'BB', 'JJ']
-['AA', 'CC', 'EE', 'DD', 'HH', 'JJ', 'BB']
-['AA', 'CC', 'EE', 'DD', 'JJ', 'BB', 'HH']
-['AA', 'CC', 'EE', 'DD', 'JJ', 'HH', 'BB']
-['AA', 'CC', 'EE', 'HH', 'BB', 'DD', 'JJ']
-['AA', 'CC', 'EE', 'HH', 'BB', 'JJ', 'DD']
-['AA', 'CC', 'EE', 'HH', 'DD', 'BB', 'JJ']
-['AA', 'CC', 'EE', 'HH', 'DD', 'JJ', 'BB']
-['AA', 'CC', 'EE', 'HH', 'JJ', 'BB', 'DD']
-['AA', 'CC', 'EE', 'HH', 'JJ', 'DD', 'BB']
-['AA', 'CC', 'EE', 'JJ', 'BB', 'DD', 'HH']
-['AA', 'CC', 'EE', 'JJ', 'BB', 'HH', 'DD']
-['AA', 'CC', 'EE', 'JJ', 'DD', 'BB', 'HH']
-['AA', 'CC', 'EE', 'JJ', 'DD', 'HH', 'BB']
-['AA', 'CC', 'EE', 'JJ', 'HH', 'BB', 'DD']
-['AA', 'CC', 'EE', 'JJ', 'HH', 'DD', 'BB']
-['AA', 'CC', 'HH', 'BB', 'DD', 'EE', 'JJ']
-['AA', 'CC', 'HH', 'BB', 'DD', 'JJ', 'EE']
-['AA', 'CC', 'HH', 'BB', 'EE', 'DD', 'JJ']
-['AA', 'CC', 'HH', 'BB', 'EE', 'JJ', 'DD']
-['AA', 'CC', 'HH', 'BB', 'JJ', 'DD', 'EE']
-['AA', 'CC', 'HH', 'BB', 'JJ', 'EE', 'DD']
-['AA', 'CC', 'HH', 'DD', 'BB', 'EE', 'JJ']
-['AA', 'CC', 'HH', 'DD', 'BB', 'JJ', 'EE']
-['AA', 'CC', 'HH', 'DD', 'EE', 'BB', 'JJ']
-['AA', 'CC', 'HH', 'DD', 'EE', 'JJ', 'BB']
-['AA', 'CC', 'HH', 'DD', 'JJ', 'BB', 'EE']
-['AA', 'CC', 'HH', 'DD', 'JJ', 'EE', 'BB']
-['AA', 'CC', 'HH', 'EE', 'BB', 'DD', 'JJ']
-['AA', 'CC', 'HH', 'EE', 'BB', 'JJ', 'DD']
-['AA', 'CC', 'HH', 'EE', 'DD', 'BB', 'JJ']
-['AA', 'CC', 'HH', 'EE', 'DD', 'JJ', 'BB']
-['AA', 'CC', 'HH', 'EE', 'JJ', 'BB', 'DD']
-['AA', 'CC', 'HH', 'EE', 'JJ', 'DD', 'BB']
-['AA', 'CC', 'HH', 'JJ', 'BB', 'DD', 'EE']
-['AA', 'CC', 'HH', 'JJ', 'BB', 'EE', 'DD']
-['AA', 'CC', 'HH', 'JJ', 'DD', 'BB', 'EE']
-['AA', 'CC', 'HH', 'JJ', 'DD', 'EE', 'BB']
-['AA', 'CC', 'HH', 'JJ', 'EE', 'BB', 'DD']
-['AA', 'CC', 'HH', 'JJ', 'EE', 'DD', 'BB']
-['AA', 'CC', 'JJ', 'BB', 'DD', 'EE', 'HH']
-['AA', 'CC', 'JJ', 'BB', 'DD', 'HH', 'EE']
-['AA', 'CC', 'JJ', 'BB', 'EE', 'DD', 'HH']
-['AA', 'CC', 'JJ', 'BB', 'EE', 'HH', 'DD']
-['AA', 'CC', 'JJ', 'BB', 'HH', 'DD', 'EE']
-['AA', 'CC', 'JJ', 'BB', 'HH', 'EE', 'DD']
-['AA', 'CC', 'JJ', 'DD', 'BB', 'EE', 'HH']
-['AA', 'CC', 'JJ', 'DD', 'BB', 'HH', 'EE']
-['AA', 'CC', 'JJ', 'DD', 'EE', 'BB', 'HH']
-['AA', 'CC', 'JJ', 'DD', 'EE', 'HH', 'BB']
-['AA', 'CC', 'JJ', 'DD', 'HH', 'BB', 'EE']
-['AA', 'CC', 'JJ', 'DD', 'HH', 'EE', 'BB']
-['AA', 'CC', 'JJ', 'EE', 'BB', 'DD', 'HH']
-['AA', 'CC', 'JJ', 'EE', 'BB', 'HH', 'DD']
-['AA', 'CC', 'JJ', 'EE', 'DD', 'BB', 'HH']
-['AA', 'CC', 'JJ', 'EE', 'DD', 'HH', 'BB']
-['AA', 'CC', 'JJ', 'EE', 'HH', 'BB', 'DD']
-['AA', 'CC', 'JJ', 'EE', 'HH', 'DD', 'BB']
-['AA', 'CC', 'JJ', 'HH', 'BB', 'DD', 'EE']
-['AA', 'CC', 'JJ', 'HH', 'BB', 'EE', 'DD']
-['AA', 'CC', 'JJ', 'HH', 'DD', 'BB', 'EE']
-['AA', 'CC', 'JJ', 'HH', 'DD', 'EE', 'BB']
-['AA', 'CC', 'JJ', 'HH', 'EE', 'BB', 'DD']
-['AA', 'CC', 'JJ', 'HH', 'EE', 'DD', 'BB']
-['AA', 'DD', 'BB', 'CC', 'EE', 'HH', 'JJ']
-['AA', 'DD', 'BB', 'CC', 'EE', 'JJ', 'HH']
-['AA', 'DD', 'BB', 'CC', 'HH', 'EE', 'JJ']
-['AA', 'DD', 'BB', 'CC', 'HH', 'JJ', 'EE']
-['AA', 'DD', 'BB', 'CC', 'JJ', 'EE', 'HH']
-['AA', 'DD', 'BB', 'CC', 'JJ', 'HH', 'EE']
-['AA', 'DD', 'BB', 'EE', 'CC', 'HH', 'JJ']
-['AA', 'DD', 'BB', 'EE', 'CC', 'JJ', 'HH']
-['AA', 'DD', 'BB', 'EE', 'HH', 'CC', 'JJ']
-['AA', 'DD', 'BB', 'EE', 'HH', 'JJ', 'CC']
-['AA', 'DD', 'BB', 'EE', 'JJ', 'CC', 'HH']
-['AA', 'DD', 'BB', 'EE', 'JJ', 'HH', 'CC']
-['AA', 'DD', 'BB', 'HH', 'CC', 'EE', 'JJ']
-['AA', 'DD', 'BB', 'HH', 'CC', 'JJ', 'EE']
-['AA', 'DD', 'BB', 'HH', 'EE', 'CC', 'JJ']
-['AA', 'DD', 'BB', 'HH', 'EE', 'JJ', 'CC']
-['AA', 'DD', 'BB', 'HH', 'JJ', 'CC', 'EE']
-['AA', 'DD', 'BB', 'HH', 'JJ', 'EE', 'CC']
-['AA', 'DD', 'BB', 'JJ', 'CC', 'EE', 'HH']
-['AA', 'DD', 'BB', 'JJ', 'CC', 'HH', 'EE']
-['AA', 'DD', 'BB', 'JJ', 'EE', 'CC', 'HH']
-['AA', 'DD', 'BB', 'JJ', 'EE', 'HH', 'CC']
-['AA', 'DD', 'BB', 'JJ', 'HH', 'CC', 'EE']
-['AA', 'DD', 'BB', 'JJ', 'HH', 'EE', 'CC']
-['AA', 'DD', 'CC', 'BB', 'EE', 'HH', 'JJ']
-['AA', 'DD', 'CC', 'BB', 'EE', 'JJ', 'HH']
-['AA', 'DD', 'CC', 'BB', 'HH', 'EE', 'JJ']
-['AA', 'DD', 'CC', 'BB', 'HH', 'JJ', 'EE']
-['AA', 'DD', 'CC', 'BB', 'JJ', 'EE', 'HH']
-['AA', 'DD', 'CC', 'BB', 'JJ', 'HH', 'EE']
-['AA', 'DD', 'CC', 'EE', 'BB', 'HH', 'JJ']
-['AA', 'DD', 'CC', 'EE', 'BB', 'JJ', 'HH']
-['AA', 'DD', 'CC', 'EE', 'HH', 'BB', 'JJ']
-['AA', 'DD', 'CC', 'EE', 'HH', 'JJ', 'BB']
-['AA', 'DD', 'CC', 'EE', 'JJ', 'BB', 'HH']
-['AA', 'DD', 'CC', 'EE', 'JJ', 'HH', 'BB']
-['AA', 'DD', 'CC', 'HH', 'BB', 'EE', 'JJ']
-['AA', 'DD', 'CC', 'HH', 'BB', 'JJ', 'EE']
-['AA', 'DD', 'CC', 'HH', 'EE', 'BB', 'JJ']
-['AA', 'DD', 'CC', 'HH', 'EE', 'JJ', 'BB']
-['AA', 'DD', 'CC', 'HH', 'JJ', 'BB', 'EE']
-['AA', 'DD', 'CC', 'HH', 'JJ', 'EE', 'BB']
-['AA', 'DD', 'CC', 'JJ', 'BB', 'EE', 'HH']
-['AA', 'DD', 'CC', 'JJ', 'BB', 'HH', 'EE']
-['AA', 'DD', 'CC', 'JJ', 'EE', 'BB', 'HH']
-['AA', 'DD', 'CC', 'JJ', 'EE', 'HH', 'BB']
-['AA', 'DD', 'CC', 'JJ', 'HH', 'BB', 'EE']
-['AA', 'DD', 'CC', 'JJ', 'HH', 'EE', 'BB']
-['AA', 'DD', 'EE', 'BB', 'CC', 'HH', 'JJ']
-['AA', 'DD', 'EE', 'BB', 'CC', 'JJ', 'HH']
-['AA', 'DD', 'EE', 'BB', 'HH', 'CC', 'JJ']
-['AA', 'DD', 'EE', 'BB', 'HH', 'JJ', 'CC']
-['AA', 'DD', 'EE', 'BB', 'JJ', 'CC', 'HH']
-['AA', 'DD', 'EE', 'BB', 'JJ', 'HH', 'CC']
-['AA', 'DD', 'EE', 'CC', 'BB', 'HH', 'JJ']
-['AA', 'DD', 'EE', 'CC', 'BB', 'JJ', 'HH']
-['AA', 'DD', 'EE', 'CC', 'HH', 'BB', 'JJ']
-['AA', 'DD', 'EE', 'CC', 'HH', 'JJ', 'BB']
-['AA', 'DD', 'EE', 'CC', 'JJ', 'BB', 'HH']
-['AA', 'DD', 'EE', 'CC', 'JJ', 'HH', 'BB']
-['AA', 'DD', 'EE', 'HH', 'BB', 'CC', 'JJ']
-['AA', 'DD', 'EE', 'HH', 'BB', 'JJ', 'CC']
-['AA', 'DD', 'EE', 'HH', 'CC', 'BB', 'JJ']
-['AA', 'DD', 'EE', 'HH', 'CC', 'JJ', 'BB']
-['AA', 'DD', 'EE', 'HH', 'JJ', 'BB', 'CC']
-['AA', 'DD', 'EE', 'HH', 'JJ', 'CC', 'BB']
-['AA', 'DD', 'EE', 'JJ', 'BB', 'CC', 'HH']
-['AA', 'DD', 'EE', 'JJ', 'BB', 'HH', 'CC']
-['AA', 'DD', 'EE', 'JJ', 'CC', 'BB', 'HH']
-['AA', 'DD', 'EE', 'JJ', 'CC', 'HH', 'BB']
-['AA', 'DD', 'EE', 'JJ', 'HH', 'BB', 'CC']
-['AA', 'DD', 'EE', 'JJ', 'HH', 'CC', 'BB']
-['AA', 'DD', 'HH', 'BB', 'CC', 'EE', 'JJ']
-['AA', 'DD', 'HH', 'BB', 'CC', 'JJ', 'EE']
-['AA', 'DD', 'HH', 'BB', 'EE', 'CC', 'JJ']
-['AA', 'DD', 'HH', 'BB', 'EE', 'JJ', 'CC']
-['AA', 'DD', 'HH', 'BB', 'JJ', 'CC', 'EE']
-['AA', 'DD', 'HH', 'BB', 'JJ', 'EE', 'CC']
-['AA', 'DD', 'HH', 'CC', 'BB', 'EE', 'JJ']
-['AA', 'DD', 'HH', 'CC', 'BB', 'JJ', 'EE']
-['AA', 'DD', 'HH', 'CC', 'EE', 'BB', 'JJ']
-['AA', 'DD', 'HH', 'CC', 'EE', 'JJ', 'BB']
-['AA', 'DD', 'HH', 'CC', 'JJ', 'BB', 'EE']
-['AA', 'DD', 'HH', 'CC', 'JJ', 'EE', 'BB']
-['AA', 'DD', 'HH', 'EE', 'BB', 'CC', 'JJ']
-['AA', 'DD', 'HH', 'EE', 'BB', 'JJ', 'CC']
-['AA', 'DD', 'HH', 'EE', 'CC', 'BB', 'JJ']
-['AA', 'DD', 'HH', 'EE', 'CC', 'JJ', 'BB']
-['AA', 'DD', 'HH', 'EE', 'JJ', 'BB', 'CC']
-['AA', 'DD', 'HH', 'EE', 'JJ', 'CC', 'BB']
-['AA', 'DD', 'HH', 'JJ', 'BB', 'CC', 'EE']
-['AA', 'DD', 'HH', 'JJ', 'BB', 'EE', 'CC']
-['AA', 'DD', 'HH', 'JJ', 'CC', 'BB', 'EE']
-['AA', 'DD', 'HH', 'JJ', 'CC', 'EE', 'BB']
-['AA', 'DD', 'HH', 'JJ', 'EE', 'BB', 'CC']
-['AA', 'DD', 'HH', 'JJ', 'EE', 'CC', 'BB']
-['AA', 'DD', 'JJ', 'BB', 'CC', 'EE', 'HH']
-['AA', 'DD', 'JJ', 'BB', 'CC', 'HH', 'EE']
-['AA', 'DD', 'JJ', 'BB', 'EE', 'CC', 'HH']
-['AA', 'DD', 'JJ', 'BB', 'EE', 'HH', 'CC']
-['AA', 'DD', 'JJ', 'BB', 'HH', 'CC', 'EE']
-['AA', 'DD', 'JJ', 'BB', 'HH', 'EE', 'CC']
-['AA', 'DD', 'JJ', 'CC', 'BB', 'EE', 'HH']
-['AA', 'DD', 'JJ', 'CC', 'BB', 'HH', 'EE']
-['AA', 'DD', 'JJ', 'CC', 'EE', 'BB', 'HH']
-['AA', 'DD', 'JJ', 'CC', 'EE', 'HH', 'BB']
-['AA', 'DD', 'JJ', 'CC', 'HH', 'BB', 'EE']
-['AA', 'DD', 'JJ', 'CC', 'HH', 'EE', 'BB']
-['AA', 'DD', 'JJ', 'EE', 'BB', 'CC', 'HH']
-['AA', 'DD', 'JJ', 'EE', 'BB', 'HH', 'CC']
-['AA', 'DD', 'JJ', 'EE', 'CC', 'BB', 'HH']
-['AA', 'DD', 'JJ', 'EE', 'CC', 'HH', 'BB']
-['AA', 'DD', 'JJ', 'EE', 'HH', 'BB', 'CC']
-['AA', 'DD', 'JJ', 'EE', 'HH', 'CC', 'BB']
-['AA', 'DD', 'JJ', 'HH', 'BB', 'CC', 'EE']
-['AA', 'DD', 'JJ', 'HH', 'BB', 'EE', 'CC']
-['AA', 'DD', 'JJ', 'HH', 'CC', 'BB', 'EE']
-['AA', 'DD', 'JJ', 'HH', 'CC', 'EE', 'BB']
-['AA', 'DD', 'JJ', 'HH', 'EE', 'BB', 'CC']
-['AA', 'DD', 'JJ', 'HH', 'EE', 'CC', 'BB']
-['AA', 'EE', 'BB', 'CC', 'DD', 'HH', 'JJ']
-['AA', 'EE', 'BB', 'CC', 'DD', 'JJ', 'HH']
-['AA', 'EE', 'BB', 'CC', 'HH', 'DD', 'JJ']
-['AA', 'EE', 'BB', 'CC', 'HH', 'JJ', 'DD']
-['AA', 'EE', 'BB', 'CC', 'JJ', 'DD', 'HH']
-['AA', 'EE', 'BB', 'CC', 'JJ', 'HH', 'DD']
-['AA', 'EE', 'BB', 'DD', 'CC', 'HH', 'JJ']
-['AA', 'EE', 'BB', 'DD', 'CC', 'JJ', 'HH']
-['AA', 'EE', 'BB', 'DD', 'HH', 'CC', 'JJ']
-['AA', 'EE', 'BB', 'DD', 'HH', 'JJ', 'CC']
-['AA', 'EE', 'BB', 'DD', 'JJ', 'CC', 'HH']
-['AA', 'EE', 'BB', 'DD', 'JJ', 'HH', 'CC']
-['AA', 'EE', 'BB', 'HH', 'CC', 'DD', 'JJ']
-['AA', 'EE', 'BB', 'HH', 'CC', 'JJ', 'DD']
-['AA', 'EE', 'BB', 'HH', 'DD', 'CC', 'JJ']
-['AA', 'EE', 'BB', 'HH', 'DD', 'JJ', 'CC']
-['AA', 'EE', 'BB', 'HH', 'JJ', 'CC', 'DD']
-['AA', 'EE', 'BB', 'HH', 'JJ', 'DD', 'CC']
-['AA', 'EE', 'BB', 'JJ', 'CC', 'DD', 'HH']
-['AA', 'EE', 'BB', 'JJ', 'CC', 'HH', 'DD']
-['AA', 'EE', 'BB', 'JJ', 'DD', 'CC', 'HH']
-['AA', 'EE', 'BB', 'JJ', 'DD', 'HH', 'CC']
-['AA', 'EE', 'BB', 'JJ', 'HH', 'CC', 'DD']
-['AA', 'EE', 'BB', 'JJ', 'HH', 'DD', 'CC']
-['AA', 'EE', 'CC', 'BB', 'DD', 'HH', 'JJ']
-['AA', 'EE', 'CC', 'BB', 'DD', 'JJ', 'HH']
-['AA', 'EE', 'CC', 'BB', 'HH', 'DD', 'JJ']
-['AA', 'EE', 'CC', 'BB', 'HH', 'JJ', 'DD']
-['AA', 'EE', 'CC', 'BB', 'JJ', 'DD', 'HH']
-['AA', 'EE', 'CC', 'BB', 'JJ', 'HH', 'DD']
-['AA', 'EE', 'CC', 'DD', 'BB', 'HH', 'JJ']
-['AA', 'EE', 'CC', 'DD', 'BB', 'JJ', 'HH']
-['AA', 'EE', 'CC', 'DD', 'HH', 'BB', 'JJ']
-['AA', 'EE', 'CC', 'DD', 'HH', 'JJ', 'BB']
-['AA', 'EE', 'CC', 'DD', 'JJ', 'BB', 'HH']
-['AA', 'EE', 'CC', 'DD', 'JJ', 'HH', 'BB']
-['AA', 'EE', 'CC', 'HH', 'BB', 'DD', 'JJ']
-['AA', 'EE', 'CC', 'HH', 'BB', 'JJ', 'DD']
-['AA', 'EE', 'CC', 'HH', 'DD', 'BB', 'JJ']
-['AA', 'EE', 'CC', 'HH', 'DD', 'JJ', 'BB']
-['AA', 'EE', 'CC', 'HH', 'JJ', 'BB', 'DD']
-['AA', 'EE', 'CC', 'HH', 'JJ', 'DD', 'BB']
-['AA', 'EE', 'CC', 'JJ', 'BB', 'DD', 'HH']
-['AA', 'EE', 'CC', 'JJ', 'BB', 'HH', 'DD']
-['AA', 'EE', 'CC', 'JJ', 'DD', 'BB', 'HH']
-['AA', 'EE', 'CC', 'JJ', 'DD', 'HH', 'BB']
-['AA', 'EE', 'CC', 'JJ', 'HH', 'BB', 'DD']
-['AA', 'EE', 'CC', 'JJ', 'HH', 'DD', 'BB']
-['AA', 'EE', 'DD', 'BB', 'CC', 'HH', 'JJ']
-['AA', 'EE', 'DD', 'BB', 'CC', 'JJ', 'HH']
-['AA', 'EE', 'DD', 'BB', 'HH', 'CC', 'JJ']
-['AA', 'EE', 'DD', 'BB', 'HH', 'JJ', 'CC']
-['AA', 'EE', 'DD', 'BB', 'JJ', 'CC', 'HH']
-['AA', 'EE', 'DD', 'BB', 'JJ', 'HH', 'CC']
-['AA', 'EE', 'DD', 'CC', 'BB', 'HH', 'JJ']
-['AA', 'EE', 'DD', 'CC', 'BB', 'JJ', 'HH']
-['AA', 'EE', 'DD', 'CC', 'HH', 'BB', 'JJ']
-['AA', 'EE', 'DD', 'CC', 'HH', 'JJ', 'BB']
-['AA', 'EE', 'DD', 'CC', 'JJ', 'BB', 'HH']
-['AA', 'EE', 'DD', 'CC', 'JJ', 'HH', 'BB']
-['AA', 'EE', 'DD', 'HH', 'BB', 'CC', 'JJ']
-['AA', 'EE', 'DD', 'HH', 'BB', 'JJ', 'CC']
-['AA', 'EE', 'DD', 'HH', 'CC', 'BB', 'JJ']
-['AA', 'EE', 'DD', 'HH', 'CC', 'JJ', 'BB']
-['AA', 'EE', 'DD', 'HH', 'JJ', 'BB', 'CC']
-['AA', 'EE', 'DD', 'HH', 'JJ', 'CC', 'BB']
-['AA', 'EE', 'DD', 'JJ', 'BB', 'CC', 'HH']
-['AA', 'EE', 'DD', 'JJ', 'BB', 'HH', 'CC']
-['AA', 'EE', 'DD', 'JJ', 'CC', 'BB', 'HH']
-['AA', 'EE', 'DD', 'JJ', 'CC', 'HH', 'BB']
-['AA', 'EE', 'DD', 'JJ', 'HH', 'BB', 'CC']
-['AA', 'EE', 'DD', 'JJ', 'HH', 'CC', 'BB']
-['AA', 'EE', 'HH', 'BB', 'CC', 'DD', 'JJ']
-['AA', 'EE', 'HH', 'BB', 'CC', 'JJ', 'DD']
-['AA', 'EE', 'HH', 'BB', 'DD', 'CC', 'JJ']
-['AA', 'EE', 'HH', 'BB', 'DD', 'JJ', 'CC']
-['AA', 'EE', 'HH', 'BB', 'JJ', 'CC', 'DD']
-['AA', 'EE', 'HH', 'BB', 'JJ', 'DD', 'CC']
-['AA', 'EE', 'HH', 'CC', 'BB', 'DD', 'JJ']
-['AA', 'EE', 'HH', 'CC', 'BB', 'JJ', 'DD']
-['AA', 'EE', 'HH', 'CC', 'DD', 'BB', 'JJ']
-['AA', 'EE', 'HH', 'CC', 'DD', 'JJ', 'BB']
-['AA', 'EE', 'HH', 'CC', 'JJ', 'BB', 'DD']
-['AA', 'EE', 'HH', 'CC', 'JJ', 'DD', 'BB']
-['AA', 'EE', 'HH', 'DD', 'BB', 'CC', 'JJ']
-['AA', 'EE', 'HH', 'DD', 'BB', 'JJ', 'CC']
-['AA', 'EE', 'HH', 'DD', 'CC', 'BB', 'JJ']
-['AA', 'EE', 'HH', 'DD', 'CC', 'JJ', 'BB']
-['AA', 'EE', 'HH', 'DD', 'JJ', 'BB', 'CC']
-['AA', 'EE', 'HH', 'DD', 'JJ', 'CC', 'BB']
-['AA', 'EE', 'HH', 'JJ', 'BB', 'CC', 'DD']
-['AA', 'EE', 'HH', 'JJ', 'BB', 'DD', 'CC']
-['AA', 'EE', 'HH', 'JJ', 'CC', 'BB', 'DD']
-['AA', 'EE', 'HH', 'JJ', 'CC', 'DD', 'BB']
-['AA', 'EE', 'HH', 'JJ', 'DD', 'BB', 'CC']
-['AA', 'EE', 'HH', 'JJ', 'DD', 'CC', 'BB']
-['AA', 'EE', 'JJ', 'BB', 'CC', 'DD', 'HH']
-['AA', 'EE', 'JJ', 'BB', 'CC', 'HH', 'DD']
-['AA', 'EE', 'JJ', 'BB', 'DD', 'CC', 'HH']
-['AA', 'EE', 'JJ', 'BB', 'DD', 'HH', 'CC']
-['AA', 'EE', 'JJ', 'BB', 'HH', 'CC', 'DD']
-['AA', 'EE', 'JJ', 'BB', 'HH', 'DD', 'CC']
-['AA', 'EE', 'JJ', 'CC', 'BB', 'DD', 'HH']
-['AA', 'EE', 'JJ', 'CC', 'BB', 'HH', 'DD']
-['AA', 'EE', 'JJ', 'CC', 'DD', 'BB', 'HH']
-['AA', 'EE', 'JJ', 'CC', 'DD', 'HH', 'BB']
-['AA', 'EE', 'JJ', 'CC', 'HH', 'BB', 'DD']
-['AA', 'EE', 'JJ', 'CC', 'HH', 'DD', 'BB']
-['AA', 'EE', 'JJ', 'DD', 'BB', 'CC', 'HH']
-['AA', 'EE', 'JJ', 'DD', 'BB', 'HH', 'CC']
-['AA', 'EE', 'JJ', 'DD', 'CC', 'BB', 'HH']
-['AA', 'EE', 'JJ', 'DD', 'CC', 'HH', 'BB']
-['AA', 'EE', 'JJ', 'DD', 'HH', 'BB', 'CC']
-['AA', 'EE', 'JJ', 'DD', 'HH', 'CC', 'BB']
-['AA', 'EE', 'JJ', 'HH', 'BB', 'CC', 'DD']
-['AA', 'EE', 'JJ', 'HH', 'BB', 'DD', 'CC']
-['AA', 'EE', 'JJ', 'HH', 'CC', 'BB', 'DD']
-['AA', 'EE', 'JJ', 'HH', 'CC', 'DD', 'BB']
-['AA', 'EE', 'JJ', 'HH', 'DD', 'BB', 'CC']
-['AA', 'EE', 'JJ', 'HH', 'DD', 'CC', 'BB']
-['AA', 'HH', 'BB', 'CC', 'DD', 'EE', 'JJ']
-['AA', 'HH', 'BB', 'CC', 'DD', 'JJ', 'EE']
-['AA', 'HH', 'BB', 'CC', 'EE', 'DD', 'JJ']
-['AA', 'HH', 'BB', 'CC', 'EE', 'JJ', 'DD']
-['AA', 'HH', 'BB', 'CC', 'JJ', 'DD', 'EE']
-['AA', 'HH', 'BB', 'CC', 'JJ', 'EE', 'DD']
-['AA', 'HH', 'BB', 'DD', 'CC', 'EE', 'JJ']
-['AA', 'HH', 'BB', 'DD', 'CC', 'JJ', 'EE']
-['AA', 'HH', 'BB', 'DD', 'EE', 'CC', 'JJ']
-['AA', 'HH', 'BB', 'DD', 'EE', 'JJ', 'CC']
-['AA', 'HH', 'BB', 'DD', 'JJ', 'CC', 'EE']
-['AA', 'HH', 'BB', 'DD', 'JJ', 'EE', 'CC']
-['AA', 'HH', 'BB', 'EE', 'CC', 'DD', 'JJ']
-['AA', 'HH', 'BB', 'EE', 'CC', 'JJ', 'DD']
-['AA', 'HH', 'BB', 'EE', 'DD', 'CC', 'JJ']
-['AA', 'HH', 'BB', 'EE', 'DD', 'JJ', 'CC']
-['AA', 'HH', 'BB', 'EE', 'JJ', 'CC', 'DD']
-['AA', 'HH', 'BB', 'EE', 'JJ', 'DD', 'CC']
-['AA', 'HH', 'BB', 'JJ', 'CC', 'DD', 'EE']
-['AA', 'HH', 'BB', 'JJ', 'CC', 'EE', 'DD']
-['AA', 'HH', 'BB', 'JJ', 'DD', 'CC', 'EE']
-['AA', 'HH', 'BB', 'JJ', 'DD', 'EE', 'CC']
-['AA', 'HH', 'BB', 'JJ', 'EE', 'CC', 'DD']
-['AA', 'HH', 'BB', 'JJ', 'EE', 'DD', 'CC']
-['AA', 'HH', 'CC', 'BB', 'DD', 'EE', 'JJ']
-['AA', 'HH', 'CC', 'BB', 'DD', 'JJ', 'EE']
-['AA', 'HH', 'CC', 'BB', 'EE', 'DD', 'JJ']
-['AA', 'HH', 'CC', 'BB', 'EE', 'JJ', 'DD']
-['AA', 'HH', 'CC', 'BB', 'JJ', 'DD', 'EE']
-['AA', 'HH', 'CC', 'BB', 'JJ', 'EE', 'DD']
-['AA', 'HH', 'CC', 'DD', 'BB', 'EE', 'JJ']
-['AA', 'HH', 'CC', 'DD', 'BB', 'JJ', 'EE']
-['AA', 'HH', 'CC', 'DD', 'EE', 'BB', 'JJ']
-['AA', 'HH', 'CC', 'DD', 'EE', 'JJ', 'BB']
-['AA', 'HH', 'CC', 'DD', 'JJ', 'BB', 'EE']
-['AA', 'HH', 'CC', 'DD', 'JJ', 'EE', 'BB']
-['AA', 'HH', 'CC', 'EE', 'BB', 'DD', 'JJ']
-['AA', 'HH', 'CC', 'EE', 'BB', 'JJ', 'DD']
-['AA', 'HH', 'CC', 'EE', 'DD', 'BB', 'JJ']
-['AA', 'HH', 'CC', 'EE', 'DD', 'JJ', 'BB']
-['AA', 'HH', 'CC', 'EE', 'JJ', 'BB', 'DD']
-['AA', 'HH', 'CC', 'EE', 'JJ', 'DD', 'BB']
-['AA', 'HH', 'CC', 'JJ', 'BB', 'DD', 'EE']
-['AA', 'HH', 'CC', 'JJ', 'BB', 'EE', 'DD']
-['AA', 'HH', 'CC', 'JJ', 'DD', 'BB', 'EE']
-['AA', 'HH', 'CC', 'JJ', 'DD', 'EE', 'BB']
-['AA', 'HH', 'CC', 'JJ', 'EE', 'BB', 'DD']
-['AA', 'HH', 'CC', 'JJ', 'EE', 'DD', 'BB']
-['AA', 'HH', 'DD', 'BB', 'CC', 'EE', 'JJ']
-['AA', 'HH', 'DD', 'BB', 'CC', 'JJ', 'EE']
-['AA', 'HH', 'DD', 'BB', 'EE', 'CC', 'JJ']
-['AA', 'HH', 'DD', 'BB', 'EE', 'JJ', 'CC']
-['AA', 'HH', 'DD', 'BB', 'JJ', 'CC', 'EE']
-['AA', 'HH', 'DD', 'BB', 'JJ', 'EE', 'CC']
-['AA', 'HH', 'DD', 'CC', 'BB', 'EE', 'JJ']
-['AA', 'HH', 'DD', 'CC', 'BB', 'JJ', 'EE']
-['AA', 'HH', 'DD', 'CC', 'EE', 'BB', 'JJ']
-['AA', 'HH', 'DD', 'CC', 'EE', 'JJ', 'BB']
-['AA', 'HH', 'DD', 'CC', 'JJ', 'BB', 'EE']
-['AA', 'HH', 'DD', 'CC', 'JJ', 'EE', 'BB']
-['AA', 'HH', 'DD', 'EE', 'BB', 'CC', 'JJ']
-['AA', 'HH', 'DD', 'EE', 'BB', 'JJ', 'CC']
-['AA', 'HH', 'DD', 'EE', 'CC', 'BB', 'JJ']
-['AA', 'HH', 'DD', 'EE', 'CC', 'JJ', 'BB']
-['AA', 'HH', 'DD', 'EE', 'JJ', 'BB', 'CC']
-['AA', 'HH', 'DD', 'EE', 'JJ', 'CC', 'BB']
-['AA', 'HH', 'DD', 'JJ', 'BB', 'CC', 'EE']
-['AA', 'HH', 'DD', 'JJ', 'BB', 'EE', 'CC']
-['AA', 'HH', 'DD', 'JJ', 'CC', 'BB', 'EE']
-['AA', 'HH', 'DD', 'JJ', 'CC', 'EE', 'BB']
-['AA', 'HH', 'DD', 'JJ', 'EE', 'BB', 'CC']
-['AA', 'HH', 'DD', 'JJ', 'EE', 'CC', 'BB']
-['AA', 'HH', 'EE', 'BB', 'CC', 'DD', 'JJ']
-['AA', 'HH', 'EE', 'BB', 'CC', 'JJ', 'DD']
-['AA', 'HH', 'EE', 'BB', 'DD', 'CC', 'JJ']
-['AA', 'HH', 'EE', 'BB', 'DD', 'JJ', 'CC']
-['AA', 'HH', 'EE', 'BB', 'JJ', 'CC', 'DD']
-['AA', 'HH', 'EE', 'BB', 'JJ', 'DD', 'CC']
-['AA', 'HH', 'EE', 'CC', 'BB', 'DD', 'JJ']
-['AA', 'HH', 'EE', 'CC', 'BB', 'JJ', 'DD']
-['AA', 'HH', 'EE', 'CC', 'DD', 'BB', 'JJ']
-['AA', 'HH', 'EE', 'CC', 'DD', 'JJ', 'BB']
-['AA', 'HH', 'EE', 'CC', 'JJ', 'BB', 'DD']
-['AA', 'HH', 'EE', 'CC', 'JJ', 'DD', 'BB']
-['AA', 'HH', 'EE', 'DD', 'BB', 'CC', 'JJ']
-['AA', 'HH', 'EE', 'DD', 'BB', 'JJ', 'CC']
-['AA', 'HH', 'EE', 'DD', 'CC', 'BB', 'JJ']
-['AA', 'HH', 'EE', 'DD', 'CC', 'JJ', 'BB']
-['AA', 'HH', 'EE', 'DD', 'JJ', 'BB', 'CC']
-['AA', 'HH', 'EE', 'DD', 'JJ', 'CC', 'BB']
-['AA', 'HH', 'EE', 'JJ', 'BB', 'CC', 'DD']
-['AA', 'HH', 'EE', 'JJ', 'BB', 'DD', 'CC']
-['AA', 'HH', 'EE', 'JJ', 'CC', 'BB', 'DD']
-['AA', 'HH', 'EE', 'JJ', 'CC', 'DD', 'BB']
-['AA', 'HH', 'EE', 'JJ', 'DD', 'BB', 'CC']
-['AA', 'HH', 'EE', 'JJ', 'DD', 'CC', 'BB']
-['AA', 'HH', 'JJ', 'BB', 'CC', 'DD', 'EE']
-['AA', 'HH', 'JJ', 'BB', 'CC', 'EE', 'DD']
-['AA', 'HH', 'JJ', 'BB', 'DD', 'CC', 'EE']
-['AA', 'HH', 'JJ', 'BB', 'DD', 'EE', 'CC']
-['AA', 'HH', 'JJ', 'BB', 'EE', 'CC', 'DD']
-['AA', 'HH', 'JJ', 'BB', 'EE', 'DD', 'CC']
-['AA', 'HH', 'JJ', 'CC', 'BB', 'DD', 'EE']
-['AA', 'HH', 'JJ', 'CC', 'BB', 'EE', 'DD']
-['AA', 'HH', 'JJ', 'CC', 'DD', 'BB', 'EE']
-['AA', 'HH', 'JJ', 'CC', 'DD', 'EE', 'BB']
-['AA', 'HH', 'JJ', 'CC', 'EE', 'BB', 'DD']
-['AA', 'HH', 'JJ', 'CC', 'EE', 'DD', 'BB']
-['AA', 'HH', 'JJ', 'DD', 'BB', 'CC', 'EE']
-['AA', 'HH', 'JJ', 'DD', 'BB', 'EE', 'CC']
-['AA', 'HH', 'JJ', 'DD', 'CC', 'BB', 'EE']
-['AA', 'HH', 'JJ', 'DD', 'CC', 'EE', 'BB']
-['AA', 'HH', 'JJ', 'DD', 'EE', 'BB', 'CC']
-['AA', 'HH', 'JJ', 'DD', 'EE', 'CC', 'BB']
-['AA', 'HH', 'JJ', 'EE', 'BB', 'CC', 'DD']
-['AA', 'HH', 'JJ', 'EE', 'BB', 'DD', 'CC']
-['AA', 'HH', 'JJ', 'EE', 'CC', 'BB', 'DD']
-['AA', 'HH', 'JJ', 'EE', 'CC', 'DD', 'BB']
-['AA', 'HH', 'JJ', 'EE', 'DD', 'BB', 'CC']
-['AA', 'HH', 'JJ', 'EE', 'DD', 'CC', 'BB']
-['AA', 'JJ', 'BB', 'CC', 'DD', 'EE', 'HH']
-['AA', 'JJ', 'BB', 'CC', 'DD', 'HH', 'EE']
-['AA', 'JJ', 'BB', 'CC', 'EE', 'DD', 'HH']
-['AA', 'JJ', 'BB', 'CC', 'EE', 'HH', 'DD']
-['AA', 'JJ', 'BB', 'CC', 'HH', 'DD', 'EE']
-['AA', 'JJ', 'BB', 'CC', 'HH', 'EE', 'DD']
-['AA', 'JJ', 'BB', 'DD', 'CC', 'EE', 'HH']
-['AA', 'JJ', 'BB', 'DD', 'CC', 'HH', 'EE']
-['AA', 'JJ', 'BB', 'DD', 'EE', 'CC', 'HH']
-['AA', 'JJ', 'BB', 'DD', 'EE', 'HH', 'CC']
-['AA', 'JJ', 'BB', 'DD', 'HH', 'CC', 'EE']
-['AA', 'JJ', 'BB', 'DD', 'HH', 'EE', 'CC']
-['AA', 'JJ', 'BB', 'EE', 'CC', 'DD', 'HH']
-['AA', 'JJ', 'BB', 'EE', 'CC', 'HH', 'DD']
-['AA', 'JJ', 'BB', 'EE', 'DD', 'CC', 'HH']
-['AA', 'JJ', 'BB', 'EE', 'DD', 'HH', 'CC']
-['AA', 'JJ', 'BB', 'EE', 'HH', 'CC', 'DD']
-['AA', 'JJ', 'BB', 'EE', 'HH', 'DD', 'CC']
-['AA', 'JJ', 'BB', 'HH', 'CC', 'DD', 'EE']
-['AA', 'JJ', 'BB', 'HH', 'CC', 'EE', 'DD']
-['AA', 'JJ', 'BB', 'HH', 'DD', 'CC', 'EE']
-['AA', 'JJ', 'BB', 'HH', 'DD', 'EE', 'CC']
-['AA', 'JJ', 'BB', 'HH', 'EE', 'CC', 'DD']
-['AA', 'JJ', 'BB', 'HH', 'EE', 'DD', 'CC']
-['AA', 'JJ', 'CC', 'BB', 'DD', 'EE', 'HH']
-['AA', 'JJ', 'CC', 'BB', 'DD', 'HH', 'EE']
-['AA', 'JJ', 'CC', 'BB', 'EE', 'DD', 'HH']
-['AA', 'JJ', 'CC', 'BB', 'EE', 'HH', 'DD']
-['AA', 'JJ', 'CC', 'BB', 'HH', 'DD', 'EE']
-['AA', 'JJ', 'CC', 'BB', 'HH', 'EE', 'DD']
-['AA', 'JJ', 'CC', 'DD', 'BB', 'EE', 'HH']
-['AA', 'JJ', 'CC', 'DD', 'BB', 'HH', 'EE']
-['AA', 'JJ', 'CC', 'DD', 'EE', 'BB', 'HH']
-['AA', 'JJ', 'CC', 'DD', 'EE', 'HH', 'BB']
-['AA', 'JJ', 'CC', 'DD', 'HH', 'BB', 'EE']
-['AA', 'JJ', 'CC', 'DD', 'HH', 'EE', 'BB']
-['AA', 'JJ', 'CC', 'EE', 'BB', 'DD', 'HH']
-['AA', 'JJ', 'CC', 'EE', 'BB', 'HH', 'DD']
-['AA', 'JJ', 'CC', 'EE', 'DD', 'BB', 'HH']
-['AA', 'JJ', 'CC', 'EE', 'DD', 'HH', 'BB']
-['AA', 'JJ', 'CC', 'EE', 'HH', 'BB', 'DD']
-['AA', 'JJ', 'CC', 'EE', 'HH', 'DD', 'BB']
-['AA', 'JJ', 'CC', 'HH', 'BB', 'DD', 'EE']
-['AA', 'JJ', 'CC', 'HH', 'BB', 'EE', 'DD']
-['AA', 'JJ', 'CC', 'HH', 'DD', 'BB', 'EE']
-['AA', 'JJ', 'CC', 'HH', 'DD', 'EE', 'BB']
-['AA', 'JJ', 'CC', 'HH', 'EE', 'BB', 'DD']
-['AA', 'JJ', 'CC', 'HH', 'EE', 'DD', 'BB']
-['AA', 'JJ', 'DD', 'BB', 'CC', 'EE', 'HH']
-['AA', 'JJ', 'DD', 'BB', 'CC', 'HH', 'EE']
-['AA', 'JJ', 'DD', 'BB', 'EE', 'CC', 'HH']
-['AA', 'JJ', 'DD', 'BB', 'EE', 'HH', 'CC']
-['AA', 'JJ', 'DD', 'BB', 'HH', 'CC', 'EE']
-['AA', 'JJ', 'DD', 'BB', 'HH', 'EE', 'CC']
-['AA', 'JJ', 'DD', 'CC', 'BB', 'EE', 'HH']
-['AA', 'JJ', 'DD', 'CC', 'BB', 'HH', 'EE']
-['AA', 'JJ', 'DD', 'CC', 'EE', 'BB', 'HH']
-['AA', 'JJ', 'DD', 'CC', 'EE', 'HH', 'BB']
-['AA', 'JJ', 'DD', 'CC', 'HH', 'BB', 'EE']
-['AA', 'JJ', 'DD', 'CC', 'HH', 'EE', 'BB']
-['AA', 'JJ', 'DD', 'EE', 'BB', 'CC', 'HH']
-['AA', 'JJ', 'DD', 'EE', 'BB', 'HH', 'CC']
-['AA', 'JJ', 'DD', 'EE', 'CC', 'BB', 'HH']
-['AA', 'JJ', 'DD', 'EE', 'CC', 'HH', 'BB']
-['AA', 'JJ', 'DD', 'EE', 'HH', 'BB', 'CC']
-['AA', 'JJ', 'DD', 'EE', 'HH', 'CC', 'BB']
-['AA', 'JJ', 'DD', 'HH', 'BB', 'CC', 'EE']
-['AA', 'JJ', 'DD', 'HH', 'BB', 'EE', 'CC']
-['AA', 'JJ', 'DD', 'HH', 'CC', 'BB', 'EE']
-['AA', 'JJ', 'DD', 'HH', 'CC', 'EE', 'BB']
-['AA', 'JJ', 'DD', 'HH', 'EE', 'BB', 'CC']
-['AA', 'JJ', 'DD', 'HH', 'EE', 'CC', 'BB']
-['AA', 'JJ', 'EE', 'BB', 'CC', 'DD', 'HH']
-['AA', 'JJ', 'EE', 'BB', 'CC', 'HH', 'DD']
-['AA', 'JJ', 'EE', 'BB', 'DD', 'CC', 'HH']
-['AA', 'JJ', 'EE', 'BB', 'DD', 'HH', 'CC']
-['AA', 'JJ', 'EE', 'BB', 'HH', 'CC', 'DD']
-['AA', 'JJ', 'EE', 'BB', 'HH', 'DD', 'CC']
-['AA', 'JJ', 'EE', 'CC', 'BB', 'DD', 'HH']
-['AA', 'JJ', 'EE', 'CC', 'BB', 'HH', 'DD']
-['AA', 'JJ', 'EE', 'CC', 'DD', 'BB', 'HH']
-['AA', 'JJ', 'EE', 'CC', 'DD', 'HH', 'BB']
-['AA', 'JJ', 'EE', 'CC', 'HH', 'BB', 'DD']
-['AA', 'JJ', 'EE', 'CC', 'HH', 'DD', 'BB']
-['AA', 'JJ', 'EE', 'DD', 'BB', 'CC', 'HH']
-['AA', 'JJ', 'EE', 'DD', 'BB', 'HH', 'CC']
-['AA', 'JJ', 'EE', 'DD', 'CC', 'BB', 'HH']
-['AA', 'JJ', 'EE', 'DD', 'CC', 'HH', 'BB']
-['AA', 'JJ', 'EE', 'DD', 'HH', 'BB', 'CC']
-['AA', 'JJ', 'EE', 'DD', 'HH', 'CC', 'BB']
-['AA', 'JJ', 'EE', 'HH', 'BB', 'CC', 'DD']
-['AA', 'JJ', 'EE', 'HH', 'BB', 'DD', 'CC']
-['AA', 'JJ', 'EE', 'HH', 'CC', 'BB', 'DD']
-['AA', 'JJ', 'EE', 'HH', 'CC', 'DD', 'BB']
-['AA', 'JJ', 'EE', 'HH', 'DD', 'BB', 'CC']
-['AA', 'JJ', 'EE', 'HH', 'DD', 'CC', 'BB']
-['AA', 'JJ', 'HH', 'BB', 'CC', 'DD', 'EE']
-['AA', 'JJ', 'HH', 'BB', 'CC', 'EE', 'DD']
-['AA', 'JJ', 'HH', 'BB', 'DD', 'CC', 'EE']
-['AA', 'JJ', 'HH', 'BB', 'DD', 'EE', 'CC']
-['AA', 'JJ', 'HH', 'BB', 'EE', 'CC', 'DD']
-['AA', 'JJ', 'HH', 'BB', 'EE', 'DD', 'CC']
-['AA', 'JJ', 'HH', 'CC', 'BB', 'DD', 'EE']
-['AA', 'JJ', 'HH', 'CC', 'BB', 'EE', 'DD']
-['AA', 'JJ', 'HH', 'CC', 'DD', 'BB', 'EE']
-['AA', 'JJ', 'HH', 'CC', 'DD', 'EE', 'BB']
-['AA', 'JJ', 'HH', 'CC', 'EE', 'BB', 'DD']
-['AA', 'JJ', 'HH', 'CC', 'EE', 'DD', 'BB']
-['AA', 'JJ', 'HH', 'DD', 'BB', 'CC', 'EE']
-['AA', 'JJ', 'HH', 'DD', 'BB', 'EE', 'CC']
-['AA', 'JJ', 'HH', 'DD', 'CC', 'BB', 'EE']
-['AA', 'JJ', 'HH', 'DD', 'CC', 'EE', 'BB']
-['AA', 'JJ', 'HH', 'DD', 'EE', 'BB', 'CC']
-['AA', 'JJ', 'HH', 'DD', 'EE', 'CC', 'BB']
-['AA', 'JJ', 'HH', 'EE', 'BB', 'CC', 'DD']
-['AA', 'JJ', 'HH', 'EE', 'BB', 'DD', 'CC']
-['AA', 'JJ', 'HH', 'EE', 'CC', 'BB', 'DD']
-['AA', 'JJ', 'HH', 'EE', 'CC', 'DD', 'BB']
-['AA', 'JJ', 'HH', 'EE', 'DD', 'BB', 'CC']
-['AA', 'JJ', 'HH', 'EE', 'DD', 'CC', 'BB']
-Possible paths  720
-[took 8.601299999999998ms]
+['AA', 'JJ', 'BB']
+[took 7.993099999999999ms]

@@ -60,8 +60,6 @@ with open("input.txt", "r") as file:
             
     remaining_valves = [valve for valve in valve_flow_rates if valve_flow_rates[valve] > 0]
     
-    time_remaining = 30
-    
     frontier: "deque[Node]" = deque()
     frontier.append(Node("AA", 0, 30, remaining_valves, ["AA"]))
     

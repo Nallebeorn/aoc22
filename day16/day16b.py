@@ -1,94 +1,118 @@
 import os
 import sys
 from functools import *
+from itertools import permutations
 from time import perf_counter
-from operator import itemgetter
+from collections import deque
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
 print(
-"""~~~ 15/12 ~~~
+"""~~~
 """)
 
 start_time = perf_counter()
-
-def merge_ranges(ranges):
-    out_ranges = sorted(ranges, key=itemgetter(0))
     
-    out_index = 0
+def find_path_between(start, end):
+    queue = deque()
+    queue.append(start)
+    path: dict[str, list[str]] = {}
+    path[start] = []
     
-    for i in range(1, len(out_ranges)):
-        start1, end1 = out_ranges[out_index]
-        start2, end2 = out_ranges[i]
-        if end1 >= start2:
-            out_ranges[out_index] = (start1, max(end1, end2))
-        else:
-            out_index += 1
-            out_ranges[out_index] = out_ranges[i]
+    while len(queue):
+        room = queue.popleft()
+        if room == end:
+            break
             
-    return out_ranges[0:out_index+1]
+        for to in valve_tunnels[room]:
+            if to not in path:
+                path[to] = path[room] + [to]
+                queue.append(to)
+    
+    return path[end]
+
+class Node:
+    def __init__(self, my_location, elephant_location, pressure_released, time_remaining, remaining_valves, my_path, elephant_path, my_goal = None, elephant_goal = None):
+        self.my_location = my_location
+        self.elephant_location = elephant_location
+        self.pressure_released = pressure_released
+        self.time_remaining = time_remaining
+        self.remaining_valves = remaining_valves
+        self.my_path = my_path + ([my_location] if my_goal == None else [])
+        self.elephant_path = elephant_path + ([elephant_location] if elephant_goal == None else [])
+        self.my_goal = my_goal
+        self.elephant_goal = elephant_goal
 
 with open("input.txt", "r") as file:
-    size = 4_000_000
+    valves_input = [line.split() for line in file]
     
-    covered_rows = [[] for i in range(size + 1)]
-    covered_columns = [[] for i in range(size + 1)]
+    valve_flow_rates = {}
+    valve_tunnels = {}
+    for data in valves_input:
+        name = data[1]
+        flow_rate_info = data[4]
+        flow_rate = int("".join(c for c in flow_rate_info if c.isdigit()))
+        tunnels_to = [valve.strip(",") for valve in data[9:]]
+        valve_flow_rates[name] = flow_rate
+        valve_tunnels[name] = tunnels_to
     
-    print("Read sensors")
+    paths = {}
+    for from_valve in valve_tunnels:
+        for to_valve in valve_tunnels:
+            paths[from_valve, to_valve] = find_path_between(from_valve, to_valve)
+
+    remaining_valves = [valve for valve in valve_flow_rates if valve_flow_rates[valve] > 0]
     
-    for data in [line.split() for line in file]:
-        sensor_x = int("".join(c for c in data[2] if c.isdigit() or c == "-"))
-        sensor_y = int("".join(c for c in data[3] if c.isdigit() or c == "-"))
-        print("Sensor:", sensor_x, sensor_y)
+    frontier: "deque[Node]" = deque()
+    frontier.append(Node("AA", "AA", 0, 26, remaining_valves, [], []))
+    
+    current_best: Node = None
+    
+    while len(frontier):
+        current = frontier.popleft()
         
-        beacon_x = int("".join(c for c in data[-2] if c.isdigit() or c == "-"))
-        beacon_y = int("".join(c for c in data[-1] if c.isdigit() or c == "-"))
+        if current.my_goal != None and current.elephant_goal != None:
+            valve_targets = [(current.my_goal, current.elephant_goal)]
+        elif current.my_goal != None:
+            valve_targets = [(current.my_goal, v) for v in current.remaining_valves]
+        elif current.elephant_goal != None:
+            valve_targets = [(v, current.elephant_goal) for v in current.remaining_valves]
+        else:
+            valve_targets = permutations(current.remaining_valves, 2)
         
-        distance = abs(beacon_x - sensor_x) + abs(beacon_y - sensor_y)
-        
-        min_x = max(0, sensor_x - distance)
-        max_x = min(size, sensor_x + distance)
-        min_y = max(0, sensor_y - distance)
-        max_y = min(size, sensor_y + distance)
-        
-        for column in range(min_x, max_x + 1):
-            cross_dist = distance - abs(sensor_x - column)
+        for my_next, elephant_next in valve_targets:
+            my_path = paths[(current.my_location, my_next)] + [my_next]
+            elephant_path = paths[(current.elephant_location, elephant_next)] + [elephant_next]
             
-            y1 = sensor_y - cross_dist
-            y2 = sensor_y + cross_dist
-            covered_columns[column].append((y1, y2))
-        
-        for row in range(min_y, max_y + 1):
-            cross_dist = distance - abs(sensor_y - row)
+            my_distance = len(my_path)
+            elephant_distance = len(elephant_path)
             
-            x1 = sensor_x - cross_dist
-            x2 = sensor_x + cross_dist
-            covered_rows[row].append((x1, x2))
+            new_time_remaining = current.time_remaining - min(my_distance, elephant_distance)
+            new_remaining_valves = [v for v in current.remaining_valves if v != my_next and v != elephant_next]
             
-    print("Merge ranges")
+            if new_time_remaining > 0:
+                if my_distance == elephant_distance:
+                    new_pressure_released = current.pressure_released + (valve_flow_rates[my_next] + valve_flow_rates[elephant_next]) * new_time_remaining
+                    
+                    next_node = Node(my_next, elephant_next, new_pressure_released, new_time_remaining, new_remaining_valves, current.my_path, current.elephant_path, None, None)
+                elif my_distance < elephant_distance:
+                    new_pressure_released = current.pressure_released + valve_flow_rates[my_next] * new_time_remaining
+                    
+                    elephant_short_next = elephant_path[my_distance - 1]
+                    next_node = Node(my_next, elephant_short_next, new_pressure_released, new_time_remaining, new_remaining_valves, current.my_path, current.elephant_path, None, elephant_next)
+                elif elephant_distance < my_distance:
+                    new_pressure_released = current.pressure_released + valve_flow_rates[elephant_next] * new_time_remaining
+                    
+                    my_short_next = my_path[elephant_distance - 1]
+                    next_node = Node(my_short_next, elephant_next, new_pressure_released, new_time_remaining, new_remaining_valves, current.my_path, current.elephant_path, my_next, None)
+                    
+                if current_best == None or new_pressure_released > current_best.pressure_released:
+                    current_best = next_node
+                frontier.append(next_node)
     
-    candidates_x = []
-    candidates_y = []
-    
-    for i in range(len(covered_rows)):
-        if i % 100_000 == 0:
-            print("Range no:", i)
-        merged_rows = merge_ranges(covered_rows[i])
-        merged_columns = merge_ranges(covered_columns[i])
-        if len(merged_rows) > 1:
-            candidates_x.append((i, merged_rows[0][1] + 1))
-        if len(merged_columns) > 1:
-            candidates_y.append((i, merged_columns[0][1] + 1))
-        
-    print("Find beacon")
-    
-    for column, y in candidates_y:
-        for row, x in candidates_x:
-            print("Candidate position:", x, y)
-            if column == x and row == y:
-                tuning_frequency = x * 4_000_000 + y
-                print(f"* If my calculations are correct, then {tuning_frequency} is the tuning frequency of the only possible location of the distress beacon.")
-                break
+    print(f"If I do this methodically I should be able to release {current_best.pressure_released + 2} units of pressure and save the elephants and me before the volcano erupts!")
+    print(current_best.my_path)
+    print(current_best.elephant_path)
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")
