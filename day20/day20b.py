@@ -14,29 +14,21 @@ start_time = perf_counter()
 decryption_key = 811589153
 
 with open("input.txt", "r") as file:
-    sequence = [(orig_index, int(original) * decryption_key) for orig_index, original in enumerate(file)]
-
-def find_index_by_orig_index(sequence, orig_index):
-    for i, element in enumerate(sequence):
-        if element[0] == orig_index:
-            return i
-
-def find_index_by_value(sequence, value):
-    for i, element in enumerate(sequence):
-        if element[1] == value:
-            return i
+    sequence = [int(line) * decryption_key for line in file]
+    original_indices = list(range(len(sequence)))
 
 for mix_round in range(10):
-    print(mix_round)
     for orig_index in range(len(sequence)):
-        from_index = find_index_by_orig_index(sequence, orig_index)
-        orig_index, value = sequence[from_index]
+        from_index = original_indices.index(orig_index)
+        value = sequence[from_index]
         to_index = (from_index + value) % (len(sequence) - 1)
         sequence.pop(from_index)
-        sequence.insert(to_index, (orig_index, value))
+        sequence.insert(to_index, value)
+        original_indices.pop(from_index)
+        original_indices.insert(to_index, orig_index)
 
-index_of_0 = find_index_by_value(sequence, 0)
-coordinates_sum = sum(sequence[(index_of_0 + offset) % len(sequence)][1] for offset in [1000, 2000, 3000])
+index_of_0 = sequence.index(0)
+coordinates_sum = sum(sequence[(index_of_0 + offset) % len(sequence)] for offset in [1000, 2000, 3000])
 print(f"* After mixing the encrypted file once, I get {coordinates_sum} as the sum of the 3D coordinates.")
 
 end_time = perf_counter()
