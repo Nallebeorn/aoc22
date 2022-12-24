@@ -6,7 +6,7 @@ from time import perf_counter
 os.chdir(os.path.dirname(sys.argv[0]))
 
 print(
-"""~~~ 20
+"""~~~
 """)
 
 start_time = perf_counter()
