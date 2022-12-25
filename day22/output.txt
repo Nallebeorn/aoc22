@@ -201,5 +201,5 @@ v..#v<<>>>v^<<<<<<<<<<<<<<<.v^#v<<<^<<<<<^<<#v..v#
 ..^..^#^##.v^v...#..........v......>>>>>>>v#.^...v                                                                                                    
 ..^..^.^.#.v^v....#.........v.....#v....#.v..^...v                                                                                                    
 
-Having followed the monkeys' path, I can conclude that the password is 26562 based on my location and the direction I'm facing.
-[took 95.0151100041694ms]
+* Having followed the monkeys' path, I can conclude that the password is 26558 based on my location and the direction I'm facing.
+[took 62.53613399894675ms]

@@ -33,6 +33,10 @@ def parse_path(string):
                 path.append(int(current_number))
                 current_number = ""
             path.append(c)
+
+    if current_number:
+        path.append(int(current_number))
+
     return path
 
 def print_board(board_tuple):

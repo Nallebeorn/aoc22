@@ -31,7 +31,7 @@ def find_monkey_number(monkey):
         elif operator == "/":
             return left_num // right_num
         else:
-            raise "Invalid monkey operator"
+            raise Exception("Invalid monkey operator")
     
 root_number = find_monkey_number("root")
 
