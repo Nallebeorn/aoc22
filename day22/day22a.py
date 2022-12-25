@@ -132,7 +132,7 @@ print_board(board)
 
 final_password = (position[0] + 1) * 4 + (position[1] + 1) * 1000 + facing
 
-print(f"* Having followed the monkeys' path, I can conclude that the password is {final_password} based on my location and the direction I'm facing.")
+print(f"* Having traced the monkeys' path on the input device, I can conclude that {final_password} must be the password.")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")
