@@ -31,7 +31,7 @@ def evaluate_blizzard_state(minute):
     if minute in state_cache:
         return state_cache[minute]
     
-    print("simulate blizzards", minute)
+    print("Simulate blizzards at minute:", minute)
 
     new_state = []
     blizzards = evaluate_blizzard_state(minute - 1)
@@ -110,6 +110,8 @@ def find_path_length(start, goal):
     frontier = []
     heapq.heappush(frontier, (0, 0, start))
 
+    visited = set()
+
     while len(frontier) > 0:
         priority, cost_so_far, pos = heapq.heappop(frontier)
         x, y = pos
@@ -122,9 +124,11 @@ def find_path_length(start, goal):
 
         for movex, movey in [(0, 0), (1, 0), (-1, 0), (0, 1), (0, -1)]:
             next_pos = (x + movex, y + movey)
-            if (not is_blizzard_at(next_blizzard, next_pos)) and is_in_bounds(next_pos):
-                priority = next_cost + heuristic(next_pos, goal)
-                heapq.heappush(frontier, (priority, next_cost, next_pos))
+            if (next_cost, next_pos) not in visited:
+                if (not is_blizzard_at(next_blizzard, next_pos)) and is_in_bounds(next_pos):
+                    priority = next_cost + heuristic(next_pos, goal)
+                    heapq.heappush(frontier, (priority, next_cost, next_pos))
+                    visited.add((next_cost, next_pos))
 
 # print_blizzards(evaluate_blizzard_state(10))
 
