@@ -40,20 +40,25 @@ directions = [
     [(1, -1), (1, 0), (1, 1)], # NE E SE
 ]
 
+all_adjacent = [(-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1)]
+
+directions = [[all_adjacent.index((ofsx, ofsy)) for ofsx, ofsy in dir] for dir in directions]
+
 # print_state(elves)
 
 num_rounds = 0
 while True:
     num_rounds += 1
-    print(num_rounds)
+    # print(num_rounds)
 
     proposals = {}
     for elfx, elfy in elves:
-        if all(all((elfx + ofsx, elfy + ofsy) not in elves for ofsx, ofsy in direction) for direction in directions):
+        adjacent_free = [(elfx + ofsx, elfy + ofsy) not in elves for ofsx, ofsy in all_adjacent]
+        if all(adjacent_free):
             continue
         for direction in directions:
-            if all((elfx + ofsx, elfy + ofsy) not in elves for ofsx, ofsy in direction):
-                movex, movey = direction[1]
+            if all(adjacent_free[idx] for idx in direction):
+                movex, movey = all_adjacent[direction[1]]
                 move_to = (elfx + movex, elfy + movey)
                 proposals[move_to] = (elfx, elfy) if move_to not in proposals else None
                 break
