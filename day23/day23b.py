@@ -54,7 +54,8 @@ while True:
         for direction in directions:
             if all((elfx + ofsx, elfy + ofsy) not in elves for ofsx, ofsy in direction):
                 movex, movey = direction[1]
-                proposals[elfx, elfy] = (elfx + movex, elfy + movey)
+                move_to = (elfx + movex, elfy + movey)
+                proposals[move_to] = (elfx, elfy) if move_to not in proposals else None
                 break
 
     first_direction = directions.pop(0)
@@ -62,8 +63,8 @@ while True:
 
     did_any_elf_move = False
 
-    for elf, move_to in proposals.items():
-        if sum(1 for x in proposals.values() if x == move_to) == 1:
+    for move_to, elf in proposals.items():
+        if elf != None:
             elves.remove(elf)
             elves.add(move_to)
             did_any_elf_move = True
