@@ -2,84 +2,148 @@ import os
 import sys
 from functools import *
 from time import perf_counter
+import heapq
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
 print(
-"""~~~
+"""~~~ 24/12 ~~~
 """)
 
 start_time = perf_counter()
 
 with open("input.txt", "r") as file:
-    elves = set()
-    for y, line in enumerate(file):
+    lines = [line.strip()[1:-1] for line in file][1:-1]
+    width = len(lines[0])
+    height = len(lines)
+    blizzards = []
+    for y, line in enumerate(lines):
         for x, c in enumerate(line):
-            if c == "#":
-                elves.add((x, y))
+            if c in [">", "v", "<", "^"]:
+                blizzards.append((c, x, y))
 
-def print_state(elves):
-    minx = min(x for x, y in elves)
-    maxx = max(x for x, y in elves)
-    miny = min(y for x, y in elves)
-    maxy = max(y for x, y in elves)
-    output = ""
-    for y in range(miny, maxy + 1):
-        for x in range(minx, maxx + 1):
-            output += "#" if (x, y) in elves else "."
-        output += "\n"
+state_cache = {}
+state_cache[0] = blizzards
+
+def evaluate_blizzard_state(minute):
+    global width, height, state_cache
+
+    if minute in state_cache:
+        return state_cache[minute]
     
+    print("Simulate blizzards at minute:", minute)
+
+    new_state = []
+    blizzards = evaluate_blizzard_state(minute - 1)
+    for direction, x, y in blizzards:
+        if direction == ">":
+            x += 1
+        elif direction == "<":
+            x -= 1
+        elif direction == "v":
+            y += 1
+        elif direction == "^":
+            y -= 1
+        else:
+            raise Exception("Unreachable code")
+        x = x % width
+        y = y % height
+        new_state.append((direction, x, y))
+
+    state_cache[minute] = new_state
+
+    return new_state
+
+def is_blizzard_at(blizzards, pos):
+    x, y = pos
+    for direction, blizx, blizy in blizzards:
+        if x == blizx and y == blizy:
+            return True
+    
+    return False
+
+def is_in_bounds(pos):
+    global width, height
+
+    x, y = pos
+
+    if x >= 0 and y >= 0 and x < width and y < height:
+        return True
+
+    if x == 0 and y == -1:
+        return True
+
+    if x == width - 1 and y == height:
+        return True
+
+    return False
+
+def heuristic(begin, end):
+    bx, by = begin
+    ex, ey = end
+    return abs(bx - ex) + abs(by - ey)
+
+def print_blizzards(blizzards):
+    global width, height
+
+    board = []
+    for y in range(height):
+        board.append(["."] * width)
+
+    for direction, x, y in blizzards:
+        if board[y][x] == ".":
+            board[y][x] = direction
+        elif board[y][x].isdigit():
+            board[y][x] = str(int(board[y][x]) + 1)
+        else:
+            board[y][x] = "2"
+
+    output = ""
+    for y in range(height):
+        for x in range(width):
+            output += board[y][x]
+        output += "\n"
+
     print(output)
 
-num_rounds = 10
+def find_path_length(start, goal, starting_minute):
+    print(f"Finding path from {start} to {goal} beginning at {starting_minute}")
 
-directions = [
-    [(-1, -1), (0, -1), (1, -1)], # NW N NE
-    [(-1, 1), (0, 1), (1, 1)], # SW S SE
-    [(-1, -1), (-1, 0), (-1, 1)], # NW W SW
-    [(1, -1), (1, 0), (1, 1)], # NE E SE
-]
+    frontier = []
+    heapq.heappush(frontier, (0, 0, start))
 
-all_adjacent = [(-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1)]
+    visited = set()
 
-directions = [[all_adjacent.index((ofsx, ofsy)) for ofsx, ofsy in dir] for dir in directions]
+    while len(frontier) > 0:
+        priority, cost_so_far, pos = heapq.heappop(frontier)
+        x, y = pos
 
-# print_state(elves)
+        if pos == goal:
+            return cost_so_far
+        
+        next_cost = cost_so_far + 1
+        next_blizzard = evaluate_blizzard_state(starting_minute + next_cost)
 
-num_rounds = 0
-while True:
-    num_rounds += 1
-    # print(num_rounds)
+        for movex, movey in [(0, 0), (1, 0), (-1, 0), (0, 1), (0, -1)]:
+            next_pos = (x + movex, y + movey)
+            if (next_cost, next_pos) not in visited:
+                if (not is_blizzard_at(next_blizzard, next_pos)) and is_in_bounds(next_pos):
+                    priority = next_cost + heuristic(next_pos, goal)
+                    heapq.heappush(frontier, (priority, next_cost, next_pos))
+                    visited.add((next_cost, next_pos))
 
-    proposals = {}
-    for elfx, elfy in elves:
-        adjacent_free = [(elfx + ofsx, elfy + ofsy) not in elves for ofsx, ofsy in all_adjacent]
-        if all(adjacent_free):
-            continue
-        for direction in directions:
-            if all(adjacent_free[idx] for idx in direction):
-                movex, movey = all_adjacent[direction[1]]
-                move_to = (elfx + movex, elfy + movey)
-                proposals[move_to] = (elfx, elfy) if move_to not in proposals else None
-                break
+# print_blizzards(evaluate_blizzard_state(10))
 
-    first_direction = directions.pop(0)
-    directions.append(first_direction)
+start = (0, -1)
+goal = (width - 1, height)
 
-    did_any_elf_move = False
+there = find_path_length(start, goal, 0)
+back_again = find_path_length(goal, start, there)
+there_again = find_path_length(start, goal, there + back_again)
 
-    for move_to, elf in proposals.items():
-        if elf != None:
-            elves.remove(elf)
-            elves.add(move_to)
-            did_any_elf_move = True
-
-    if not did_any_elf_move:
-        break
-    
-    # print_state(elves)
-
-print(f"* Round {num_rounds} will be the first round where no elf moves.")
+total_time = there + back_again + there_again
+            
+print(f"* Running through the valley dodging blizzards, running back to fetch the elf's snacks and then finally running to the goal once again took me a total of {total_time} minutes ({there} + {back_again} + {there_again})!")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")
