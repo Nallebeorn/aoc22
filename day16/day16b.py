@@ -129,7 +129,7 @@ with open("input.txt", "r") as file:
 
     print(current_best.my_path)
     print(current_best.el_path)
-    print(f"* If I do this methodically I should be able to release {current_best.pressure_released} units of pressure and save the elephants and me before the volcano erupts!")
+    print(f"* I quickly explained my plan to one of the elephants. I could now release {current_best.pressure_released} units of pressure working together as a team!")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")

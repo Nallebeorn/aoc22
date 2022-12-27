@@ -6,10 +6,12 @@ from time import perf_counter
 os.chdir(os.path.dirname(sys.argv[0]))
 
 print(
-"""~~~ 22
+"""~~~ 22/12 ~~~
 """)
 
 start_time = perf_counter()
+
+CUBE_SIZE = 4
 
 def parse_board(lines):
     width = max(len(line) for line in lines)
@@ -21,6 +23,67 @@ def parse_board(lines):
             board[y * width + x] = line[x]
 
     return width, height, board
+
+def split_board(board_tuple):
+    width, height, board = board_tuple
+    num_x = width // CUBE_SIZE
+    num_y = height // CUBE_SIZE
+    sides = {}
+    for sidey in range(num_y):
+        for sidex in range(num_x):
+            side = {}
+            startx = sidex * CUBE_SIZE
+            starty = sidey * CUBE_SIZE
+            for y in range(CUBE_SIZE):
+                for x in range(CUBE_SIZE):
+                    side[(x, y, CUBE_SIZE - 1)] = board_get(board_tuple, (startx + x, starty + y))
+
+            if not all(c == " " for c in side.values()):
+                sides[(sidex, sidey)] = side
+
+    connections = {}
+    for sidex, sidey in sides:
+        cons = {}
+        for ofsx, ofsy in movement.values():
+            if (sidex + ofsx, sidey + ofsy) in sides:
+                cons[ofsx, ofsy] = sidex + ofsx, sidey + ofsy
+        connections[sidex, sidey] = cons
+
+    print(connections)
+
+    cube = {}
+
+    visited = set()
+    frontier = []
+    frontier.append((next(iter(sides)), []))
+    while len(frontier) > 0:
+        side, transformations = frontier.pop()
+        print("CUBE SIDE", side)
+        visited.add(side)
+
+        neg = CUBE_SIZE - 1
+        for pos, value in sides[side].items():
+            x, y, z = pos
+            for trans in transformations:
+                if trans == (1, 0):
+                    x, y, z = (z, y, neg - x)
+                elif trans == (-1, 0):
+                    x, y, z = (neg - z, y, x)
+                elif trans == (0, 1):
+                    x, y, z = (x, z, neg - y)
+                elif trans == (0, -1):
+                    x, y, z = (x, neg - z, y)
+                else:
+                    raise Exception("Unreachable code")
+
+            cube[x, y, z] = value
+
+        for con, other_side in connections[side].items():
+            if not other_side in visited:
+                frontier.append((other_side, transformations + [con]))
+    
+    print("cube size", len(cube), "expected", 6 * CUBE_SIZE * CUBE_SIZE)
+    return cube
 
 def parse_path(string):
     path = []
@@ -99,6 +162,10 @@ for x in range(width):
         break
 
 board_set(board, position, facing_symbol[facing])
+
+cube = split_board(board)
+print("CUBEDIDOO", {k: v for k, v in cube.items() if k[0] == 4})
+exit()
 
 for instruction in path:
     if instruction == "L":

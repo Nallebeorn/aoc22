@@ -2,6 +2,8 @@ import os
 import sys
 from functools import *
 from time import perf_counter
+from math import ceil
+from copy import deepcopy
 from collections import deque
 
 os.chdir(os.path.dirname(sys.argv[0]))
@@ -12,78 +14,92 @@ print(
 
 start_time = perf_counter()
 
+ORE = 0
+CLAY = 1
+OBSIDIAN = 2
+GEODE = 3
+
+class Node:
+    def __init__(self, time_remaining: int, inventory: dict[int, int], robots: dict[int, int], prev: "Node"):
+        self.time_remaining = time_remaining
+        self.inventory = inventory.copy()
+        self.robots = robots.copy()
+        self.prev = prev
+        self.depth = 0 if prev == None else prev.depth + 1
+
+    def __repr__(self):
+        return f"[{self.depth}] {self.time_remaining} :: INV {self.inventory} ROB {self.robots}"
+
 with open("input.txt", "r") as file:
-    cubemap = set(tuple([int(n) for n in line.strip().split(",")]) for line in file)
 
-min_pos = (0, 0, 0)
-max_pos = (0, 0, 0)
+    blueprints = []
 
-for x, y, z in cubemap:
-    minx, miny, minz = min_pos
-    maxx, maxy, maxz = max_pos
-    min_pos = (min(minx, x - 1), min(miny, y - 1), min(minz, z - 1)) # Add margin of 1 so we have a margin where we know every voxel will be exterior air
-    max_pos = (max(maxx, x + 1), max(maxy, y + 1), max(maxz, z + 1)) # that we can start the search from later
+    for blueprint in file.read().splitlines():
+        numbers = [int(c) for c in blueprint.split() if c.isdigit()]
+        blueprints.append({
+            ORE: {ORE: numbers[0]},
+            CLAY: {ORE: numbers[1]},
+            OBSIDIAN: {ORE: numbers[2], CLAY: numbers[3]},
+            GEODE: {ORE: numbers[4], OBSIDIAN: numbers[5]},
+        })
+
+result = 1
+
+for bp_index, blueprint in enumerate(blueprints[:3]):
+    print("BLUEPRINT", bp_index)
+    start_state = Node(32, {ORE: 0, CLAY: 0, OBSIDIAN: 0, GEODE: 0}, {ORE: 1, CLAY: 0, OBSIDIAN: 0, GEODE: 0}, None)
+    frontier: deque[Node] = deque()
+    frontier.append(start_state)
+
+    best_so_far = None
+
+    while len(frontier) > 0:
+        state = frontier.pop()
+
+        # print(most_geodes, state)
+
+        if state.time_remaining <= 0:
+            # print(0 if not best_so_far else best_so_far.inventory[GEODE], state.inventory[GEODE])
+            # print(state)
+            if best_so_far == None or state.inventory[GEODE] > best_so_far.inventory[GEODE]:
+                best_so_far = state
+            continue
+
+        if best_so_far != None:
+            theoretical_best = state.inventory[GEODE] + state.robots[GEODE] * state.time_remaining
+            for i in reversed(range(0, state.time_remaining)):
+                theoretical_best += i
+
+            if theoretical_best <= best_so_far.inventory[GEODE]:
+                continue
+
+        rate = state.robots
+        inventory = state.inventory
+
+        could_build_anything = False
+        for robot_type, recipe in blueprint.items():
+            remaining = {mat: max(0, recipe[mat] - inventory[mat]) for mat in recipe}
+            
+            if all(rate[mat] > 0 for mat in recipe):
+                new_state = Node(state.time_remaining, state.inventory, state.robots, state)
+                time_until_build = max(ceil(remaining[mat] / rate[mat]) for mat in remaining) + 1
+                new_state.inventory = {mat: inventory[mat] - recipe.get(mat, 0) + rate[mat] * time_until_build for mat in inventory}
+                new_state.robots[robot_type] += 1
+                new_state.time_remaining -= time_until_build
+                if new_state.time_remaining > 0:
+                    could_build_anything = True
+                    frontier.append(new_state)
+            
+        if not could_build_anything:
+            new_state = Node(state.time_remaining, state.inventory, state.robots, state)
+            new_state.inventory = {mat: inventory[mat] + rate[mat] * state.time_remaining for mat in inventory}
+            new_state.time_remaining -= state.time_remaining
+            frontier.append(new_state)
     
-frontier = deque()
-frontier.append(min_pos)
+    print(best_so_far.inventory[GEODE])
+    result *= best_so_far.inventory[GEODE]
 
-minx, miny, minz = min_pos
-maxx, maxy, maxz = max_pos
-
-sizex = maxx - minx + 1
-sizey = maxy - miny + 1
-sizez = maxz - minz + 1
-
-# Checking if a value is in a set is supposed to pretty fast and O(1), but it's far too slow for the search with real input apparently...
-# So I make an array that can be indexed with the position instead
-
-UNKNOWN = 0
-EXTERIOR_AIR = 1
-BLOCK = 2
-
-cubemap_arr = [UNKNOWN] * sizex * sizey * sizez
-
-def get_index(x, y, z):
-    return x + y * sizex + z * sizex * sizey
-
-for x, y, z in cubemap:
-    cubemap_arr[get_index(x, y, z)] = BLOCK
-
-while len(frontier) > 0:
-    current = frontier.popleft()
-    
-    x, y, z = current
-    
-    for neighbour in [
-        (x + 1, y, z),
-        (x - 1, y, z),
-        (x, y + 1, z),
-        (x, y - 1, z),
-        (x, y, z + 1),
-        (x, y, z - 1),
-    ]:
-        nx, ny, nz = neighbour
-        if nx >= minx and ny >= miny and nz >= minz and nx <= maxx and ny <= maxy and nz <= maxz:
-            if cubemap_arr[get_index(nx, ny, nz)] == UNKNOWN:
-                cubemap_arr[get_index(nx, ny, nz)] = EXTERIOR_AIR
-                frontier.append(neighbour)
-
-count = 0                
-
-for x, y, z in cubemap:
-    for neighbour in [
-        (x + 1, y, z),
-        (x - 1, y, z),
-        (x, y + 1, z),
-        (x, y - 1, z),
-        (x, y, z + 1),
-        (x, y, z - 1),
-    ]:
-        nx, ny, nz = neighbour
-        if cubemap_arr[get_index(nx, ny, nz)] == EXTERIOR_AIR:
-            count += 1
-
-print(f"* A single lava droplet has a surface area of {count} exposed to the open air.")
+print(f"After much, much deliberation, I have determined how many geodes I could collect in 32 minutes while following each of the three remaining blueprints: {result} is the product.")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")
