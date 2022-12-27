@@ -71,6 +71,8 @@ board = parse_board(lines[:-1])
 width, height, board_array = board
 path = parse_path(lines[-1])
 
+CUBE = 50
+
 RIGHT = 0
 DOWN = 1
 LEFT = 2
@@ -111,11 +113,82 @@ for instruction in path:
             x, y = position
             movex, movey = movement[facing]
             newx, newy = x + movex, y + movey
+
+            new_facing = facing
             
             if is_out_of_bounds(board, (newx, newy)):
-                while not is_out_of_bounds(board, (newx - movex, newy - movey)):
-                    newx -= movex
-                    newy -= movey
+                relx, rely = (x % CUBE, y % CUBE)
+                chunkx, chunky = (newx // CUBE, newy // CUBE)
+                print("WRAP", facing_symbol[facing], chunkx, chunky, "at", newx, newy)
+                if chunkx == 1 and chunky == -1 and facing == UP:
+                    newx = 0
+                    newy = 3 * CUBE + relx
+                    new_facing = RIGHT
+                elif chunkx == 2 and chunky == -1 and facing == UP:
+                    newx = relx
+                    newy = 3 * CUBE + CUBE - 1
+                    new_facing = UP
+                elif chunkx == 0 and chunky == 0 and facing == LEFT:
+                    newx = 0
+                    newy = 2 * CUBE + (CUBE - 1 - rely)
+                    new_facing = RIGHT
+                elif chunkx == 3 and chunky == 0 and facing == RIGHT:
+                    newx = CUBE + CUBE - 1
+                    newy = 2 * CUBE + (CUBE - 1 - rely)
+                    new_facing = LEFT
+                elif chunkx == 0 and chunky == 1:
+                    if facing == LEFT and relx == 0:
+                        newx = rely
+                        newy = CUBE * 2
+                        new_facing = DOWN
+                    elif facing == UP and rely == 0:
+                        newx = CUBE
+                        newy = CUBE + relx
+                        new_facing = RIGHT
+                    else:
+                        raise Exception(f"Unreachable code in special case, {facing}, {relx}, {rely}")
+                elif chunkx == 2 and chunky == 1:
+                    if facing == RIGHT and relx == CUBE - 1:
+                        newx = CUBE * 2 + rely
+                        newy = CUBE - 1
+                        new_facing = UP
+                    elif facing == DOWN and rely == CUBE - 1:
+                        newx = CUBE + CUBE - 1
+                        newy = CUBE + relx
+                        new_facing = LEFT
+                    else:
+                        raise Exception(f"Unreachable code in special case, {facing}, {relx}, {rely}")
+                elif chunkx == -1 and chunky == 2 and facing == LEFT:
+                    newx = CUBE
+                    newy = CUBE - 1 - rely
+                    new_facing = RIGHT
+                elif chunkx == 2 and chunky == 2 and facing == RIGHT:
+                    newx = CUBE * 2 + CUBE - 1
+                    newy = CUBE - 1 - rely
+                    new_facing = LEFT
+                elif chunkx == -1 and chunky == 3 and facing == LEFT:
+                    newx = CUBE + rely
+                    newy = 0
+                    new_facing = DOWN
+                elif chunkx == 0 and chunky == 4 and facing == DOWN:
+                    newx = CUBE * 2 + relx
+                    newy = 0
+                    new_facing = DOWN
+                elif chunkx == 1 and chunky == 3:
+                    if facing == DOWN and rely == CUBE - 1:
+                        newx = CUBE - 1
+                        newy = CUBE * 3 + relx
+                        new_facing = LEFT
+                    elif facing == RIGHT and relx == CUBE - 1:
+                        newx = CUBE + rely
+                        newy = CUBE * 2 + CUBE - 1
+                        new_facing = UP
+                    else:
+                        raise Exception(f"Unreachable code in special case, {facing}, {relx}, {rely}")
+                else:
+                    raise Exception(f"Unreachable code {facing_symbol[facing]} {chunkx},{chunky} ({newx}, {newy})")
+
+                print(x, y, facing_symbol[facing], "=>", newx, newy, facing_symbol[new_facing], "\n")
 
             cell_at_new = board_get(board, (newx, newy))
 
@@ -123,6 +196,7 @@ for instruction in path:
                 break
             else:
                 position = (newx, newy)
+                facing = new_facing
 
             board_set(board, position, facing_symbol[facing])
 
@@ -132,7 +206,7 @@ print_board(board)
 
 final_password = (position[0] + 1) * 4 + (position[1] + 1) * 1000 + facing
 
-print(f"* Having traced the monkeys' path on the input device, I can conclude that {final_password} must be the password.")
+print(f"* Having retraced the monkeys' path on the (apparently cubic!) input device, I can conclude that {final_password} must be the real password.")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")
