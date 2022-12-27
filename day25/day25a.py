@@ -56,7 +56,7 @@ total_fuel = "0"
 for fuel in snafu_numbers:
     total_fuel = add_snafu(total_fuel, fuel)
 
-print(f"Expressed as a SNAFU number, {total_fuel} is the total fuel requirement. I should enter this into Bob's console!")
+print(f"* Expressed as a SNAFU number, {total_fuel} is the total fuel requirement. I should enter this into Bob's console!")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")
