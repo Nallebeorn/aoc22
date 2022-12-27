@@ -4,7 +4,7 @@ from functools import *
 from time import perf_counter
 from collections import deque
 from math import factorial
-from itertools import permutations
+from itertools import combinations
 
 os.chdir(os.path.dirname(sys.argv[0]))
 
@@ -81,8 +81,24 @@ with open("input.txt", "r") as file:
 
             if best_possible < current_best.pressure_released:
                 continue
-       
-        if cur.my_distance_left <= 0:
+
+        if cur.my_location == cur.el_location:
+            for my_next, el_next in combinations(cur.remaining_valves, 2):
+                my_distance = distances[(cur.my_location, my_next)]
+                el_distance = distances[(cur.el_location, el_next)]
+                my_new_time_remaining = cur.time_remaining - my_distance - 1
+                el_new_time_remaining = cur.time_remaining - el_distance - 1
+                if my_new_time_remaining > 0 and el_new_time_remaining > 0:
+                    my_pressure = valve_flow_rates[my_next] * my_new_time_remaining
+                    el_pressure = valve_flow_rates[el_next] * el_new_time_remaining
+                    new_pressure_released = cur.pressure_released + my_pressure + el_pressure
+                    new_remaning_valves = [v for v in cur.remaining_valves if v != my_next and v != el_next]
+                    next_node = Node(my_next, el_next, my_distance + 1, el_distance + 1, new_pressure_released,
+                                     cur.time_remaining, new_remaning_valves, cur.my_path + [my_next], cur.el_path + [el_next])
+                    if current_best == None or new_pressure_released > current_best.pressure_released:
+                        current_best = next_node
+                    frontier.append(next_node)
+        elif cur.my_distance_left <= 0:
             for next in cur.remaining_valves:
                 distance = distances[(cur.my_location, next)]
                 new_time_remaining = cur.time_remaining - distance - 1
