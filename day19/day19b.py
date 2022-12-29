@@ -51,6 +51,8 @@ for bp_index, blueprint in enumerate(blueprints[:3]):
     frontier: deque[Node] = deque()
     frontier.append(start_state)
 
+    visited = set()
+
     best_so_far = None
 
     while len(frontier) > 0:
@@ -87,19 +89,25 @@ for bp_index, blueprint in enumerate(blueprints[:3]):
                 new_state.robots[robot_type] += 1
                 new_state.time_remaining -= time_until_build
                 if new_state.time_remaining > 0:
-                    could_build_anything = True
-                    frontier.append(new_state)
+                    state_tuple = (new_state.time_remaining, *new_state.inventory.values(), *new_state.robots.values())
+                    if state_tuple not in visited:                    
+                        could_build_anything = True
+                        visited.add(state_tuple)
+                        frontier.append(new_state)
             
         if not could_build_anything:
             new_state = Node(state.time_remaining, state.inventory, state.robots, state)
             new_state.inventory = {mat: inventory[mat] + rate[mat] * state.time_remaining for mat in inventory}
             new_state.time_remaining -= state.time_remaining
-            frontier.append(new_state)
+            state_tuple = (new_state.time_remaining, *new_state.inventory.values(), *new_state.robots.values())
+            if state_tuple not in visited:                
+                visited.add(state_tuple)
+                frontier.append(new_state)
     
     print(best_so_far.inventory[GEODE])
     result *= best_so_far.inventory[GEODE]
 
-print(f"After much, much deliberation, I have determined how many geodes I could collect in 32 minutes while following each of the three remaining blueprints: {result} is the product.")
+print(f"* After much, much deliberation, I have determined how many geodes I could collect in 32 minutes while following each of the three remaining blueprints: {result} is the product.")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")

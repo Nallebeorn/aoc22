@@ -107,7 +107,7 @@ for bp_index, blueprint in enumerate(blueprints):
     print(best_so_far.inventory[GEODE])
     quality_level_sum += (bp_index + 1) * best_so_far.inventory[GEODE]
 
-print(f"After much deliberation, I have determined the quality level of every blueprint at my disposal, adding up to {quality_level_sum} -- phew!")
+print(f"* After much deliberation, I have determined the quality level of every blueprint at my disposal, adding up to {quality_level_sum} -- phew!")
 
 end_time = perf_counter()
 print(f"[took {(end_time - start_time) * 1000}ms]")
